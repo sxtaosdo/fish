@@ -4,7 +4,7 @@
 class ConfigModel {
     private static _instance: ConfigModel;
     /**路径文件名称 */
-    private static pathNameList: Array<string> = ["A_star1[12]_track", "A_star2[12]_track"];
+    private static pathNameList: Array<string> = ["A_star1[12]_track", "A_star2[12]_track", "A_tai[2]_track", "A_w[2]_track", "A_w[8]_track", "A_wave1[8]_track", "A_wave2[6]_track", "A_wave3[6]_track", "A_wave4[6]_track", "A_well[8]_track", "A_wire[2]_track", "A_x[4]_track", "B99lb[5]_track", "B99lb_r[3]_track", "BombFish_track", "C04[6]_track", "Golden_Shark_track", "shark_track", "xiao1_track", "-4[13]_track", "A_a[24]_track"];
 
     /**路径列表 */
     private _pathList: Array<Object> = new Array<Object>();
@@ -13,6 +13,7 @@ class ConfigModel {
     private _debug: boolean = false;
     private _isShowLogin: boolean = false;
     private _showTest: boolean = false;
+    private _showPathPoint: boolean = false;
 
     private _fishList: Array<FishVo>;
 
@@ -32,6 +33,7 @@ class ConfigModel {
         var value: any;
         this._version = data.version;
         this._showTest = data.showTest;
+        this._showPathPoint = data.showPathPoint;
         console.log("配置文件:" + this._version);
         if (data.debug) {
             this._debug = data.debug == "true" ? true : false;
@@ -57,7 +59,7 @@ class ConfigModel {
 
     public parseFishPath(): void {
         ConfigModel.pathNameList.forEach(element => {
-            console.log("");
+            // console.log("");
             // var data: ArrayBuffer = RES.getRes(element);
             var data: egret.ByteArray = new egret.ByteArray(RES.getRes(element));
             data.endian = egret.Endian.LITTLE_ENDIAN;
@@ -65,6 +67,7 @@ class ConfigModel {
             var data1 = data.readUnsignedInt();         //32整数文件头   1667330676
             var version = data.readUnsignedInt();       //32位整数版本号  105
             var pathNum = data.readUnsignedInt();       //32整数路径数量  12
+            var tempList0: Array<any> = new Array<any>();
             for (var index = 0; index < pathNum; index++) {
                 var len = data.readUnsignedInt();       //32大小  10
                 var templist: Array<PathPoint> = new Array<PathPoint>();
@@ -72,10 +75,10 @@ class ConfigModel {
                     var pp: PathPoint = new PathPoint();
                     pp.x = data.readFloat() * Main.GAME_WIDTH;
                     pp.y = data.readFloat() * Main.GAME_HEIGHT;
-                    pp.speed = 5;
+                    pp.speed = 9;
                     templist.push(pp);//32小数，32小数
                 }
-                this._pathList.push(templist);
+                tempList0.push(templist);
                 // continue;
                 var data2 = data.readFloat();       //32小数
                 var len2 = data.readUnsignedInt();  //32大小
@@ -91,8 +94,9 @@ class ConfigModel {
                     tempList2.push(data.readUTF());
                 }
             }
+            this._pathList.push(tempList0);
         });
-        console.log(this._pathList);
+        // console.log(this._pathList);
     }
 
     public get version(): string {
@@ -117,6 +121,10 @@ class ConfigModel {
 
     public get pathList(): Array<Object> {
         return this._pathList;
+    }
+
+    public get showPathPoint(): boolean {
+        return this._showPathPoint
     }
 
 }

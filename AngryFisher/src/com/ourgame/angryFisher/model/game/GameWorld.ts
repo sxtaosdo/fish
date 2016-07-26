@@ -1,7 +1,9 @@
 class GameWorld extends egret.Sprite implements IBase {
-
+    private static bgNameList: Array<string> = ["bg2_png", "bg3_png", "bg4_png", "bg6_png", "bg7_png", "bg8_png", "BattleBackground1_png", "bg_png", "bg1_png"];
     private static that: GameWorld;
     private client: ClientModel;
+    private currentPath: any;
+    private bg: egret.Bitmap = new egret.Bitmap();
 
     public constructor() {
         super();
@@ -23,11 +25,13 @@ class GameWorld extends egret.Sprite implements IBase {
         var player: PlayerGunRenderer = new PlayerGunRenderer();
         this.addChild(player);
         player.enter();
-        // if (this.client.playerList.indexOf(player) > -1) {
         this.client.playerList.push(player);
+
         TimerManager.instance.doFrameLoop(1, this.onEnterFrame, this);
         GameDispatcher.addEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
-        // }
+        GameDispatcher.addEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
+
+        this.changePath();
     }
 
     public exit(data?: any): void {
@@ -41,15 +45,54 @@ class GameWorld extends egret.Sprite implements IBase {
     private addFish(): void {
         var fish: FishRenderer = EntityManager.instance.getAvailableEntity<FishRenderer>(FishRenderer);
         fish.entityType = EntityType.FISH;
-        fish.setData(ConfigModel.instance.fishList[RandomUtil.randInt(0, 5)]);
+        var vo: FishVo = ConfigModel.instance.fishList[RandomUtil.randInt(0, 16)];
+        var index2: number = RandomUtil.randInt(0, this.currentPath["length"] - 1);
+        vo.path = this.currentPath[index2];
+        fish.setData(vo);
         GameWorld.that.addChild(fish.getDisplayObject());
         fish.getFSM().ChangeState(FishStateSeek.instance);
         GameWorld.that.client.fishList[fish.sid] = fish;
     }
 
+    private changePath(): void {
+        var index: number = RandomUtil.randInt(0, ConfigModel.instance.pathList.length - 1);
+        this.currentPath = ConfigModel.instance.pathList[index];
+        this.bg.texture = RES.getRes(GameWorld.bgNameList[RandomUtil.randInt(0, GameWorld.bgNameList.length - 1)]);
+        this.addChildAt(this.bg, 0);
+        this.drawPathPoint();
+    }
+
+    private drawPathPoint(): void {
+        if (ConfigModel.instance.showPathPoint) {
+            if (this.contains(this.bg)) {   //显示路径点则不显示背景
+                this.removeChild(this.bg);
+            }
+            this.graphics.clear();
+            var color: number = 0x000000;
+            console.log(this.currentPath.length);
+            this.currentPath.forEach(element => {
+                var index: number = 0;
+                element.forEach(element => {
+                    // color += 9;
+                    this.graphics.beginFill(color, 0.8);
+                    this.graphics.drawCircle(element.x, element.y, 5);
+
+                    // this.graphics.lineStyle(1, color);
+                    // this.graphics.lineTo(element.x, element.y)
+                    // this.graphics.moveTo(element.x, element.y);
+                    this.graphics.endFill();
+                    index++;
+                });
+                color += 0xaa;
+            });
+        }
+    }
+
     private onEnterFrame(evt?: egret.Event): void {
         this.client.fishList.forEach(element => {
-            element.getFSM().Update();
+            if (element.isDestroy == false) {
+                element.getFSM().Update();
+            }
         });
 
         this.client.playerList.forEach(element => {

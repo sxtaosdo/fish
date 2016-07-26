@@ -12,7 +12,7 @@ class LoadingUI extends BaseComponent implements IBase {
 
     private static _instance: LoadingUI;
     private static tipList: Array<string> = ["抵制不良游戏，拒绝盗版游戏", "注意自我保护，谨防受骗上当", "适度游戏益脑，沉迷游戏伤身", "合理安排时间，享受健康生活"];
-    private static assetsList: Array<string> = ["fish", "config", "main", "player"];
+    private static assetsList: Array<string> = ["fish", "config",  "player","bg"];
     private static total: number = LoadingUI.assetsList.length;
 
     public constructor() {

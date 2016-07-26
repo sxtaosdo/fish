@@ -9,16 +9,20 @@
 			"name":"fish"
 		},
 		{
-			"keys":"game_json,fish_json,A_star1[12]_track,A_star2[12]_track,A_tai[2]_track,A_w[2]_track,A_w[8]_track,A_wave1[8]_track,A_wave2[6]_track,A_wave3[6]_track,A_wave4[6]_track,A_well[8]_track,A_wire[2]_track,A_x[4]_track,B99lb[5]_track,B99lb_r[3]_track,B99lt[5]_track,B99lt_r[3]_track,B99mb[5]_track,B99mb_r[3]_track,B99mt[5]_track,B99mt_r[3]_track,B99rb[5]_track,B99rb_r[3]_track,B99rt[5]_track,B99rt_r[3]_track,BombFish_track,BombFishPoints_txt,BombFishPoints.txt_bak,C04[6]_track,C05[6]_track,C06[6]_track,C10[6]_track,C13[1]_track,C15[6]_track,C16[6]_track,C17[1]_track,C17[4]_track,C18[4]_track,C19[4]_track,C20[4]_track,C21[4]_track,C22[6]_track,Golden_Shark_track,GoldenShark_track,GoldenShark_txt,index_toc,index.toc_bak,LC17[3]_track,shark_track,T_2at_track,T_2gt_track,T_at_track,T_bt_track,T_ct_track,T_dt_track,T_et_track,T_gt_track,vssver2_scc,xiao1_track,xiao3_track,xiao4_track,xiao6_track,-4[13]_track,A_a[24]_track,-A_a[24]_track,A_bone[4]_track,A_c[4]_track,A_cross[4]_track,A_d[8]_track,A_diamond[8]_track,A_grid[4]_track,A_heart[2]_track,A_net[10]_track,A_parallel1[4]_track,A_parallel2[6]_track,A_parallel3[8]_track,A_parallel4[2]_track,A_r[4]_track,A_rainbow[4]_track,A_rice[8]_track,A_semicircle[6]_track,little_golden_shark_track",
+			"keys":"game_json,fish_json,A_star1[12]_track,A_star2[12]_track,A_tai[2]_track,A_w[2]_track,A_w[8]_track,A_wave1[8]_track,A_wave2[6]_track,A_wave3[6]_track,A_wave4[6]_track,A_well[8]_track,A_wire[2]_track,A_x[4]_track,B99lb[5]_track,B99lb_r[3]_track,B99lt[5]_track,B99lt_r[3]_track,B99mb[5]_track,B99mb_r[3]_track,B99mt[5]_track,B99mt_r[3]_track,B99rb[5]_track,B99rb_r[3]_track,B99rt[5]_track,B99rt_r[3]_track,BombFish_track,C04[6]_track,C05[6]_track,C06[6]_track,C10[6]_track,C13[1]_track,C15[6]_track,C16[6]_track,C17[1]_track,C17[4]_track,C18[4]_track,C19[4]_track,C20[4]_track,C21[4]_track,C22[6]_track,Golden_Shark_track,GoldenShark_track,LC17[3]_track,shark_track,T_2at_track,T_2gt_track,T_at_track,T_bt_track,T_ct_track,T_dt_track,T_et_track,T_gt_track,xiao1_track,xiao3_track,xiao4_track,xiao6_track,-4[13]_track,A_a[24]_track,-A_a[24]_track,A_bone[4]_track,A_c[4]_track,A_cross[4]_track,A_d[8]_track,A_diamond[8]_track,A_grid[4]_track,A_heart[2]_track,A_net[10]_track,A_parallel1[4]_track,A_parallel2[6]_track,A_parallel3[8]_track,A_parallel4[2]_track,A_r[4]_track,A_rainbow[4]_track,A_rice[8]_track,A_semicircle[6]_track,little_golden_shark_track",
 			"name":"config"
 		},
 		{
-			"keys":"bg_png",
+			"keys":"",
 			"name":"main"
 		},
 		{
 			"keys":"playerBg_png,playerLvBarBar_png,playerLvBarBg_png,robot_png,playerShell_png,net_png",
 			"name":"player"
+		},
+		{
+			"keys":"bg2_png,bg3_png,bg4_png,bg6_png,bg7_png,bg8_png,BattleBackground1_png,bg_png,bg1_png",
+			"name":"bg"
 		}
 	],
 	"resources":[
@@ -338,11 +342,6 @@
 			"url":"assets/fish/f9.png"
 		},
 		{
-			"name":"bg_png",
-			"type":"image",
-			"url":"assets/bg.png"
-		},
-		{
 			"name":"game_json",
 			"type":"json",
 			"url":"config/game.json"
@@ -508,16 +507,6 @@
 			"url":"config/path/BombFish.track"
 		},
 		{
-			"name":"BombFishPoints_txt",
-			"type":"text",
-			"url":"config/path/BombFishPoints.txt"
-		},
-		{
-			"name":"BombFishPoints.txt_bak",
-			"type":"bin",
-			"url":"config/path/BombFishPoints.txt.bak"
-		},
-		{
 			"name":"C04[6]_track",
 			"type":"bin",
 			"url":"config/path/C04[6].track"
@@ -598,21 +587,6 @@
 			"url":"config/path/GoldenShark.track"
 		},
 		{
-			"name":"GoldenShark_txt",
-			"type":"text",
-			"url":"config/path/GoldenShark.txt"
-		},
-		{
-			"name":"index_toc",
-			"type":"bin",
-			"url":"config/path/index.toc"
-		},
-		{
-			"name":"index.toc_bak",
-			"type":"bin",
-			"url":"config/path/index.toc.bak"
-		},
-		{
 			"name":"LC17[3]_track",
 			"type":"bin",
 			"url":"config/path/LC17[3].track"
@@ -661,11 +635,6 @@
 			"name":"T_gt_track",
 			"type":"bin",
 			"url":"config/path/T_gt.track"
-		},
-		{
-			"name":"vssver2_scc",
-			"type":"bin",
-			"url":"config/path/vssver2.scc"
 		},
 		{
 			"name":"xiao1_track",
@@ -786,6 +755,51 @@
 			"name":"little_golden_shark_track",
 			"type":"bin",
 			"url":"config/path/little_golden_shark.track"
+		},
+		{
+			"name":"bg2_png",
+			"type":"image",
+			"url":"assets/bg/bg2.png"
+		},
+		{
+			"name":"bg3_png",
+			"type":"image",
+			"url":"assets/bg/bg3.png"
+		},
+		{
+			"name":"bg4_png",
+			"type":"image",
+			"url":"assets/bg/bg4.png"
+		},
+		{
+			"name":"bg6_png",
+			"type":"image",
+			"url":"assets/bg/bg6.png"
+		},
+		{
+			"name":"bg7_png",
+			"type":"image",
+			"url":"assets/bg/bg7.png"
+		},
+		{
+			"name":"bg8_png",
+			"type":"image",
+			"url":"assets/bg/bg8.png"
+		},
+		{
+			"name":"BattleBackground1_png",
+			"type":"image",
+			"url":"assets/bg/BattleBackground1.png"
+		},
+		{
+			"name":"bg_png",
+			"type":"image",
+			"url":"assets/bg/bg.png"
+		},
+		{
+			"name":"bg1_png",
+			"type":"image",
+			"url":"assets/bg/bg1.png"
 		}
 	]
 }

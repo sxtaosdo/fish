@@ -132,18 +132,13 @@ class ShellMovingEntityStateArrive {
 		//播放爆咋动画
 		//
 		this.client = ClientModel.instance;
-		console.log(entity.sid + "");
+		// console.log(entity.sid + "");
 		var dis: egret.Bitmap = <any>entity.getDisplayObject();
 		dis.texture = RES.getRes("net_png");
 		dis.anchorOffsetX = dis.width >> 1;
 		dis.anchorOffsetY = dis.height >> 1;
 		this.client.fishList.forEach(element => {
-			// var dis: egret.DisplayObject = element.displayObject;
-			// if (dis.hitTestPoint(dis.x, dis.y, false)) {
-			// 	if (dis.parent) {
-			// 		dis.parent.removeChild(dis);
-			// 	}
-			// }
+	
 			if (HitTestUtils.hitTest(dis, element.getDisplayObject())) {
 				element.getFSM().ChangeState(FishStateDeath.instance);
 			}

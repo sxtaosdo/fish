@@ -3,5 +3,6 @@
   "showTest":"true",
   "showLoading":"true",
   "version":"20160719_1111_0",
-  "showTestBox":"true"
+  "showTestBox":"true",
+  "showPathPoint":"true"
 }

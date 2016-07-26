@@ -62,7 +62,7 @@ class TestWindow extends BaseComponent implements IBase {
 	}
 
 	private onCutBtn(): void {
-
+		GameDispatcher.send(TestEvent.CHANGE_PATH);
 	}
 
 	private onSBtn(): void {

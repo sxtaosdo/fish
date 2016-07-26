@@ -10,6 +10,7 @@ class FishRenderer extends BaseMovingEntity implements IMovingEneity {
 	public currentPath: PathPoint;
 	public nextPath: PathPoint;
 	private vo: FishVo;
+	// public currentStep: number = 0;
 
 	public constructor() {
 		super();
@@ -43,8 +44,7 @@ class FishRenderer extends BaseMovingEntity implements IMovingEneity {
 			this.setMc(vo.id);
 		}
 		this.vo = vo;
-		// this.pathList = vo.path;
-		this.pathList = <any>ConfigModel.instance.pathList[RandomUtil.randInt(0, ConfigModel.instance.pathList.length - 1)];
+		this.pathList = vo.path;
 		this.name = vo.name;
 		this.pathStep = 0;
 		this.speedX = 0;
@@ -54,11 +54,11 @@ class FishRenderer extends BaseMovingEntity implements IMovingEneity {
 
 	private setMc(id: number): void {
 		var mc: egret.MovieClip;
-        // var key: number = RandomUtil.randInt(1, 20);
         var js: any = RES.getRes("f" + id + "_json");
         var tx: any = RES.getRes("f" + id + "_png");
         var data: egret.MovieClipDataFactory = new egret.MovieClipDataFactory(js, tx);
         mc = new egret.MovieClip(data.generateMovieClipData());
+		mc.stop();
         mc.rotation = 180;
 		mc.anchorOffsetX = mc.width >> 1;
 		mc.anchorOffsetY = mc.height >> 1;
