@@ -1,0 +1,7 @@
+{
+    "15602a5ec95": {
+        "path": "..\\resource\\game_skins\\baseSkin\\PlayerLvProgressBarSkin.ts",
+        "class": "PlayerLvProgressBarSkin",
+        "parentPath": "resource/eui_skins/ProgressBarSkin.exml"
+    }
+}
