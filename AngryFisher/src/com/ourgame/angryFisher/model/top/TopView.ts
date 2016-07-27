@@ -11,6 +11,7 @@ class TopView extends BaseComponent implements IBase {
 	public enter(data?: any): void {
 		if (this.skinLoaded) {
 			this.exitBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onExit, this);
+			this.execute(ClientModel.instance.gameState);
 		}
 	}
 

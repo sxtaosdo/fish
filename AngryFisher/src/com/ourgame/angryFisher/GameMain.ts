@@ -15,26 +15,35 @@ class GameMain extends egret.Sprite implements IBase {
 	public constructor() {
 		super();
 
-		this.topBar = new TopView();
-
-		this.addEventListener(egret.Event.ADDED_TO_STAGE, this.enter, this);
-
 		this.addChild(BitMapUtil.createBitmapByName("bg_png"));
+		this.addEventListener(egret.Event.ADDED_TO_STAGE, this.enter, this);
+		GameDispatcher.addEventListener(BaseEvent.ASSETS_COMPLETE_EVENT, this.onAssetsComplete, this);
+		GameDispatcher.addEventListener(BaseEvent.WINDOW_EVENT, this.onWindow, this);
 	}
-
 
 	public enter(data?: any): void {
 		GameDispatcher.addEventListener(BaseEvent.GAME_STATE_EVENT, this.onStateChange, this);
 		this.setDefoult();
 	}
 
+	private onAssetsComplete(): void {
+		this.topBar = new TopView();
+		this.addChild(this.topBar);
+		this.topBar.enter();
+	}
+
+	/**
+	 * 打开窗口
+	 */
+	private onWindow():void{
+
+	}
+
 	/**
 	 * 进入游戏后默认的设置
 	 */
 	private setDefoult(): void {
-		ClientModel.instance.changeGameState(new HallView());
-		this.addChild(this.topBar);
-		this.topBar.enter();
+		ClientModel.instance.changeGameState(new LoginView());
 	}
 
 	public exit(): void {
@@ -56,7 +65,9 @@ class GameMain extends egret.Sprite implements IBase {
 		this.currentState.enter();
 
 		this.addChildAt(<any>this.currentState, 0);
-		this.topBar.execute(newState);
+		if (this.topBar) {
+			this.topBar.execute(newState);
+		}
 	}
 
 }

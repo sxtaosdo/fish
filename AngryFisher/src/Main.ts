@@ -32,7 +32,7 @@ class Main extends eui.UILayer {
         RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
         RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
         RES.loadGroup("preload");
-        this.addChild(LoadingUI.instance);
+        // this.addChild(LoadingUI.instance);
     }
     private isThemeLoadEnd: boolean = false;
     /**
@@ -60,12 +60,12 @@ class Main extends eui.UILayer {
     }
     private createScene() {
         if (this.isThemeLoadEnd && this.isResourceLoadEnd) {
-            LoadingUI.instance.loadAssets(this.onAssetsComplete, this);
+            // LoadingUI.instance.loadAssets(this.onAssetsComplete, this);
+            this.addChild(this.game);
         }
     }
 
     private onAssetsComplete(): void {
-        this.addChild(this.game);
         if (ConfigModel.instance.showTest) {
             var test: TestWindow = new TestWindow();
             this.addChild(test);

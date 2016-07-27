@@ -49,6 +49,7 @@ var game_file_list = [
 	"bin-debug/com/ourgame/angryFisher/model/hall/HallView.js",
 	"bin-debug/com/ourgame/angryFisher/model/hall/RoomInfoListPanel.js",
 	"bin-debug/com/ourgame/angryFisher/model/loading/LoadingUI.js",
+	"bin-debug/com/ourgame/angryFisher/model/login/LoginView.js",
 	"bin-debug/com/ourgame/angryFisher/model/renderer/FishRenderer.js",
 	"bin-debug/com/ourgame/angryFisher/model/renderer/PlayerGunRenderer.js",
 	"bin-debug/com/ourgame/angryFisher/model/renderer/RoomInfoListRenderer.js",
