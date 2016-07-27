@@ -1,9 +1,10 @@
 class GameWorld extends egret.Sprite implements IBase {
-    private static bgNameList: Array<string> = ["bg2_png", "bg3_png", "bg4_png", "bg6_png", "bg7_png", "bg8_png", "BattleBackground1_png", "bg_png", "bg1_png"];
+
+
     private static that: GameWorld;
     private client: ClientModel;
     private currentPath: any;
-    private bg: egret.Bitmap = new egret.Bitmap();
+    private bg: DeabedPanel;
 
     public constructor() {
         super();
@@ -11,6 +12,7 @@ class GameWorld extends egret.Sprite implements IBase {
         this.client = ClientModel.instance;
         this.client.fishList = new Array<FishRenderer>();
         this.client.playerList = new Array<PlayerGunRenderer>();
+        this.bg = new DeabedPanel();
     }
 
     private test(): void {
@@ -21,6 +23,8 @@ class GameWorld extends egret.Sprite implements IBase {
     }
 
     public enter(data?: any): void {
+        this.addChild(this.bg);
+        this.bg.enter();
         var player: PlayerGunRenderer = new PlayerGunRenderer();
         this.addChild(player);
         player.enter();
@@ -31,7 +35,6 @@ class GameWorld extends egret.Sprite implements IBase {
         TimerManager.instance.doFrameLoop(1, this.onEnterFrame, this);
         GameDispatcher.addEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
         GameDispatcher.addEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
-
     }
 
     public exit(data?: any): void {
@@ -63,15 +66,15 @@ class GameWorld extends egret.Sprite implements IBase {
     private changePath(): void {
         var index: number = RandomUtil.randInt(0, ConfigModel.instance.pathList.length - 1);
         this.currentPath = ConfigModel.instance.pathList[index];
-        this.bg.texture = RES.getRes(GameWorld.bgNameList[RandomUtil.randInt(0, GameWorld.bgNameList.length - 1)]);
-        this.addChildAt(this.bg, 0);
+        // this.bg.texture = RES.getRes(GameWorld.bgNameList[RandomUtil.randInt(0, GameWorld.bgNameList.length - 1)]);
+        // this.addChildAt(this.bg, 0);
         this.drawPathPoint();
     }
 
     private drawPathPoint(): void {
         if (ConfigModel.instance.showPathPoint) {
-            if (this.contains(this.bg)) {   //显示路径点则不显示背景
-                this.removeChild(this.bg);
+            if (this.bg) {   //显示路径点则不显示背景
+                this.bg.execute(null);
             }
             this.graphics.clear();
             var color: number = 0x000000;
@@ -89,7 +92,7 @@ class GameWorld extends egret.Sprite implements IBase {
                     this.graphics.endFill();
                     index++;
                 });
-                color += 0xaa;
+                color += 0x88;
             });
         }
     }

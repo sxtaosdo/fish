@@ -3,6 +3,12 @@ class TestWindow extends BaseComponent implements IBase {
 	private curBtn: eui.Button;
 	private sBtn: eui.Button;
 	private ssBtn: eui.Button;
+
+	private changeMapBtn: eui.Button;
+	// private curBtn: eui.Button;
+	// private sBtn: eui.Button;
+	private closeBtn: eui.Button;
+
 	private numText: eui.Label;
 	private showNumText: eui.Label;
 	private main: Main;
@@ -26,6 +32,9 @@ class TestWindow extends BaseComponent implements IBase {
 			this.curBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onCutBtn, this);
 			this.sBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onSBtn, this);
 			this.ssBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.on8Btn, this);
+
+			this.changeMapBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onChangeMap, this);
+			this.closeBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClose, this);
 			TimerManager.instance.doLoop(1000, this.execute, this);
 
 			this.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.onTouchMove, this);
@@ -71,7 +80,17 @@ class TestWindow extends BaseComponent implements IBase {
 
 	private on8Btn(): void {
 		TimerManager.instance.doLoop(150, this.onAddBtn, this)
+	}
 
+	private onChangeMap(): void {
+		GameDispatcher.send(TestEvent.CHANGE_MAP);
+	}
+
+	private onclose(): void {
+		// GameDispatcher.send(TestEvent.CLOSE_EVENT);
+		if (this.parent) {
+			this.parent.removeChild(this);
+		}
 	}
 
 

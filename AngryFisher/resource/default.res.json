@@ -39,6 +39,10 @@
 		{
 			"keys":"topBg_png,topExitBtn1_png,topExitBtn2_png,topMoneyBg_png,topMailBtn1_png,topMailBtn2_png,topOpenationBtn1_png,topOpenationBtn2_png,toprechargeBtn1_png,toprechargeBtn2_png,topAutoBtn1_png,topAutoBtn2_png,topHelpBtn1_png,topHelpBtn2_png",
 			"name":"top"
+		},
+		{
+			"keys":"plant_4_json,plant_1_json,plant_1_png,plant_2_json,plant_2_png,plant_3_json,plant_3_png,plant_4_png",
+			"name":"bgPlant"
 		}
 	],
 	"resources":[
@@ -1041,6 +1045,46 @@
 			"name":"loadingRoomBg_png",
 			"type":"image",
 			"url":"assets/loading/loadingRoomBg.png"
+		},
+		{
+			"name":"plant_4_json",
+			"type":"json",
+			"url":"assets/bg/plant_4.json"
+		},
+		{
+			"name":"plant_1_json",
+			"type":"json",
+			"url":"assets/bg/plant_1.json"
+		},
+		{
+			"name":"plant_1_png",
+			"type":"image",
+			"url":"assets/bg/plant_1.png"
+		},
+		{
+			"name":"plant_2_json",
+			"type":"json",
+			"url":"assets/bg/plant_2.json"
+		},
+		{
+			"name":"plant_2_png",
+			"type":"image",
+			"url":"assets/bg/plant_2.png"
+		},
+		{
+			"name":"plant_3_json",
+			"type":"json",
+			"url":"assets/bg/plant_3.json"
+		},
+		{
+			"name":"plant_3_png",
+			"type":"image",
+			"url":"assets/bg/plant_3.png"
+		},
+		{
+			"name":"plant_4_png",
+			"type":"image",
+			"url":"assets/bg/plant_4.png"
 		}
 	]
 }
