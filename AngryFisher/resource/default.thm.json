@@ -38,6 +38,7 @@
     "resource/game_skins/LabbySkin.exml",
     "resource/game_skins/LoadSkin.exml",
     "resource/game_skins/TestSkin.exml",
+    "resource/renderer/HallRoomInfoListItemSkin.exml",
     "resource/renderer/PlayerGun.exml"
   ]
 }

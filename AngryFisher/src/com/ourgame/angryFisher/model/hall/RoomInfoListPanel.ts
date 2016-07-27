@@ -4,7 +4,7 @@
 class RoomInfoListPanel extends BaseComponent implements IBase {
 	private closeBtn: eui.Button;
 	private dataList: eui.List;
-	private collection: eui.ArrayCollection();
+	private collection: eui.ArrayCollection;
 
 	public constructor() {
 		super();
@@ -21,10 +21,12 @@ class RoomInfoListPanel extends BaseComponent implements IBase {
 	}
 
 	public enter(data?: any): void {
+		var temp: RoomInfoVo = data;
 		if (this.skinLoaded) {
 			this.closeBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onCloseBtn, this);
+			this.dataList.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onSelect, this);
 			this.collection.removeAll();
-			data.forEach(element => {
+			temp.list.forEach(element => {
 				this.collection.addItem(element);
 			});
 			this.dataList.dataProvider = this.collection;
@@ -44,5 +46,13 @@ class RoomInfoListPanel extends BaseComponent implements IBase {
 
 	private onCloseBtn(): void {
 		this.exit();
+	}
+
+	private onSelect(evt: eui.ItemTapEvent): void {
+		if (1) {
+			ClientModel.instance.changeGameState(new GameWorld());
+		} else {
+
+		}
 	}
 }

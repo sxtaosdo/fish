@@ -8,6 +8,7 @@ class ConfigModel {
 
     /**路径列表 */
     private _pathList: Array<Object> = new Array<Object>();
+    private _roomList: Array<RoomInfoVo> = new Array<RoomInfoVo>();
 
     private _version: string = "";
     private _debug: boolean = false;
@@ -99,6 +100,15 @@ class ConfigModel {
         // console.log(this._pathList);
     }
 
+    public parseRoomList(data: any): void {
+        var key: any;
+        for (key in data.room) {
+            var vo: RoomInfoVo = new RoomInfoVo();
+            vo.analysis(data.room[key]);
+            this._roomList.push(vo);
+        }
+    }
+
     public get version(): string {
         return this._version;
     }
@@ -125,6 +135,10 @@ class ConfigModel {
 
     public get showPathPoint(): boolean {
         return this._showPathPoint
+    }
+
+    public get roomList(): Array<RoomInfoVo> {
+        return this._roomList;
     }
 
 }

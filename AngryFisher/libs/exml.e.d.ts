@@ -64,5 +64,7 @@ declare class LoadSkin extends eui.Skin{
 }
 declare class TestSkin extends eui.Skin{
 }
+declare class HallRoomInfoListItemSkin extends eui.Skin{
+}
 declare class PlayerGun extends eui.Skin{
 }

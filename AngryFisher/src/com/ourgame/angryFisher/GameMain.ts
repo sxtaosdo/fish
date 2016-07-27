@@ -42,22 +42,16 @@ class GameMain extends egret.Sprite implements IBase {
 	}
 
 	private onStateChange(evt: any): void {
-		var newState: IBase = ClientModel.instance.gameState
-		if (this.previousState == null) {
-			this.previousState = newState;
-			this.previousState.enter();
-			this.addChild(<any>this.previousState);
-		} else {
-			if (newState != null) {
-				this.previousState = this.currentState;
-				this.currentState.exit();
-				this.currentState = newState;
-				this.currentState.enter();
-			} else {
-				console.error("newState is :" + newState);
-			}
-			this.addChild(<any>this.currentState);
+		var newState: IBase = ClientModel.instance.gameState;
+
+		this.previousState = this.currentState;
+		if (this.previousState != null) {
+			this.previousState.exit();
 		}
+		this.currentState = newState;
+		this.currentState.enter();
+
+		this.addChild(<any>this.currentState);
 	}
 
 }

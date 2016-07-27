@@ -43,14 +43,14 @@
           "name": "好运新手场",
           "state": 1,
           "min": 0,
-          "desc": "可获得Big Double<br>可获得巨奖"
+          "desc": "可获得Big Double\n可获得巨奖"
         },
         {
           "index": 2,
           "name": "大师场",
           "state": 1,
           "min": 20000,
-          "desc": "高概率获得Big Double<br>记忆获得巨奖"
+          "desc": "高概率获得Big Double\n记忆获得巨奖"
         },
         {
           "index": 3,

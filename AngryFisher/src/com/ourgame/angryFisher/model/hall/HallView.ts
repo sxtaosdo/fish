@@ -15,7 +15,10 @@ class HallView extends BaseComponent implements IBase {
 	}
 
 	public exit(): void {
-
+		if (this.parent != null) {
+			this.parent.removeChild(this);
+		}
+		this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this)
 	}
 
 	public execute(data?: any): void {
@@ -26,15 +29,15 @@ class HallView extends BaseComponent implements IBase {
 		evt.target.name
 		switch (evt.target) {
 			case this.room1Btn:
-				this.showRoomInfoListPanel();
+				this.showRoomInfoListPanel(ConfigModel.instance.roomList[0]);
 				break;
 			case this.room2Btn:
-				this.showRoomInfoListPanel();
+				this.showRoomInfoListPanel(ConfigModel.instance.roomList[1]);
 				break;
 		}
 	}
 
-	private showRoomInfoListPanel(data?: any): void {
+	private showRoomInfoListPanel(data: RoomInfoVo): void {
 		if (this.roomInfoPanel == null) {
 			this.roomInfoPanel = new RoomInfoListPanel();
 		}
