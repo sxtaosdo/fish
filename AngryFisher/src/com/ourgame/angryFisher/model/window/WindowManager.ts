@@ -47,7 +47,7 @@ class WindowManager extends egret.Sprite {
             this.addPopUp(this.winList[panel], true);
             this.winList[panel].enter(data);
             this.currentWin = this.winList[panel];
-            console.log("打开窗口：" + this.currentWin);
+            // console.log("打开窗口：" + this.currentWin);
         }
     }
 

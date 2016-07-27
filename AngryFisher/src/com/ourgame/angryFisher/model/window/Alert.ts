@@ -3,16 +3,18 @@
  * @author sxt
  */
 class Alert extends BaseComponent implements IWindow {
-    
+
     public static SHOW_TIME: number = 2500;
-    private context: egret.TextField;
+    private contentText: eui.Label;
+    private okBtn: eui.Button;
+    private returnBtn: eui.Button;
     private bg: egret.Sprite;
-    private imageBg: egret.Bitmap;
-    private contentSp: egret.Sprite;
     private isShow: boolean = false;
+    private info: Object;
 
     public constructor() {
-        super(false);
+        super();
+        this.skinName = "resource/game_skins/window/AlertSkin.exml";
         this.init();
     }
 
@@ -21,24 +23,16 @@ class Alert extends BaseComponent implements IWindow {
         // console.log("1 alert剩余数量：" + WindowManager.instance.alertDataList.length);
         if (this.isShow == false) {
             this.isShow = true;
-            var info: Object = WindowManager.instance.alertDataList.shift();
-            console.warn("Alert的enter方法，info：" + info)
-            if (info != null) {
-                this.contentSp.alpha = 0;
+            this.info = WindowManager.instance.alertDataList.shift();
+            if (this.info != null) {
                 this.alpha = 1;
-                this.context.text = info["text"];
-                this.context.size = 26;
-                this.context.textColor = 0xffffff;
-                this.context.y = (Main.GAME_HEIGHT - this.context.textHeight) >> 1;
-                this.imageBg.y = this.context.y - 1;
-                egret.Tween.removeTweens(this.contentSp);
-                egret.Tween.get(this.contentSp).to({ alpha: 1 }, 100);
-                egret.Tween.removeTweens(this);
-                egret.Tween.get(this).wait(Alert.SHOW_TIME - 300).to({ alpha: 0 }, 150).wait(0).call(this.onShowComplete, this);
+                this.contentText.text = this.info["text"];
             } else {
                 this.isShow = false;
                 ClientModel.instance.openWindow(null);
             }
+            this.okBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onOkBtn, this);
+            this.returnBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onReturnBtn, this);
         }
     }
 
@@ -56,8 +50,10 @@ class Alert extends BaseComponent implements IWindow {
     }
 
     public exit(data?: any): void {
-        this.context.text = "";
+        this.contentText.text = "";
         TimerManager.instance.clearTimer(ClientModel.instance.openWindow);
+        ClientModel.instance.openWindow(null);
+        this.isShow = false;
     }
 
     public destroy(): void {
@@ -65,23 +61,28 @@ class Alert extends BaseComponent implements IWindow {
     }
 
     public init(): void {
-        this.contentSp = new egret.Sprite();
-        this.addChild(this.contentSp);
-
-        this.imageBg = BitMapUtil.createBitmapByName("alert_bg_png");
-        this.contentSp.addChild(this.imageBg);
-
-        this.context = new egret.TextField();
-        this.context.textColor = 0x000000;
-        this.context.width = 290;
-        this.context.height = Main.GAME_HEIGHT;
-        this.context.textAlign = egret.HorizontalAlign.CENTER;
-        this.contentSp.addChild(this.context);
-
         this.bg = new egret.Sprite();
         this.bg.graphics.beginFill(0xffffff, 0);
         this.bg.graphics.drawRect(0, 0, Main.GAME_WIDTH, Main.GAME_HEIGHT);
         this.bg.graphics.endFill();
         this.addChildAt(this.bg, 0);
+    }
+
+    private onOkBtn(): void {
+        if (this.info) {
+            if (this.info["okFun"]) {
+                this.info["okFun"]();
+            }
+        }
+        this.exit();
+    }
+
+    private onReturnBtn(): void {
+        if (this.info) {
+            if (this.info["canelFun"]) {
+                this.info["canelFun"]();
+            }
+        }
+        this.exit();
     }
 }

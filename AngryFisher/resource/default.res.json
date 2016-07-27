@@ -25,7 +25,7 @@
 			"name":"bg"
 		},
 		{
-			"keys":"loadingBar_png,loadingBarBg_png,loadingBg_png",
+			"keys":"loadingBar_png,loadingBarBg_png,loadingBg_png,loadingRoomBar_png,loadingRoomBarBg_png,loadingRoomBg_png",
 			"name":"loading"
 		},
 		{
@@ -1026,6 +1026,21 @@
 			"name":"topHelpBtn2_png",
 			"type":"image",
 			"url":"assets/top/topHelpBtn2.png"
+		},
+		{
+			"name":"loadingRoomBar_png",
+			"type":"image",
+			"url":"assets/loading/loadingRoomBar.png"
+		},
+		{
+			"name":"loadingRoomBarBg_png",
+			"type":"image",
+			"url":"assets/loading/loadingRoomBarBg.png"
+		},
+		{
+			"name":"loadingRoomBg_png",
+			"type":"image",
+			"url":"assets/loading/loadingRoomBg.png"
 		}
 	]
 }

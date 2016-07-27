@@ -66,11 +66,11 @@ class Main extends eui.UILayer {
     }
 
     private onAssetsComplete(): void {
-        if (ConfigModel.instance.showTest) {
-            var test: TestWindow = new TestWindow();
-            this.addChild(test);
-            test.enter(this);
-        }
+        // if (ConfigModel.instance.showTest) {
+        //     var test: TestWindow = new TestWindow();
+        //     this.addChild(test);
+        //     test.enter(this);
+        // }
     }
 
     /**

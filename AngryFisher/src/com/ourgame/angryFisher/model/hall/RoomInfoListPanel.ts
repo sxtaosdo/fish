@@ -56,7 +56,12 @@ class RoomInfoListPanel extends BaseComponent implements IBase {
 
 	private onSelect(evt: eui.ItemTapEvent): void {
 		if (1) {
-			ClientModel.instance.changeGameState(new GameWorld());
+			// ClientModel.instance.changeGameState(new GameWorld());
+			ClientModel.instance.changeGameState(LoadingUI.instance);
+			LoadingUI.instance.enter("resource/game_skins/LoadRoomSkin.exml");
+			LoadingUI.instance.loadAssets(() => {
+				ClientModel.instance.changeGameState(new GameWorld());
+			}, LoadingUI.assets2);
 		} else {
 
 		}

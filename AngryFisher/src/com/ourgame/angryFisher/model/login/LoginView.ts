@@ -45,10 +45,11 @@ class LoginView extends egret.Sprite implements IBase {
 
 		var tip: egret.TextField = new egret.TextField();
 		tip.text = "点击屏幕登陆游戏";
-		this.addChild(title);
 		tip.size = 20;
 		tip.x = this.nameTip.x;
 		tip.y = this.nameTip.y + 200;
+		tip.textColor = 0x010101;
+		this.addChild(tip);
 
 		egret.Tween.get(sp).to({ alpha: 0.1 }, 15000)
 		sp.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this);
@@ -73,6 +74,6 @@ class LoginView extends egret.Sprite implements IBase {
 		ClientModel.instance.changeGameState(LoadingUI.instance);	//应该等服务器的登陆结果
 		LoadingUI.instance.loadAssets(() => {
 			ClientModel.instance.changeGameState(new HallView());
-		});
+		}, LoadingUI.assets1);
 	}
 }

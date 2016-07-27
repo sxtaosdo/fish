@@ -155,11 +155,7 @@ class ClientModel {
             ClientModel.instance._currentWin = value;
         }
         GameDispatcher.send(BaseEvent.WINDOW_EVENT);
-        // if (ClientModel.instance._currentWin == null) {
-        //     WindowManager.instance.close(value, data);
-        // } else {
         WindowManager.instance.open(value, data);
-        // }
     }
 
     /**
