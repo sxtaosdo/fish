@@ -1,0 +1,72 @@
+{
+  "room": {
+    "room1": {
+      "id": 1,
+      "name": "免费体验馆",
+      "list": [
+        {
+          "index": 1,
+          "name": "海洋体验|新手海岛",
+          "state": 1,
+          "min": 0,
+          "desc": ""
+        },
+        {
+          "index": 2,
+          "name": "贝壳寻宝试玩场",
+          "state": 1,
+          "min": 0,
+          "desc": ""
+        },
+        {
+          "index": 3,
+          "name": "好运玩法试玩场",
+          "state": 1,
+          "min": 0,
+          "desc": ""
+        },
+        {
+          "index": 4,
+          "name": "",
+          "state": 0,
+          "min": 0,
+          "desc": ""
+        }
+      ]
+    },
+    "room2": {
+      "id": 2,
+      "name": "好运场",
+      "list": [
+        {
+          "index": 1,
+          "name": "好运新手场",
+          "state": 1,
+          "min": 0,
+          "desc": "可获得Big Double<br>可获得巨奖"
+        },
+        {
+          "index": 2,
+          "name": "大师场",
+          "state": 1,
+          "min": 20000,
+          "desc": "高概率获得Big Double<br>记忆获得巨奖"
+        },
+        {
+          "index": 3,
+          "name": "",
+          "state": 0,
+          "min": 0,
+          "desc": ""
+        },
+        {
+          "index": 4,
+          "name": "",
+          "state": 0,
+          "min": 0,
+          "desc": ""
+        }
+      ]
+    }
+  }
+}

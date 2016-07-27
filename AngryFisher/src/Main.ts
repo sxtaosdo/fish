@@ -85,7 +85,6 @@ class Main extends eui.UILayer {
      * Resource group loading failed
      */
     private onResourceLoadError(event: RES.ResourceEvent): void {
-        //TODO
         console.warn("Group:" + event.groupName + " has failed to load");
         //忽略加载失败的项目
         //ignore loading failed projects

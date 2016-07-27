@@ -86,7 +86,7 @@ class ClientModel {
 	/**
 	 * 状态机
 	 */
-    public setGameState(state: IBase): void {
+    public changeGameState(state: IBase): void {
         if (this._gameState == state) {
             return;
         }

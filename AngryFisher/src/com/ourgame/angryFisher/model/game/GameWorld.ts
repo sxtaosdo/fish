@@ -11,7 +11,6 @@ class GameWorld extends egret.Sprite implements IBase {
         this.client = ClientModel.instance;
         this.client.fishList = new Array<FishRenderer>();
         this.client.playerList = new Array<PlayerGunRenderer>();
-        TimerManager.instance.doLoop(500, this.test, this);
     }
 
     private test(): void {
@@ -27,11 +26,12 @@ class GameWorld extends egret.Sprite implements IBase {
         player.enter();
         this.client.playerList.push(player);
 
+        this.changePath();
+        TimerManager.instance.doLoop(500, this.test, this);
         TimerManager.instance.doFrameLoop(1, this.onEnterFrame, this);
         GameDispatcher.addEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
         GameDispatcher.addEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
 
-        this.changePath();
     }
 
     public exit(data?: any): void {

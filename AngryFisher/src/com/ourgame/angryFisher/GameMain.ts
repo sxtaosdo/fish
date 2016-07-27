@@ -28,7 +28,9 @@ class GameMain extends egret.Sprite implements IBase {
 	 * 进入游戏后默认的设置
 	 */
 	private setDefoult(): void {
-		ClientModel.instance.setGameState(new GameWorld());//目前默认进入游戏界面
+		// ClientModel.instance.changeGameState(new GameWorld());//目前默认进入游戏界面
+		ClientModel.instance.changeGameState(new HallView());//目前默认进入游戏界面
+
 	}
 
 	public exit(): void {

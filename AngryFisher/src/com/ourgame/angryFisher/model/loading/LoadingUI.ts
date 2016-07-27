@@ -4,6 +4,7 @@
 class LoadingUI extends BaseComponent implements IBase {
 
     private versionText: eui.Label;
+    private bar: eui.ProgressBar;
     private tipText: eui.Label;
     private tempText: eui.Label;
     private current: number = 0;
@@ -12,7 +13,7 @@ class LoadingUI extends BaseComponent implements IBase {
 
     private static _instance: LoadingUI;
     private static tipList: Array<string> = ["抵制不良游戏，拒绝盗版游戏", "注意自我保护，谨防受骗上当", "适度游戏益脑，沉迷游戏伤身", "合理安排时间，享受健康生活"];
-    private static assetsList: Array<string> = ["fish", "config",  "player","bg"];
+    private static assetsList: Array<string> = ["fish", "config", "player", "bg"];
     private static total: number = LoadingUI.assetsList.length;
 
     public constructor() {
@@ -63,7 +64,7 @@ class LoadingUI extends BaseComponent implements IBase {
             RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
             LoadingUI.instance.tempText.text = "资源加载完毕！";
             if (this.callBack != null) {
-                this.callBack.call(this.callObj);
+                this.callBack.apply(this.callObj);
             }
             LoadingUI.instance.exit();
             ClientModel.instance.onAssetsComplete();
@@ -92,6 +93,9 @@ class LoadingUI extends BaseComponent implements IBase {
     public setProgress(current, total): void {
         if (LoadingUI.instance.tempText != null) {
             LoadingUI.instance.tempText.text = "当前加载进度：[" + Math.floor((current / total) * 100) + "/100]" + "\n总进度：" + "[" + LoadingUI.instance.current + "/" + LoadingUI.total + "]";
+        }
+        if (LoadingUI.instance.skinLoaded) {
+            LoadingUI.instance.bar.value = current / total;
         }
     }
 

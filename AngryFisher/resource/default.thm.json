@@ -13,7 +13,8 @@
     "eui.VScrollBar": "resource/eui_skins/VScrollBarSkin.exml",
     "eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
     "eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml",
-    "PlayerLvProgressBarSkin": "resource/eui_skins/PlayerLvProgressBarSkin.exml"
+    "PlayerLvProgressBarSkin": "resource/eui_skins/PlayerLvProgressBarSkin.exml",
+    "LoadingProgressBarSkin": "resource/eui_skins/LoadingProgressBarSkin.exml"
   },
   "autoGenerateExmlsList": true,
   "exmls": [
@@ -30,7 +31,11 @@
     "resource/eui_skins/ToggleSwitchSkin.exml",
     "resource/eui_skins/VScrollBarSkin.exml",
     "resource/eui_skins/VSliderSkin.exml",
+    "resource/game_skins/AlertSkin.exml",
+    "resource/game_skins/baseSkin/LoadingProgressBarSkin.exml",
     "resource/game_skins/baseSkin/PlayerLvProgressBarSkin.exml",
+    "resource/game_skins/LabbyRoomInfoListSkin.exml",
+    "resource/game_skins/LabbySkin.exml",
     "resource/game_skins/LoadSkin.exml",
     "resource/game_skins/TestSkin.exml",
     "resource/renderer/PlayerGun.exml"
