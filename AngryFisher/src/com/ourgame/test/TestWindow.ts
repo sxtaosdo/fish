@@ -40,7 +40,7 @@ class TestWindow extends BaseComponent implements IBase {
 	public execute(data?: any): void {
 		if (this.skinLoaded) {
 			this.numText.text = "生成数:" + EntityManager.instance.length;
-			this.showNumText.text = "显示数:" + (<egret.DisplayObjectContainer>this.main.game.getChildAt(1)).numChildren;
+			this.showNumText.text = "显示数:" + (<egret.DisplayObjectContainer>this.main.game.getChildAt(0)).numChildren;
 		}
 	}
 

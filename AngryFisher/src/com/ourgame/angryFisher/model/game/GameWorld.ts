@@ -35,7 +35,13 @@ class GameWorld extends egret.Sprite implements IBase {
     }
 
     public exit(data?: any): void {
-
+        if (this.parent != null) {
+            this.parent.removeChild(this);
+        }
+        TimerManager.instance.clearTimer(this.test);
+        TimerManager.instance.clearTimer(this.onEnterFrame);
+        GameDispatcher.removeEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
+        GameDispatcher.removeEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
     }
 
     public execute(): void {

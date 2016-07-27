@@ -7,7 +7,7 @@ class RoomInfoListPanel extends BaseComponent implements IBase {
 	private collection: eui.ArrayCollection;
 
 	public constructor() {
-		super();
+		super(false);
 		var sp: egret.Sprite = new egret.Sprite();
 		sp.graphics.beginFill(0x000000, 0);
 		sp.graphics.drawRect(-Main.GAME_WIDTH >> 1, -Main.GAME_HEIGHT >> 1, Main.GAME_WIDTH, Main.GAME_HEIGHT);
@@ -18,6 +18,12 @@ class RoomInfoListPanel extends BaseComponent implements IBase {
 		this.skinName = "resource/game_skins/LabbyRoomInfoListSkin.exml";
 		this.dataList.itemRenderer = RoomInfoListRenderer;
 		this.collection = new eui.ArrayCollection();
+	}
+
+	protected onSkinComplete(e: any): void {
+		super.onSkinComplete(e);
+		this.x = (Main.GAME_WIDTH - this.width) / 3;
+		this.y = (Main.GAME_HEIGHT - this.height) >> 1;
 	}
 
 	public enter(data?: any): void {

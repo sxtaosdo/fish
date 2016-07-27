@@ -29,4 +29,8 @@ class GameDispatcher extends egret.EventDispatcher {
     public static addEventListener(type: string,callback: Function,self:any): void {
         GameDispatcher.instance.addEventListener(type,callback,self);
     }
+
+    public static removeEventListener(type: string,callback: Function,self:any): void {
+        GameDispatcher.instance.removeEventListener(type,callback,self);
+    }
 }
