@@ -1,35 +1,3 @@
-// class MovingEntityState implements IState {
-
-// 	private static _instance: MovingEntityState;
-
-// 	public constructor() {
-// 	}
-
-// 	public static get instance(): MovingEntityState {
-// 		if (this._instance == null) {
-// 			this._instance = new MovingEntityState();
-// 		}
-// 		return this._instance;
-// 	}
-
-
-//     public onMessage(entity: IBaseGameEntity, telegram: Telegram): boolean {
-// 		return false;
-// 	}
-
-//     public enter(entity: IBaseGameEntity): void {
-
-// 	}
-
-//     public execute(entity: IBaseGameEntity): void {
-
-// 	}
-
-//     public exit(entity: IBaseGameEntity): void {
-
-// 	}
-
-// }
 /**
  * 寻找
  */
@@ -107,7 +75,7 @@ class ShellMovingEntityStateSeek implements IState {
 /**
  * 抵达
  */
-class ShellMovingEntityStateArrive {
+class ShellMovingEntityStateArrive implements IState {
 	private static _instance: ShellMovingEntityStateArrive;
 	private client: ClientModel;
 
@@ -131,7 +99,7 @@ class ShellMovingEntityStateArrive {
 	//收金币动画
     public enter(entity: IBaseGameEntity): void {
 		this.client = ClientModel.instance;
-		// console.log(entity.sid + "");
+		var shell: ShellRenderer = <ShellRenderer>entity;
 		var dis: egret.Bitmap = <any>entity.getDisplayObject();
 		dis.texture = RES.getRes("net_png");
 		dis.anchorOffsetX = dis.width >> 1;
@@ -143,6 +111,7 @@ class ShellMovingEntityStateArrive {
 				}
 			}
 		});
+		HitGoldAnimation.instance.enter({ target: shell.owner, money: 99, x: dis.x, y: dis.y });
 		entity.getFSM().ChangeState(ShellMovingEntityStateDeath.instance);
 	}
 
@@ -156,7 +125,7 @@ class ShellMovingEntityStateArrive {
 }
 
 
-class ShellMovingEntityStateDeath {
+class ShellMovingEntityStateDeath implements IState {
 	private static _instance: ShellMovingEntityStateDeath;
 	private client: ClientModel;
 

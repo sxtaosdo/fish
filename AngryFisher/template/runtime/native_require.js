@@ -47,6 +47,7 @@ var game_file_list = [
 	"bin-debug/com/ourgame/angryFisher/GameMain.js",
 	"bin-debug/com/ourgame/angryFisher/model/game/DeabedPanel.js",
 	"bin-debug/com/ourgame/angryFisher/model/game/GameWorld.js",
+	"bin-debug/com/ourgame/angryFisher/model/game/HitGoldAnimation.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/BaseComponent.js",
 	"bin-debug/com/ourgame/angryFisher/model/hall/HallView.js",
 	"bin-debug/com/ourgame/angryFisher/model/hall/RoomInfoListPanel.js",
