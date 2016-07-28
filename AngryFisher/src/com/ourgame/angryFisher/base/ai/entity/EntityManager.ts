@@ -62,7 +62,7 @@ class EntityManager {
                 if (entity != null) {
                     if (entity.isDestroy == true) {
                         availableEntity = entity;
-                        return availableEntity;
+                        // return availableEntity;
                     }
                 }
             }

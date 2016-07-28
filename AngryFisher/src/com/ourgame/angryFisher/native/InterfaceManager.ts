@@ -49,6 +49,16 @@ class InterfaceManager {
 
     }
 
+    public get isMove(): boolean {
+        switch (egret.Capabilities.os) {
+            case "iOS":
+            case "Android":
+                return true;
+            default:
+                return false;
+        }
+    }
+
     public static get instance(): InterfaceManager {
         if (this._instance == null) {
             this._instance = new InterfaceManager();

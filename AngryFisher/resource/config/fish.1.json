@@ -1,0 +1,108 @@
+{
+    "config": {
+        "fish1": {
+            "name": "小鱼",
+            "id": 1,
+            "path": [
+            ]
+        },
+        "fish2": {
+            "name": "中鱼",
+            "id": 2,
+            "path": [
+
+            ]
+        },
+        "fish3": {
+            "name": "大鱼",
+            "id": 3,
+            "path": [
+
+            ]
+        },
+        "fish4": {
+            "name": "鱼",
+            "id": 4,
+            "path": [
+            ]
+        },
+        "fish5": {
+            "name": "鱼1",
+            "id": 5,
+            "path": [
+            ]
+        },
+        "fish6": {
+            "name": "鱼2",
+            "id": 7,
+            "path": [
+            ]
+        },
+        "fish7": {
+            "name": "鱼2",
+            "id": 8,
+            "path": [
+            ]
+        },
+        "fish8": {
+            "name": "鱼2",
+            "id": 8,
+            "path": [
+            ]
+        },
+        "fish9": {
+            "name": "鱼2",
+            "id": 9,
+            "path": [
+            ]
+        },
+        "fish10": {
+            "name": "鱼2",
+            "id": 10,
+            "path": [
+            ]
+        },
+        "fish11": {
+            "name": "鱼2",
+            "id": 11,
+            "path": [
+            ]
+        },
+        "fish12": {
+            "name": "鱼2",
+            "id": 12,
+            "path": [
+            ]
+        },
+        "fish13": {
+            "name": "鱼2",
+            "id": 13,
+            "path": [
+            ]
+        },
+        "fish14": {
+            "name": "鱼2",
+            "id": 14,
+            "path": [
+            ]
+        },
+        "fish15": {
+            "name": "鱼2",
+            "id": 15,
+            "path": [
+            ]
+        },
+        "fish16": {
+            "name": "鱼2",
+            "id": 16,
+            "path": [
+            ]
+        },
+        "fish17": {
+            "name": "鱼2",
+            "id": 18,
+            "path": [
+            ]
+        }
+    }
+}

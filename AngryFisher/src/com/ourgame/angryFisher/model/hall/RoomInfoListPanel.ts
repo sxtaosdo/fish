@@ -10,7 +10,7 @@ class RoomInfoListPanel extends BaseComponent implements IBase {
 		super(false);
 		var sp: egret.Sprite = new egret.Sprite();
 		sp.graphics.beginFill(0x000000, 0);
-		sp.graphics.drawRect(-Main.GAME_WIDTH >> 1, -Main.GAME_HEIGHT >> 1, Main.GAME_WIDTH, Main.GAME_HEIGHT);
+		sp.graphics.drawRect(-207, -155, Main.GAME_WIDTH, Main.GAME_HEIGHT);
 		sp.graphics.endFill();
 		this.addChild(sp);
 		// this.width = Main.GAME_WIDTH;

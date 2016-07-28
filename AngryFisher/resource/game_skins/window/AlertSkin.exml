@@ -18,4 +18,5 @@
 		</e:skinName>
 	</e:Button>
 	<e:Label id="contentText" text="你好世界" x="26" y="27" width="423" height="74" verticalAlign="middle" textAlign="center" size="28"/>
+	<e:Label text="提示" x="35" y="5" size="14" bold="true"/>
 </e:Skin>

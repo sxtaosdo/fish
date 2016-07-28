@@ -17,7 +17,7 @@
 			"name":"main"
 		},
 		{
-			"keys":"playerBg_png,playerLvBarBar_png,playerLvBarBg_png,robot_png,playerShell_png,net_png",
+			"keys":"playerBg_png,playerLvBarBar_png,playerLvBarBg_png,robot_png,playerShell_png,net_png,hitAwardGold_json,hitAwardGold_png",
 			"name":"player"
 		},
 		{
@@ -29,7 +29,7 @@
 			"name":"loading"
 		},
 		{
-			"keys":"lobbyBg_png,lobbyJpBg_png,lobbyRankBg_png,pageBtn1_png,pageBtn2_png,pageBtn3_png,lobbyRoomListBg_png,lobbyRoom1Btn1_png,lobbyRoom1Btn2_png,lobbyRoom2Btn1_png,lobbyRoom2Btn2_png,lobbyRoom3Btn1_png,lobbyRoom3Btn2_png,lobbyRoom4Btn1_png,lobbyRoom4Btn2_png,lobbyRoomListCloseBtn1_png,lobbyRoomListCloseBtn2_png,lobbyTeammateBg_png,lobbyRoonListItemBg_png",
+			"keys":"lobbyBg_png,lobbyJpBg_png,lobbyRankBg_png,pageBtn1_png,pageBtn2_png,pageBtn3_png,lobbyRoomListBg_png,lobbyRoom1Btn1_png,lobbyRoom1Btn2_png,lobbyRoom2Btn1_png,lobbyRoom2Btn2_png,lobbyRoom3Btn1_png,lobbyRoom3Btn2_png,lobbyRoom4Btn1_png,lobbyRoom4Btn2_png,lobbyRoomListCloseBtn1_png,lobbyRoomListCloseBtn2_png,lobbyTeammateBg_png,lobbyRoonListItemBg_png,lightMc_json,lightMc_png,qiPaoMc_json,qiPaoMc_png",
 			"name":"labby"
 		},
 		{
@@ -43,6 +43,10 @@
 		{
 			"keys":"plant_4_json,plant_1_json,plant_1_png,plant_2_json,plant_2_png,plant_3_json,plant_3_png,plant_4_png",
 			"name":"bgPlant"
+		},
+		{
+			"keys":"fish1_json,fish1_png,fishd1_json,fishd1_png",
+			"name":"fish1"
 		}
 	],
 	"resources":[
@@ -1090,6 +1094,56 @@
 			"name":"deabed_json",
 			"type":"json",
 			"url":"config/deabed.json"
+		},
+		{
+			"name":"lightMc_json",
+			"type":"json",
+			"url":"assets/lobby/mc/lightMc.json"
+		},
+		{
+			"name":"lightMc_png",
+			"type":"image",
+			"url":"assets/lobby/mc/lightMc.png"
+		},
+		{
+			"name":"qiPaoMc_json",
+			"type":"json",
+			"url":"assets/lobby/mc/qiPaoMc.json"
+		},
+		{
+			"name":"qiPaoMc_png",
+			"type":"image",
+			"url":"assets/lobby/mc/qiPaoMc.png"
+		},
+		{
+			"name":"fish1_json",
+			"type":"json",
+			"url":"assets/fish1/fish1.json"
+		},
+		{
+			"name":"fish1_png",
+			"type":"image",
+			"url":"assets/fish1/fish1.png"
+		},
+		{
+			"name":"fishd1_json",
+			"type":"json",
+			"url":"assets/fish1/fishd1.json"
+		},
+		{
+			"name":"fishd1_png",
+			"type":"image",
+			"url":"assets/fish1/fishd1.png"
+		},
+		{
+			"name":"hitAwardGold_json",
+			"type":"json",
+			"url":"assets/player/mc/hitAwardGold.json"
+		},
+		{
+			"name":"hitAwardGold_png",
+			"type":"image",
+			"url":"assets/player/mc/hitAwardGold.png"
 		}
 	]
 }

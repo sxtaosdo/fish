@@ -13,6 +13,7 @@ class TopView extends BaseComponent implements IBase {
 		if (this.skinLoaded) {
 			this.exitBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onExit, this);
 			this.operationBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onOperation, this);
+			this.autoBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onAuto, this);
 			this.execute(ClientModel.instance.gameState);
 		}
 	}
@@ -20,6 +21,7 @@ class TopView extends BaseComponent implements IBase {
 	public exit(): void {
 		this.exitBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onExit, this);
 		this.operationBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onOperation, this);
+			this.autoBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onAuto, this);
 	}
 
 	public execute(data?: any): void {
@@ -45,5 +47,9 @@ class TopView extends BaseComponent implements IBase {
             this.stage.addChild(test);
             test.enter(this.parent.parent);
         }
+	}
+
+	private onAuto():void{
+		
 	}
 }

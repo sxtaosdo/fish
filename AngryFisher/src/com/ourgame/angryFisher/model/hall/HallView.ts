@@ -3,6 +3,8 @@ class HallView extends BaseComponent implements IBase {
 	private room1Btn: eui.Button;
 	private room2Btn: eui.Button;
 	private roomInfoPanel: RoomInfoListPanel;
+	private lightMc: egret.MovieClip;
+	private qpMc: egret.MovieClip;
 
 	public constructor() {
 		super();
@@ -11,13 +13,30 @@ class HallView extends BaseComponent implements IBase {
 	}
 
 	public enter(data?: any): void {
+		console.log(egret.Capabilities.runtimeType);
 
+		if (!egret.Capabilities.isMobile) {
+			// this.lightMc = MovieclipUtils.createMc("lightMc_png", "lightMc_json");
+			// this.lightMc.play(-1);
+			// this.lightMc.y = -100;
+			// this.addChildAt(this.lightMc, 1);
+		}
+
+		this.qpMc = MovieclipUtils.createMc("qiPaoMc_png", "qiPaoMc_json");
+		this.qpMc.play(-1);
+		this.qpMc.x = 300;
+		this.qpMc.y = 400;
+		this.addChildAt(this.qpMc, 1);
 	}
 
 	public exit(): void {
 		if (this.parent != null) {
 			this.parent.removeChild(this);
 		}
+		if (this.lightMc) {
+			this.lightMc.stop();
+		}
+		this.qpMc.stop();
 		this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this)
 	}
 

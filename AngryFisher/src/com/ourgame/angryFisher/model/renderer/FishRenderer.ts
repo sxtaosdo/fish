@@ -54,8 +54,10 @@ class FishRenderer extends BaseMovingEntity implements IMovingEneity {
 
 	private setMc(id: number): void {
 		var mc: egret.MovieClip;
-        var js: any = RES.getRes("f" + id + "_json");
-        var tx: any = RES.getRes("f" + id + "_png");
+        var js: any = RES.getRes("fish" + 1 + "_json");
+        var tx: any = RES.getRes("fish" + 1 + "_png");
+        // var js: any = RES.getRes("f" + id + "_json");
+        // var tx: any = RES.getRes("f" + id + "_png");
         var data: egret.MovieClipDataFactory = new egret.MovieClipDataFactory(js, tx);
         mc = new egret.MovieClip(data.generateMovieClipData());
 		mc.stop();

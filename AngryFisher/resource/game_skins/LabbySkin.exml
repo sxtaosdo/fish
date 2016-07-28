@@ -2,8 +2,8 @@
 <e:Skin class="LabbySkin" width="960" height="570" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<w:Config id="156273924e2"/>
 	<e:Image x="0" y="0" source="lobbyBg_png"/>
-	<e:Image x="160" y="11" source="lobbyJpBg_png"/>
-	<e:Image x="706" y="12" source="lobbyRankBg_png"/>
+	<e:Image x="160" y="-2" source="lobbyJpBg_png"/>
+	<e:Image x="706" y="0" source="lobbyRankBg_png"/>
 	<e:Button x="636" y="297">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
@@ -34,5 +34,5 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Image source="lobbyTeammateBg_png" x="0" y="19"/>
+	<e:Image source="lobbyTeammateBg_png" x="0" y="5"/>
 </e:Skin>

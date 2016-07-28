@@ -56,7 +56,7 @@ class GameWorld extends egret.Sprite implements IBase {
     private addFish(): void {
         var fish: FishRenderer = EntityManager.instance.getAvailableEntity<FishRenderer>(FishRenderer);
         fish.entityType = EntityType.FISH;
-        var vo: FishVo = ConfigModel.instance.fishList[RandomUtil.randInt(0, 16)];
+        var vo: FishVo = ConfigModel.instance.fishList[RandomUtil.randInt(0, ConfigModel.instance.fishList.length - 1)];
         var index2: number = RandomUtil.randInt(0, this.currentPath["length"] - 1);
         vo.path = this.currentPath[index2];
         fish.setData(vo);
@@ -68,8 +68,6 @@ class GameWorld extends egret.Sprite implements IBase {
     private changePath(): void {
         var index: number = RandomUtil.randInt(0, ConfigModel.instance.pathList.length - 1);
         this.currentPath = ConfigModel.instance.pathList[index];
-        // this.bg.texture = RES.getRes(GameWorld.bgNameList[RandomUtil.randInt(0, GameWorld.bgNameList.length - 1)]);
-        // this.addChildAt(this.bg, 0);
         this.drawPathPoint();
     }
 

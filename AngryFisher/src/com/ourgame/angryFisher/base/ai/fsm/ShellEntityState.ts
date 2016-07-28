@@ -127,10 +127,9 @@ class ShellMovingEntityStateArrive {
 		return false;
 	}
 
+	//爆炸动画
+	//收金币动画
     public enter(entity: IBaseGameEntity): void {
-		// entity.getDisplayObject().
-		//播放爆咋动画
-		//
 		this.client = ClientModel.instance;
 		// console.log(entity.sid + "");
 		var dis: egret.Bitmap = <any>entity.getDisplayObject();
@@ -138,9 +137,10 @@ class ShellMovingEntityStateArrive {
 		dis.anchorOffsetX = dis.width >> 1;
 		dis.anchorOffsetY = dis.height >> 1;
 		this.client.fishList.forEach(element => {
-	
-			if (HitTestUtils.hitTest(dis, element.getDisplayObject())) {
-				element.getFSM().ChangeState(FishStateDeath.instance);
+			if (element.isDestroy == false) {
+				if (HitTestUtils.hitTest(dis, element.getDisplayObject())) {
+					element.getFSM().ChangeState(FishStateDeath.instance);
+				}
 			}
 		});
 		entity.getFSM().ChangeState(ShellMovingEntityStateDeath.instance);
