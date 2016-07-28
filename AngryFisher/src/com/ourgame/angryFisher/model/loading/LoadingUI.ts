@@ -7,7 +7,7 @@ class LoadingUI extends BaseComponent implements IBase {
     private static tipList: Array<string> = ["抵制不良游戏，拒绝盗版游戏", "注意自我保护，谨防受骗上当", "适度游戏益脑，沉迷游戏伤身", "合理安排时间，享受健康生活"];
 
     public static assets1: Array<any> = ["config", "loading", "labby", "alert", "top"];
-    public static assets2: Array<any> = ["fish", "player", "bg"];
+    public static assets2: Array<any> = ["fish", "player", "bg", "bgPlant"];
 
     private versionText: eui.Label;
     private bar: eui.ProgressBar;

@@ -25,9 +25,9 @@ class MovieclipUtils {
         var data: egret.MovieClipDataFactory = new egret.MovieClipDataFactory(js, tx);
         mc = new egret.MovieClip(data.generateMovieClipData());
         mc.stop();
-        mc.rotation = 180;
-        mc.anchorOffsetX = mc.width >> 1;
-        mc.anchorOffsetY = mc.height >> 1;
+        // mc.rotation = 180;
+        // mc.anchorOffsetX = mc.width >> 1;
+        // mc.anchorOffsetY = mc.height >> 1;
         mc.play(-1);
         mc.touchEnabled = false;
         return mc;

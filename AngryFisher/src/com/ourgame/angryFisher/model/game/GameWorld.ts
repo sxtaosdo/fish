@@ -80,7 +80,7 @@ class GameWorld extends egret.Sprite implements IBase {
             }
             this.graphics.clear();
             var color: number = 0x000000;
-            console.log(this.currentPath.length);
+            // console.log(this.currentPath.length);
             this.currentPath.forEach(element => {
                 var index: number = 0;
                 element.forEach(element => {
@@ -113,6 +113,5 @@ class GameWorld extends egret.Sprite implements IBase {
 
     private changeMap(): void {
         this.bg.execute(true);
-        console.log("");
     }
 }
