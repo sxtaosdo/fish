@@ -86,7 +86,7 @@ class TestWindow extends BaseComponent implements IBase {
 		GameDispatcher.send(TestEvent.CHANGE_MAP);
 	}
 
-	private onclose(): void {
+	private onClose(): void {
 		// GameDispatcher.send(TestEvent.CLOSE_EVENT);
 		if (this.parent) {
 			this.parent.removeChild(this);

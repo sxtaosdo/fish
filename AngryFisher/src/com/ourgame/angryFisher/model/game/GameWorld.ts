@@ -35,6 +35,7 @@ class GameWorld extends egret.Sprite implements IBase {
         TimerManager.instance.doFrameLoop(1, this.onEnterFrame, this);
         GameDispatcher.addEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
         GameDispatcher.addEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
+        GameDispatcher.addEventListener(TestEvent.CHANGE_MAP, this.changeMap, this);
     }
 
     public exit(data?: any): void {
@@ -45,6 +46,7 @@ class GameWorld extends egret.Sprite implements IBase {
         TimerManager.instance.clearTimer(this.onEnterFrame);
         GameDispatcher.removeEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
         GameDispatcher.removeEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
+        GameDispatcher.removeEventListener(TestEvent.CHANGE_MAP, this.changeMap, this);
     }
 
     public execute(): void {
@@ -74,7 +76,7 @@ class GameWorld extends egret.Sprite implements IBase {
     private drawPathPoint(): void {
         if (ConfigModel.instance.showPathPoint) {
             if (this.bg) {   //显示路径点则不显示背景
-                this.bg.execute(null);
+                this.bg.execute(false);
             }
             this.graphics.clear();
             var color: number = 0x000000;
@@ -107,5 +109,10 @@ class GameWorld extends egret.Sprite implements IBase {
         this.client.playerList.forEach(element => {
             element.execute();
         });
+    }
+
+    private changeMap(): void {
+        this.bg.execute(true);
+        console.log("");
     }
 }

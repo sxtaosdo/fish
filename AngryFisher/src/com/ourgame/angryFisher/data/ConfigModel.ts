@@ -17,10 +17,12 @@ class ConfigModel {
     private _showPathPoint: boolean = false;
 
     private _fishList: Array<FishVo>;
+    private _deabedList: Array<DeabedVo>;
 
 
     public constructor() {
         this._fishList = new Array<FishVo>();
+        this._deabedList = new Array<DeabedVo>();
     }
 
     public static get instance(): ConfigModel {
@@ -109,6 +111,15 @@ class ConfigModel {
         }
     }
 
+    public parseDeabed(data: any): void {
+        var key: any;
+        for (key in data.deabed) {
+            var vo: DeabedVo = new DeabedVo();
+            vo.analysis(data.deabed[key]);
+            this._deabedList.push(vo);
+        }
+    }
+
     public get version(): string {
         return this._version;
     }
@@ -139,6 +150,10 @@ class ConfigModel {
 
     public get roomList(): Array<RoomInfoVo> {
         return this._roomList;
+    }
+
+    public get deabedList(): Array<DeabedVo> {
+        return this._deabedList;
     }
 
 }

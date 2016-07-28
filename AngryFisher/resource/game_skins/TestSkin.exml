@@ -5,7 +5,7 @@
 	<e:Button id="curBtn" label="换套路径" x="100" y="0" width="100" height="30"/>
 	<e:Button id="sBtn" label="停止加鱼" x="200" y="0" height="30"/>
 	<e:Button id="ssBtn" label="不停加鱼" x="300" y="0" height="30"/>
-	<e:Button id="changMapBtn" label="换地图" x="0" y="29" height="30"/>
+	<e:Button id="changeMapBtn" label="换地图" x="0" y="29" height="30"/>
 	<e:Button label="" x="100" y="29" width="100" height="30"/>
 	<e:Button label="" x="200" y="29" height="30"/>
 	<e:Button id="closeBtn" label="关闭显示" x="300" y="29" height="30"/>
