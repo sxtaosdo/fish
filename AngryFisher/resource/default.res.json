@@ -47,6 +47,10 @@
 		{
 			"keys":"fish1_json,fish1_png,fishd1_json,fishd1_png",
 			"name":"fish1"
+		},
+		{
+			"keys":"sy1_fnt",
+			"name":"font"
 		}
 	],
 	"resources":[
@@ -1149,6 +1153,11 @@
 			"name":"wave_png",
 			"type":"image",
 			"url":"assets/bg/wave.png"
+		},
+		{
+			"name":"sy1_fnt",
+			"type":"font",
+			"url":"assets/font/sy1.fnt"
 		}
 	]
 }

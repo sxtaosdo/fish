@@ -3,6 +3,7 @@ class FishVo {
 	public id: number;
 	public path: Array<PathPoint>;
 	public index: number;
+	public rate: number;
 
 	public constructor() {
 		this.path = new Array<PathPoint>();
@@ -10,6 +11,7 @@ class FishVo {
 
 	public analysis(data: any): void {
 		this.name = data.name;
+		this.rate = data.rate;
 		this.id = data.id;
 		var key: any;
 		var index: number = 0;
