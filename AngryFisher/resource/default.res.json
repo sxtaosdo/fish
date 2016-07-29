@@ -21,7 +21,7 @@
 			"name":"player"
 		},
 		{
-			"keys":"bg2_png,bg3_png,bg4_png,bg6_png,bg7_png,bg8_png,BattleBackground1_png,bg_png,bg1_png,wave_png",
+			"keys":"bg2_png,bg3_png,bg4_png,bg6_png,bg7_png,bg8_png,BattleBackground1_png,bg_png,bg1_png,wave_png,wave1_json,wave1_png",
 			"name":"bg"
 		},
 		{
@@ -41,7 +41,7 @@
 			"name":"top"
 		},
 		{
-			"keys":"plant_4_json,plant_1_json,plant_1_png,plant_2_json,plant_2_png,plant_3_json,plant_3_png,plant_4_png",
+			"keys":"plant_4_png,plant_1_json,plant_1_png,plant_2_json,plant_2_png,plant_3_json,plant_3_png,plant_4_json",
 			"name":"bgPlant"
 		},
 		{
@@ -1055,46 +1055,6 @@
 			"url":"assets/loading/loadingRoomBg.png"
 		},
 		{
-			"name":"plant_4_json",
-			"type":"json",
-			"url":"assets/bg/plant_4.json"
-		},
-		{
-			"name":"plant_1_json",
-			"type":"json",
-			"url":"assets/bg/plant_1.json"
-		},
-		{
-			"name":"plant_1_png",
-			"type":"image",
-			"url":"assets/bg/plant_1.png"
-		},
-		{
-			"name":"plant_2_json",
-			"type":"json",
-			"url":"assets/bg/plant_2.json"
-		},
-		{
-			"name":"plant_2_png",
-			"type":"image",
-			"url":"assets/bg/plant_2.png"
-		},
-		{
-			"name":"plant_3_json",
-			"type":"json",
-			"url":"assets/bg/plant_3.json"
-		},
-		{
-			"name":"plant_3_png",
-			"type":"image",
-			"url":"assets/bg/plant_3.png"
-		},
-		{
-			"name":"plant_4_png",
-			"type":"image",
-			"url":"assets/bg/plant_4.png"
-		},
-		{
 			"name":"deabed_json",
 			"type":"json",
 			"url":"config/deabed.json"
@@ -1158,6 +1118,56 @@
 			"name":"sy1_fnt",
 			"type":"font",
 			"url":"assets/font/sy1.fnt"
+		},
+		{
+			"name":"plant_4_png",
+			"type":"image",
+			"url":"assets/plant/plant_4.png"
+		},
+		{
+			"name":"plant_1_json",
+			"type":"json",
+			"url":"assets/plant/plant_1.json"
+		},
+		{
+			"name":"plant_1_png",
+			"type":"image",
+			"url":"assets/plant/plant_1.png"
+		},
+		{
+			"name":"plant_2_json",
+			"type":"json",
+			"url":"assets/plant/plant_2.json"
+		},
+		{
+			"name":"plant_2_png",
+			"type":"image",
+			"url":"assets/plant/plant_2.png"
+		},
+		{
+			"name":"plant_3_json",
+			"type":"json",
+			"url":"assets/plant/plant_3.json"
+		},
+		{
+			"name":"plant_3_png",
+			"type":"image",
+			"url":"assets/plant/plant_3.png"
+		},
+		{
+			"name":"plant_4_json",
+			"type":"json",
+			"url":"assets/plant/plant_4.json"
+		},
+		{
+			"name":"wave1_json",
+			"type":"json",
+			"url":"assets/bg/mc/wave1.json"
+		},
+		{
+			"name":"wave1_png",
+			"type":"image",
+			"url":"assets/bg/mc/wave1.png"
 		}
 	]
 }
