@@ -21,7 +21,7 @@
 			"name":"player"
 		},
 		{
-			"keys":"bg2_png,bg3_png,bg4_png,bg6_png,bg7_png,bg8_png,BattleBackground1_png,bg_png,bg1_png",
+			"keys":"bg2_png,bg3_png,bg4_png,bg6_png,bg7_png,bg8_png,BattleBackground1_png,bg_png,bg1_png,wave_png",
 			"name":"bg"
 		},
 		{
@@ -1144,6 +1144,11 @@
 			"name":"hitAwardGold_png",
 			"type":"image",
 			"url":"assets/player/mc/hitAwardGold.png"
+		},
+		{
+			"name":"wave_png",
+			"type":"image",
+			"url":"assets/bg/wave.png"
 		}
 	]
 }

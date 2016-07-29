@@ -111,7 +111,7 @@ class ShellMovingEntityStateArrive implements IState {
 				}
 			}
 		});
-		HitGoldAnimation.instance.enter({ target: shell.owner, money: 99, x: dis.x, y: dis.y });
+
 		entity.getFSM().ChangeState(ShellMovingEntityStateDeath.instance);
 	}
 
@@ -152,6 +152,7 @@ class ShellMovingEntityStateDeath implements IState {
 				obj.displayObject.parent.removeChild(obj.displayObject)
 				entity.isDestroy = true;
 				(<PlayerGunRenderer>obj.owner).clearnShell(obj.sid);
+				HitGoldAnimation.instance.enter({ target: obj.owner, money: 99, x: obj.displayObject.x, y: obj.displayObject.y });
 			}
 		});
 	}

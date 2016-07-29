@@ -4,6 +4,7 @@ class DeabedPanel extends egret.Sprite implements IBase {
     private bg: egret.Bitmap;
 	private plantList: Array<egret.MovieClip>;
 	private config: ConfigModel;
+	private wave: egret.Bitmap;
 
 	public constructor() {
 		super();
@@ -26,15 +27,18 @@ class DeabedPanel extends egret.Sprite implements IBase {
 		if (data) {
 			this.clreanPlant();
 			var vo: DeabedVo = this.config.deabedList[RandomUtil.randInt(0, this.config.deabedList.length - 1)];
-			vo.plant.forEach(element => {
-				var mc: egret.MovieClip = MovieclipUtils.createMc("plant_" + element.id + "_png", "plant_" + element.id + "_json");
-				mc.x = element.x;
-				mc.y = element.y;
-				this.plantList.push(mc);
-				this.addChild(mc);
-			});
 			// this.bg.texture = RES.getRes(DeabedPanel.bgNameList[RandomUtil.randInt(0, DeabedPanel.bgNameList.length - 1)]);
-			this.bg.texture = RES.getRes(vo.bg);
+			this.playWave();
+			egret.Tween.get(this.bg).to({ alpha: 0.7 }, 500).call((vo) => {
+				this.bg.texture = RES.getRes(vo.bg);
+				vo.plant.forEach(element => {
+					var mc: egret.MovieClip = MovieclipUtils.createMc("plant_" + element.id + "_png", "plant_" + element.id + "_json");
+					mc.x = element.x;
+					mc.y = element.y;
+					this.plantList.push(mc);
+					this.addChild(mc);
+				});
+			}, this, [vo]).to({ alpha: 1 }, 100);
 			this.bg.visible = true;
 		} else {
 			if (this.bg) {
@@ -45,17 +49,22 @@ class DeabedPanel extends egret.Sprite implements IBase {
 	}
 
 	private clreanPlant(): void {
-		// this.plantList.forEach(element => {
-		// 	element.stop();
-		// 	if (element.parent) {
-		// 		element.parent.removeChild(element);
-		// 	}
-		// });
 		while (this.plantList.length > 0) {
 			var element: egret.MovieClip = this.plantList.pop();
 			if (element.parent) {
 				element.parent.removeChild(element);
 			}
 		}
+	}
+
+	private playWave(): void {
+		if (this.wave == null) {
+			this.wave = BitMapUtil.createBitmapByName("wave_png");
+			var key: number = Main.GAME_HEIGHT / this.wave.height;
+			this.wave.scaleX = this.wave.scaleY = key;
+		}
+		this.addChild(this.wave);
+		this.wave.x = Main.GAME_WIDTH;
+		egret.Tween.get(this.wave).to({ x: -this.wave.width }, 1000);
 	}
 }

@@ -106,9 +106,12 @@ class LoadingUI extends BaseComponent implements IBase {
         if (LoadingUI.instance.tempText != null) {
             LoadingUI.instance.tempText.text = "当前加载进度：[" + Math.floor((current / total) * 100) + "/100]" + "\n总进度：" + "[" + LoadingUI.instance.current + "/" + LoadingUI.instance.total + "]";
         }
-        if (LoadingUI.instance.skinLoaded) {
+        if (LoadingUI.instance.bar) {
             LoadingUI.instance.bar.value = current;
             LoadingUI.instance.bar.maximum = total;
+            console.log("1");
+        }else{
+            console.log("");
         }
     }
 

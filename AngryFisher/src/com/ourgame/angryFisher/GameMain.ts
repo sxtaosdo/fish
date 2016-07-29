@@ -16,8 +16,6 @@ class GameMain extends egret.Sprite implements IBase {
 	public constructor() {
 		super();
 
-		this.addChild(BitMapUtil.createBitmapByName("bg_png"));
-
 		this.popup = WindowManager.instance;
 
 		this.addEventListener(egret.Event.ADDED_TO_STAGE, this.enter, this);
@@ -31,7 +29,9 @@ class GameMain extends egret.Sprite implements IBase {
 	}
 
 	private onAssetsComplete(): void {
-		this.topBar = new TopView();
+		if (this.topBar == null) {
+			this.topBar = new TopView();
+		}
 		this.addChild(this.topBar);
 		this.topBar.enter();
 	}

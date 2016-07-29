@@ -1,3 +1,6 @@
+/**
+ * 顶部条
+ */
 class TopView extends BaseComponent implements IBase {
 
 	private exitBtn: eui.Button;
