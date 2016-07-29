@@ -68,4 +68,10 @@ class FishRenderer extends BaseMovingEntity implements IMovingEneity {
         mc.touchEnabled = false;
 		this.displayObject = mc;
 	}
+
+	public getDataVo<T>(clazz: any) {
+		var vo: T;
+		vo = <any>this.vo;
+		return vo;
+	}
 }

@@ -81,7 +81,76 @@ class ConfigModel {
                     pp.speed = 9;
                     templist.push(pp);//32小数，32小数
                 }
-                tempList0.push(templist);
+                /*****************************计算客户端需要的路径点*贝塞尔曲线*************************/
+                var temp: Array<PathPoint> = [];
+                var temp1: Array<PathPoint>;
+                if (templist.length <= 3) {
+                    temp = templist;
+                    return;
+                }
+
+                for (var i = 0; i < templist.length - 1; i++) {
+                    //首点
+                    if (i == 0) {
+                        temp.push(templist[0]);
+                        var vo1: PathPoint = new PathPoint();
+                        vo1.x = templist[0].x + (templist[0].x - templist[1].x) / 100;
+                        vo1.y = templist[0].y + (templist[0].y - templist[1].y) / 100;
+                        temp1 = FishPathUtil.createPath(1, vo1, templist[0], templist[1], templist[2])
+                        temp = temp.concat(temp1);
+                    }
+                    //尾点
+                    else if (i == templist.length - 2) {
+                        var vo2: PathPoint = new PathPoint();
+                        vo2.x = templist[i + 1].x + (templist[i + 1].x - templist[i].x) / 100;
+                        vo2.y = templist[i + 1].y + (templist[i + 1].y - templist[i].y) / 100;
+                        temp1 = FishPathUtil.createPath(temp.length, templist[i - 1], templist[i], templist[i + 1], templist[i + 1]);
+                        temp = temp.concat(temp1);
+                        break;
+                    }
+                    else {
+                        temp1 = FishPathUtil.createPath(temp.length, templist[i - 1], templist[i], templist[i + 1], templist[i + 2]);
+                        temp = temp.concat(temp1);
+                    }
+                }
+                /*************************计算详细路径点取代原线**************************************/
+                //计算客户端需要的路径点
+                var lastPoint: PathPoint = temp[0];
+                var stepList: Array<PathPoint> = [];
+                for (var i: number = 0; i < temp.length; i++) {
+                    var next: PathPoint = temp[i + 1];
+                    if (next != null) {
+                        var disX: number = next.x - lastPoint.x;
+                        var disY: number = next.y - lastPoint.y;
+                        var distance: number = Math.sqrt(disX * disX + disY * disY);
+                        var speedX: number = lastPoint.speed * disX / distance;
+                        var speedY: number = lastPoint.speed * disY / distance;
+                        var advanceTime: number = Math.floor(distance / lastPoint.speed);
+                        var rotation: number = Math.atan2(disY, disX) * 57 + 180;
+                        if (i == 0) {
+                            lastPoint.rotation = rotation;
+                            stepList.push(lastPoint);
+                        }
+
+                        //起始点为上次计算的终点，不计入
+                        for (var j: number = 1; j < advanceTime; j++) {
+                            var pp: PathPoint = new PathPoint();
+                            pp.x = lastPoint.x + j * speedX;
+                            pp.y = lastPoint.y + j * speedY;
+                            pp.rotation = rotation;
+                            pp.speed = lastPoint.speed;
+                            stepList.push(pp);
+                            if (j == advanceTime - 1) {
+                                lastPoint = pp;
+                            }
+                        }
+                    }
+                }
+                tempList0.push(stepList);
+                // tempList0.push(templist);
+                /**************************************************************************/
+
+
                 // continue;
                 var data2 = data.readFloat();       //32小数
                 var len2 = data.readUnsignedInt();  //32大小

@@ -25,6 +25,7 @@ var game_file_list = [
 	"bin-debug/com/ourgame/angryFisher/base/ai/messaging/MessageDispatcher.js",
 	"bin-debug/com/ourgame/angryFisher/base/ai/messaging/MessageType.js",
 	"bin-debug/com/ourgame/angryFisher/base/ai/messaging/Telegram.js",
+	"bin-debug/com/ourgame/angryFisher/base/ai/utils/FishPathUtil.js",
 	"bin-debug/com/ourgame/angryFisher/base/ai/utils/TreeSet.js",
 	"bin-debug/com/ourgame/angryFisher/base/ai/v2d/Vector2Ds.js",
 	"bin-debug/com/ourgame/angryFisher/base/interface/IBase.js",

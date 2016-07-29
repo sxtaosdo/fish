@@ -5,7 +5,7 @@
  * 
  */
 class ShellRenderer extends BaseMovingEntity implements IMovingEneity {
-	
+
 
 	public constructor() {
 		super();
@@ -28,5 +28,7 @@ class ShellRenderer extends BaseMovingEntity implements IMovingEneity {
 		return this.displayObject;
 	}
 
-
+	public getDataVo<T>(clazz: any) {
+		return;
+	}
 }

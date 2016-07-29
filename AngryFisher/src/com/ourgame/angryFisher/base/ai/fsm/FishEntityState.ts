@@ -27,38 +27,7 @@ class FishStateSeek implements IState {
 		entity.isDestroy = false;
 		var fish: FishRenderer = (<FishRenderer>entity);
 		if (fish.pathStep == 0) {
-			//计算客户端需要的路径点
-			var lastPoint: PathPoint = fish.pathList[0];
-			for (var i: number = 0; i < fish.pathList.length; i++) {
-				var element: PathPoint = fish.pathList[i];
-				var next: PathPoint = fish.pathList[i + 1];
-				if (next != null) {
-					var disX: number = next.x - lastPoint.x;
-					var disY: number = next.y - lastPoint.y;
-					var distance: number = Math.sqrt(disX * disX + disY * disY);
-					var speedX: number = lastPoint.speed * disX / distance;
-					var speedY: number = lastPoint.speed * disY / distance;
-					var advanceTime: number = Math.floor(distance / lastPoint.speed);
-					var rotation: number = Math.atan2(disY, disX) * 57;
-					if (i == 0) {
-						lastPoint.rotation = rotation;
-						fish.clientPathList.push(lastPoint);
-					}
-
-					//起始点为上次计算的终点，不计入
-					for (var j: number = 1; j < advanceTime; j++) {
-						var pp: PathPoint = new PathPoint();
-						pp.x = lastPoint.x + j * speedX;
-						pp.y = lastPoint.y + j * speedY;
-						pp.rotation = rotation;
-						pp.speed = lastPoint.speed;
-						fish.clientPathList.push(pp);
-						if (j == advanceTime - 1) {
-							lastPoint = pp;
-						}
-					}
-				}
-			}
+			fish.clientPathList=fish.pathList;
 			//设置第一个点
 			fish.currentPath = fish.clientPathList[0];
 			fish.pathStep = 1;
@@ -227,6 +196,7 @@ class FishStateDeath implements IState {
 		// 	}
 		// 	entity.getFSM().ChangeState(FishStateDestroy.instance);
 		// });
+		//死亡动画
 		var mc: egret.MovieClip = MovieclipUtils.createMc("fishd1_png", "fishd1_json");
 		mc.x = fish.displayObject.x;
 		mc.y = fish.displayObject.y;
@@ -236,10 +206,20 @@ class FishStateDeath implements IState {
 		fish.displayObject.parent.addChild(mc);
 		fish.displayObject.parent.removeChild(fish.displayObject);
 		fish.displayObject = mc;
+		//倍率文字
+		var bt: egret.BitmapText = new egret.BitmapText();
+		bt.font = RES.getRes("sy1_fnt");
+		bt.width = fish.displayObject.width;
+		bt.textAlign = egret.HorizontalAlign.CENTER;
+		bt.x = fish.displayObject.x;
+		bt.y = fish.displayObject.y;
+		bt.text = "x" + fish.getDataVo<FishVo>(FishVo).rate;
+		fish.displayObject.parent.addChild(bt);
 		mc.gotoAndPlay(1, 1);
-		egret.Tween.get(this).wait(mc.totalFrames / 30*1000).call(() => {
+		egret.Tween.get(this).wait(mc.totalFrames / 30 * 1000).call((bt: egret.BitmapText) => {
+			bt.parent.removeChild(bt);
 			entity.getFSM().ChangeState(FishStateDestroy.instance);
-		});
+		}, this, [bt]);
 	}
 
     public execute(entity: IBaseGameEntity): void {

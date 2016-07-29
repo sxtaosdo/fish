@@ -5,6 +5,7 @@ class DeabedPanel extends egret.Sprite implements IBase {
 	private plantList: Array<egret.MovieClip>;
 	private config: ConfigModel;
 	private wave: egret.Bitmap;
+	private ripple: egret.MovieClip;
 
 	public constructor() {
 		super();
@@ -17,6 +18,12 @@ class DeabedPanel extends egret.Sprite implements IBase {
 	public enter(data?: any): void {
 		this.addChild(this.bg);
 		this.plantList.push();
+		this.ripple = MovieclipUtils.createMc("wave1_png", "wave1_json");
+		this.ripple.scaleX = Main.GAME_WIDTH / this.ripple.width;
+		this.ripple.scaleY = Main.GAME_HEIGHT / this.ripple.height;
+		this.ripple.alpha = 0.5;
+		// this.ripple.setf
+		this.addChild(this.ripple);
 	}
 
 	public exit(): void {

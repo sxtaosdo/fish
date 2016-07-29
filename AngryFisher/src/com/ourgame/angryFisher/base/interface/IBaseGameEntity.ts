@@ -12,4 +12,6 @@ interface IBaseGameEntity {
     getFSM(): StateMachine;
 
 	getDisplayObject():egret.DisplayObject;
+
+    getDataVo<T>(clazz:any);
 }

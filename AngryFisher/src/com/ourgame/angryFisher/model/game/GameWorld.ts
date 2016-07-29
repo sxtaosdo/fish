@@ -84,7 +84,7 @@ class GameWorld extends egret.Sprite implements IBase {
                 element.forEach(element => {
                     // color += 9;
                     this.graphics.beginFill(color, 0.8);
-                    this.graphics.drawCircle(element.x, element.y, 5);
+                    this.graphics.drawCircle(element.x, element.y, 2);
 
                     // this.graphics.lineStyle(1, color);
                     // this.graphics.lineTo(element.x, element.y)
