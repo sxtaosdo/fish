@@ -3,23 +3,39 @@ class GameWorld extends egret.Sprite implements IBase {
 
     private static that: GameWorld;
     private client: ClientModel;
-    private currentPath: any;
+    // private currentPath: any;
     private bg: DeabedPanel;
+    private createList: Array<FishCreateVo>;
 
     public constructor() {
         super();
         GameWorld.that = this;
         this.client = ClientModel.instance;
         this.client.fishList = new Array<FishRenderer>();
+        this.createList = new Array<FishCreateVo>();
         this.client.playerList = new Array<PlayerGunRenderer>();
         this.bg = new DeabedPanel();
     }
 
     private test(): void {
-        if (this.client.fishList.length > 50) {
-            TimerManager.instance.clearTimer(this.test);
+        console.log();
+
+        while (this.createList.length < 3) {
+            var vo: FishCreateVo = ConfigModel.instance.createList[RandomUtil.randInt(0, ConfigModel.instance.createList.length - 1)]
+            this.createList.push(vo);
+            this.drawPathPoint(ConfigModel.instance.pathList[vo.pathID]);
         }
-        this.addFish();
+    }
+
+    private addFish(id: number, path: Array<any>): void {
+        var fish: FishRenderer = EntityManager.instance.getAvailableEntity<FishRenderer>(FishRenderer);
+        fish.entityType = EntityType.FISH;
+        var vo: FishVo = ConfigModel.instance.fishList[id];
+        vo.path = path[RandomUtil.randInt(0, path.length - 1)];
+        fish.setData(vo);
+        GameWorld.that.addChild(fish.getDisplayObject());
+        fish.getFSM().ChangeState(FishStateSeek.instance);
+        GameWorld.that.client.fishList[fish.sid] = fish;
     }
 
     public enter(data?: any): void {
@@ -30,9 +46,9 @@ class GameWorld extends egret.Sprite implements IBase {
         player.enter();
         this.client.playerList.push(player);
 
-        this.changePath();
-        TimerManager.instance.doLoop(500, this.test, this);
-        TimerManager.instance.doFrameLoop(1, this.onEnterFrame, this);
+        // this.changePath();
+        TimerManager.instance.doOnce(1000, this.test, this);
+        TimerManager.instance.doFrameLoop(1, this.execute, this);
         GameDispatcher.addEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
         GameDispatcher.addEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
         GameDispatcher.addEventListener(TestEvent.CHANGE_MAP, this.changeMap, this);
@@ -43,61 +59,24 @@ class GameWorld extends egret.Sprite implements IBase {
             this.parent.removeChild(this);
         }
         TimerManager.instance.clearTimer(this.test);
-        TimerManager.instance.clearTimer(this.onEnterFrame);
+        TimerManager.instance.clearTimer(this.execute);
         GameDispatcher.removeEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
         GameDispatcher.removeEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
         GameDispatcher.removeEventListener(TestEvent.CHANGE_MAP, this.changeMap, this);
     }
 
     public execute(): void {
-
-    }
-
-    private addFish(): void {
-        var fish: FishRenderer = EntityManager.instance.getAvailableEntity<FishRenderer>(FishRenderer);
-        fish.entityType = EntityType.FISH;
-        var vo: FishVo = ConfigModel.instance.fishList[RandomUtil.randInt(0, ConfigModel.instance.fishList.length - 1)];
-        var index2: number = RandomUtil.randInt(0, this.currentPath["length"] - 1);
-        vo.path = this.currentPath[index2];
-        fish.setData(vo);
-        GameWorld.that.addChild(fish.getDisplayObject());
-        fish.getFSM().ChangeState(FishStateSeek.instance);
-        GameWorld.that.client.fishList[fish.sid] = fish;
-    }
-
-    private changePath(): void {
-        var index: number = RandomUtil.randInt(0, ConfigModel.instance.pathList.length - 1);
-        this.currentPath = ConfigModel.instance.pathList[index];
-        this.drawPathPoint();
-    }
-
-    private drawPathPoint(): void {
-        if (ConfigModel.instance.showPathPoint) {
-            if (this.bg) {   //显示路径点则不显示背景
-                this.bg.execute(false);
+        this.createList.forEach(element => {
+            if (element.currentCount < element.fishCount) {
+                if (egret.getTimer() - element.createTime > element.interval) {
+                    element.createTime = egret.getTimer();
+                    this.addFish(element.fishType, ConfigModel.instance.pathList[element.pathID]);
+                }
+            } else {
+                delete this.createList[this.createList.indexOf(element)];//数量够了,删除
             }
-            this.graphics.clear();
-            var color: number = 0x000000;
-            // console.log(this.currentPath.length);
-            this.currentPath.forEach(element => {
-                var index: number = 0;
-                element.forEach(element => {
-                    // color += 9;
-                    this.graphics.beginFill(color, 0.8);
-                    this.graphics.drawCircle(element.x, element.y, 2);
+        });
 
-                    // this.graphics.lineStyle(1, color);
-                    // this.graphics.lineTo(element.x, element.y)
-                    // this.graphics.moveTo(element.x, element.y);
-                    this.graphics.endFill();
-                    index++;
-                });
-                color += 0x88;
-            });
-        }
-    }
-
-    private onEnterFrame(evt?: egret.Event): void {
         this.client.fishList.forEach(element => {
             if (element.isDestroy == false) {
                 element.getFSM().Update();
@@ -109,7 +88,38 @@ class GameWorld extends egret.Sprite implements IBase {
         });
     }
 
+    private changePath(): void {
+        // var index: number = RandomUtil.randInt(0, ConfigModel.instance.pathList.length - 1);
+        // this.currentPath = ConfigModel.instance.pathList[index];
+        this.createList = [];
+        this.test();
+        // this.drawPathPoint();
+    }
+
+    private drawPathPoint(path: any): void {
+        if (ConfigModel.instance.showPathPoint) {
+            if (this.bg) {   //显示路径点则不显示背景
+                this.bg.execute(false);
+            }
+            this.graphics.clear();
+            var color: number = 0x000000;
+            // console.log(this.currentPath.length);
+            path.forEach(element => {
+                var index: number = 0;
+                element.forEach(element => {
+                    // color += 9;
+                    this.graphics.beginFill(color, 0.8);
+                    this.graphics.drawCircle(element.x, element.y, 2);
+                    this.graphics.endFill();
+                    index++;
+                });
+                color += 0x88;
+            });
+        }
+    }
+
     private changeMap(): void {
         this.bg.execute(true);
     }
+
 }

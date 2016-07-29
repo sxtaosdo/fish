@@ -1,0 +1,48 @@
+{
+    "create": [
+        {
+            "id": 1,
+            "fishType": 1,
+            "createTime": 1,
+            "speed": 5,
+            "fishCount": 20,
+            "radius": 1,
+            "interval": 5,
+            "randomSeed": 0,
+            "pathID": 1
+        },
+        {
+            "id": 2,
+            "fishType": 2,
+            "createTime": 1,
+            "speed": 8,
+            "fishCount": 50,
+            "radius": 1,
+            "interval": 2,
+            "randomSeed": 0,
+            "pathID": 2
+        },
+        {
+            "id": 3,
+            "fishType": 3,
+            "createTime": 1,
+            "speed": 5,
+            "fishCount": 50,
+            "radius": 1,
+            "interval": 2,
+            "randomSeed": 0,
+            "pathID": 2
+        },
+        {
+            "id": 4,
+            "fishType": 4,
+            "createTime": 1,
+            "speed": 5,
+            "fishCount": 99,
+            "radius": 1,
+            "interval": 3,
+            "randomSeed": 0,
+            "pathID": 2
+        }
+    ]
+}

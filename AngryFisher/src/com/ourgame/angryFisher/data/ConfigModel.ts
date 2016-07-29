@@ -18,11 +18,13 @@ class ConfigModel {
 
     private _fishList: Array<FishVo>;
     private _deabedList: Array<DeabedVo>;
+    private _createList: Array<FishCreateVo>;
 
 
     public constructor() {
         this._fishList = new Array<FishVo>();
         this._deabedList = new Array<DeabedVo>();
+        this._createList = new Array<FishCreateVo>();
     }
 
     public static get instance(): ConfigModel {
@@ -57,6 +59,15 @@ class ConfigModel {
             fish.index = index;
             this._fishList[fish.index] = fish;
             index++;
+        }
+    }
+
+    public parseCreate(data: any): void {
+        var key: any;
+        for (key in data.create) {
+            var create: FishCreateVo = new FishCreateVo();
+            create.analysis(data.create[key]);
+            this._createList[create.id] = create;
         }
     }
 
@@ -126,7 +137,7 @@ class ConfigModel {
                         var speedX: number = lastPoint.speed * disX / distance;
                         var speedY: number = lastPoint.speed * disY / distance;
                         var advanceTime: number = Math.floor(distance / lastPoint.speed);
-                        var rotation: number = Math.atan2(disY, disX) * 57 + 180;
+                        var rotation: number = Math.atan2(disY, disX) * 57 + 0;
                         if (i == 0) {
                             lastPoint.rotation = rotation;
                             stepList.push(lastPoint);
@@ -149,9 +160,6 @@ class ConfigModel {
                 tempList0.push(stepList);
                 // tempList0.push(templist);
                 /**************************************************************************/
-
-
-                // continue;
                 var data2 = data.readFloat();       //32小数
                 var len2 = data.readUnsignedInt();  //32大小
                 var tempList: Array<Object> = new Array<Object>();
@@ -168,7 +176,6 @@ class ConfigModel {
             }
             this._pathList.push(tempList0);
         });
-        // console.log(this._pathList);
     }
 
     public parseRoomList(data: any): void {
@@ -223,6 +230,10 @@ class ConfigModel {
 
     public get deabedList(): Array<DeabedVo> {
         return this._deabedList;
+    }
+
+    public get createList(): Array<FishCreateVo> {
+        return this._createList;
     }
 
 }

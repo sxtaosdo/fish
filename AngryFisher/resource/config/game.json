@@ -4,5 +4,5 @@
   "showLoading":"true",
   "version":"20160719_1111_0",
   "showTestBox":"true",
-  "showPathPoint":"true"
+  "showPathPoint":"false"
 }

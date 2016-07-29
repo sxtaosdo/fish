@@ -27,7 +27,7 @@ class FishStateSeek implements IState {
 		entity.isDestroy = false;
 		var fish: FishRenderer = (<FishRenderer>entity);
 		if (fish.pathStep == 0) {
-			fish.clientPathList=fish.pathList;
+			fish.clientPathList = fish.pathList;
 			//设置第一个点
 			fish.currentPath = fish.clientPathList[0];
 			fish.pathStep = 1;
@@ -182,20 +182,11 @@ class FishStateDeath implements IState {
 	}
 
 	//播放死亡动画
+	//显示倍率
 	//播放金币动画
     public enter(entity: IBaseGameEntity): void {
 		var fish: FishRenderer = (<FishRenderer>entity);
 		(<egret.MovieClip>fish.displayObject).stop();
-		// egret.Tween.get(fish.displayObject).call(() => {
-		// 	fish.displayObject.filters = [MatrixUtils.blurFliter];
-		// }).wait(100).call(() => {
-		// 	fish.displayObject.filters = [MatrixUtils.blurFliter];
-		// }).wait(100).call(() => { fish.displayObject.filters = [MatrixUtils.blurFliter]; }).wait(100).call(() => {
-		// 	if (fish.displayObject.parent != null) {
-		// 		fish.displayObject.parent.removeChild(fish.displayObject);
-		// 	}
-		// 	entity.getFSM().ChangeState(FishStateDestroy.instance);
-		// });
 		//死亡动画
 		var mc: egret.MovieClip = MovieclipUtils.createMc("fishd1_png", "fishd1_json");
 		mc.x = fish.displayObject.x;
@@ -203,7 +194,7 @@ class FishStateDeath implements IState {
 		mc.rotation = fish.displayObject.rotation;
 		mc.anchorOffsetX = mc.width >> 1;
 		mc.anchorOffsetY = mc.height >> 1;
-		fish.displayObject.parent.addChild(mc);
+		fish.displayObject.parent.addChildAt(mc, 1);
 		fish.displayObject.parent.removeChild(fish.displayObject);
 		fish.displayObject = mc;
 		//倍率文字

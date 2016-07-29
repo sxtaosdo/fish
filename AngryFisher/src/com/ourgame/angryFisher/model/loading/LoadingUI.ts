@@ -87,6 +87,7 @@ class LoadingUI extends BaseComponent implements IBase {
         if (event.groupName == "config") {
             ConfigModel.instance.parse(RES.getRes("game_json"));
             ConfigModel.instance.parseFish(RES.getRes("fish_json"));
+            ConfigModel.instance.parseCreate(RES.getRes("create_json"));
             ConfigModel.instance.parseRoomList(RES.getRes("room_json"));
             ConfigModel.instance.parseDeabed(RES.getRes("deabed_json"));
             ConfigModel.instance.parseFishPath();

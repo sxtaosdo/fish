@@ -32,8 +32,8 @@ class TimerManager {
                         }
                     }
                     else {
-                        this.clearTimer(k);
                         method.apply(handler.thisObj, args);
+                        this.clearTimer(k);
                     }
                 }
             } else {

@@ -40,6 +40,7 @@ var game_file_list = [
 	"bin-debug/com/ourgame/angryFisher/data/LanguageConfig.js",
 	"bin-debug/com/ourgame/angryFisher/data/UserModel.js",
 	"bin-debug/com/ourgame/angryFisher/data/vo/DeabedVo.js",
+	"bin-debug/com/ourgame/angryFisher/data/vo/FishCreateVo.js",
 	"bin-debug/com/ourgame/angryFisher/data/vo/FishVo.js",
 	"bin-debug/com/ourgame/angryFisher/data/vo/PathPoint.js",
 	"bin-debug/com/ourgame/angryFisher/data/vo/RoomInfoVo.js",
