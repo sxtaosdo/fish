@@ -45,7 +45,7 @@
 			"name":"bgPlant"
 		},
 		{
-			"keys":"fish1_json,fish1_png,fishd1_json,fishd1_png",
+			"keys":"fish1_json,fish1_png,fishd1_json,fishd1_png,fishd2_json,fishd2_png,fish2_json,fish2_png,fishd4_png,fish3_json,fish3_png,fish4_json,fish4_png,fishd3_json,fishd3_png,fishd4_json",
 			"name":"fish1"
 		},
 		{
@@ -1173,6 +1173,66 @@
 			"name":"create_json",
 			"type":"json",
 			"url":"config/create.json"
+		},
+		{
+			"name":"fishd2_json",
+			"type":"json",
+			"url":"assets/fish1/fishd2.json"
+		},
+		{
+			"name":"fishd2_png",
+			"type":"image",
+			"url":"assets/fish1/fishd2.png"
+		},
+		{
+			"name":"fish2_json",
+			"type":"json",
+			"url":"assets/fish1/fish2.json"
+		},
+		{
+			"name":"fish2_png",
+			"type":"image",
+			"url":"assets/fish1/fish2.png"
+		},
+		{
+			"name":"fishd4_png",
+			"type":"image",
+			"url":"assets/fish1/fishd4.png"
+		},
+		{
+			"name":"fish3_json",
+			"type":"json",
+			"url":"assets/fish1/fish3.json"
+		},
+		{
+			"name":"fish3_png",
+			"type":"image",
+			"url":"assets/fish1/fish3.png"
+		},
+		{
+			"name":"fish4_json",
+			"type":"json",
+			"url":"assets/fish1/fish4.json"
+		},
+		{
+			"name":"fish4_png",
+			"type":"image",
+			"url":"assets/fish1/fish4.png"
+		},
+		{
+			"name":"fishd3_json",
+			"type":"json",
+			"url":"assets/fish1/fishd3.json"
+		},
+		{
+			"name":"fishd3_png",
+			"type":"image",
+			"url":"assets/fish1/fishd3.png"
+		},
+		{
+			"name":"fishd4_json",
+			"type":"json",
+			"url":"assets/fish1/fishd4.json"
 		}
 	]
 }

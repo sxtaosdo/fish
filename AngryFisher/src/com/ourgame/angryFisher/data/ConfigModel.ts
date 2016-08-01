@@ -7,7 +7,7 @@ class ConfigModel {
     private static pathNameList: Array<string> = ["A_star1[12]_track", "A_star2[12]_track", "A_tai[2]_track", "A_w[2]_track", "A_w[8]_track", "A_wave1[8]_track", "A_wave2[6]_track", "A_wave3[6]_track", "A_wave4[6]_track", "A_well[8]_track", "A_wire[2]_track", "A_x[4]_track", "B99lb[5]_track", "B99lb_r[3]_track", "BombFish_track", "C04[6]_track", "Golden_Shark_track", "shark_track", "xiao1_track", "-4[13]_track", "A_a[24]_track"];
 
     /**路径列表 */
-    private _pathList: Array<Object> = new Array<Object>();
+    private _pathList: Array<any> = new Array<any>();
     private _roomList: Array<RoomInfoVo> = new Array<RoomInfoVo>();
 
     private _version: string = "";
@@ -57,7 +57,7 @@ class ConfigModel {
             var fish: FishVo = new FishVo();
             fish.analysis(data.config[key]);
             fish.index = index;
-            this._fishList[fish.index] = fish;
+            this._fishList[fish.id] = fish;
             index++;
         }
     }
@@ -67,7 +67,7 @@ class ConfigModel {
         for (key in data.create) {
             var create: FishCreateVo = new FishCreateVo();
             create.analysis(data.create[key]);
-            this._createList[create.id] = create;
+            this._createList.push(create);
         }
     }
 
@@ -216,7 +216,7 @@ class ConfigModel {
         return this._fishList;
     }
 
-    public get pathList(): Array<Object> {
+    public get pathList(): Array<any> {
         return this._pathList;
     }
 

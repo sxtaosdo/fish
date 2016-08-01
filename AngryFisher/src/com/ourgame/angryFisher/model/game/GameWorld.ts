@@ -18,10 +18,17 @@ class GameWorld extends egret.Sprite implements IBase {
     }
 
     private test(): void {
-        console.log();
-
+        // console.log();
+        var obj: Object = {};
         while (this.createList.length < 3) {
-            var vo: FishCreateVo = ConfigModel.instance.createList[RandomUtil.randInt(0, ConfigModel.instance.createList.length - 1)]
+            var key = RandomUtil.randInt(0, ConfigModel.instance.createList.length - 1);
+            if (obj[key]) {
+                continue;
+            } else {
+                obj[key] = true;
+            }
+            var vo: FishCreateVo = ConfigModel.instance.createList[key]
+            console.log(vo.fishType);
             this.createList.push(vo);
             this.drawPathPoint(ConfigModel.instance.pathList[vo.pathID]);
         }
@@ -46,7 +53,6 @@ class GameWorld extends egret.Sprite implements IBase {
         player.enter();
         this.client.playerList.push(player);
 
-        // this.changePath();
         TimerManager.instance.doOnce(1000, this.test, this);
         TimerManager.instance.doFrameLoop(1, this.execute, this);
         GameDispatcher.addEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
@@ -67,12 +73,15 @@ class GameWorld extends egret.Sprite implements IBase {
 
     public execute(): void {
         this.createList.forEach(element => {
+            
             if (element.currentCount < element.fishCount) {
                 if (egret.getTimer() - element.createTime > element.interval) {
                     element.createTime = egret.getTimer();
+                    element.currentCount++;
                     this.addFish(element.fishType, ConfigModel.instance.pathList[element.pathID]);
                 }
             } else {
+                element.currentCount = 0;
                 delete this.createList[this.createList.indexOf(element)];//数量够了,删除
             }
         });
@@ -89,11 +98,9 @@ class GameWorld extends egret.Sprite implements IBase {
     }
 
     private changePath(): void {
-        // var index: number = RandomUtil.randInt(0, ConfigModel.instance.pathList.length - 1);
-        // this.currentPath = ConfigModel.instance.pathList[index];
+        this.graphics.clear();
         this.createList = [];
         this.test();
-        // this.drawPathPoint();
     }
 
     private drawPathPoint(path: any): void {
@@ -101,7 +108,7 @@ class GameWorld extends egret.Sprite implements IBase {
             if (this.bg) {   //显示路径点则不显示背景
                 this.bg.execute(false);
             }
-            this.graphics.clear();
+
             var color: number = 0x000000;
             // console.log(this.currentPath.length);
             path.forEach(element => {

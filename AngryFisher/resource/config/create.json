@@ -7,7 +7,7 @@
             "speed": 5,
             "fishCount": 20,
             "radius": 1,
-            "interval": 5,
+            "interval": 105,
             "randomSeed": 0,
             "pathID": 1
         },
@@ -15,10 +15,10 @@
             "id": 2,
             "fishType": 2,
             "createTime": 1,
-            "speed": 8,
+            "speed": 10,
             "fishCount": 50,
             "radius": 1,
-            "interval": 2,
+            "interval": 100,
             "randomSeed": 0,
             "pathID": 2
         },
@@ -26,23 +26,23 @@
             "id": 3,
             "fishType": 3,
             "createTime": 1,
-            "speed": 5,
+            "speed": 15,
             "fishCount": 50,
             "radius": 1,
-            "interval": 2,
+            "interval": 180,
             "randomSeed": 0,
-            "pathID": 2
+            "pathID": 3
         },
         {
             "id": 4,
             "fishType": 4,
             "createTime": 1,
             "speed": 5,
-            "fishCount": 99,
+            "fishCount": 1,
             "radius": 1,
-            "interval": 3,
+            "interval": 170,
             "randomSeed": 0,
-            "pathID": 2
+            "pathID": 4
         }
     ]
 }

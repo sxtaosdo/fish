@@ -187,8 +187,9 @@ class FishStateDeath implements IState {
     public enter(entity: IBaseGameEntity): void {
 		var fish: FishRenderer = (<FishRenderer>entity);
 		(<egret.MovieClip>fish.displayObject).stop();
+		var id: number = fish.getDataVo<FishVo>(FishVo).id;
 		//死亡动画
-		var mc: egret.MovieClip = MovieclipUtils.createMc("fishd1_png", "fishd1_json");
+		var mc: egret.MovieClip = MovieclipUtils.createMc("fishd" + id + "_png", "fishd" + id + "_json");
 		mc.x = fish.displayObject.x;
 		mc.y = fish.displayObject.y;
 		mc.rotation = fish.displayObject.rotation;

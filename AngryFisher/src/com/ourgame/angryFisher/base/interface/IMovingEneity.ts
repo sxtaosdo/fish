@@ -31,6 +31,10 @@ interface IMovingEneity extends IBaseGameEntity {
 	speed: number;
 	speedX: number;
 	speedY: number;
+	/**角度 */
 	rotation: number;
-	owner:IBase;
+	/**持有者 */
+	owner: IBase;
+	/**碰撞的包围盒 */
+	testBox: egret.Rectangle;
 }

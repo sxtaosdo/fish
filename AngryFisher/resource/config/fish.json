@@ -1,27 +1,27 @@
 {
     "config": {
         "fish1": {
-            "name": "小鱼",
+            "name": "小丑鱼",
             "id": 1,
-            "rate": 1,
+            "rate": 4,
             "path": []
         },
         "fish2": {
-            "name": "中鱼",
+            "name": "鳊鱼",
             "id": 2,
-            "rate": 2,
-            "path": []
-        },
-        "fish3": {
-            "name": "大鱼",
-            "id": 3,
             "rate": 3,
             "path": []
         },
+        "fish3": {
+            "name": "小光鱼",
+            "id": 3,
+            "rate": 1,
+            "path": []
+        },
         "fish4": {
-            "name": "鱼",
+            "name": "鲨鱼",
             "id": 4,
-            "rate": 4,
+            "rate": 100,
             "path": []
         },
         "fish5": {
