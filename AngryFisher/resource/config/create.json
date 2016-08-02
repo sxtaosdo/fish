@@ -37,10 +37,32 @@
             "id": 4,
             "fishType": 4,
             "createTime": 1,
-            "speed": 5,
+            "speed": 3,
             "fishCount": 1,
             "radius": 1,
             "interval": 170,
+            "randomSeed": 0,
+            "pathID": 4
+        },
+        {
+            "id": 5,
+            "fishType": 5,
+            "createTime": 1,
+            "speed": 1,
+            "fishCount": 1,
+            "radius": 1,
+            "interval": 100,
+            "randomSeed": 0,
+            "pathID": 4
+        },
+        {
+            "id": 6,
+            "fishType": 6,
+            "createTime": 5,
+            "speed": 13,
+            "fishCount": 1,
+            "radius": 1,
+            "interval": 500,
             "randomSeed": 0,
             "pathID": 4
         }

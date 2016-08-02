@@ -38,11 +38,15 @@ class GameWorld extends egret.Sprite implements IBase {
         var fish: FishRenderer = EntityManager.instance.getAvailableEntity<FishRenderer>(FishRenderer);
         fish.entityType = EntityType.FISH;
         var vo: FishVo = ConfigModel.instance.fishList[id];
-        vo.path = path[RandomUtil.randInt(0, path.length - 1)];
-        fish.setData(vo);
-        GameWorld.that.addChild(fish.getDisplayObject());
-        fish.getFSM().ChangeState(FishStateSeek.instance);
-        GameWorld.that.client.fishList[fish.sid] = fish;
+        try {
+            vo.path = path[RandomUtil.randInt(0, path.length - 1)];
+            fish.setData(vo);
+            GameWorld.that.addChild(fish.getDisplayObject());
+            fish.getFSM().ChangeState(FishStateSeek.instance);
+            GameWorld.that.client.fishList[fish.sid] = fish;
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     public enter(data?: any): void {
@@ -73,7 +77,7 @@ class GameWorld extends egret.Sprite implements IBase {
 
     public execute(): void {
         this.createList.forEach(element => {
-            
+
             if (element.currentCount < element.fishCount) {
                 if (egret.getTimer() - element.createTime > element.interval) {
                     element.createTime = egret.getTimer();
@@ -89,6 +93,9 @@ class GameWorld extends egret.Sprite implements IBase {
         this.client.fishList.forEach(element => {
             if (element.isDestroy == false) {
                 element.getFSM().Update();
+                // if(ConfigModel.instance.showTest){
+
+                // }
             }
         });
 
