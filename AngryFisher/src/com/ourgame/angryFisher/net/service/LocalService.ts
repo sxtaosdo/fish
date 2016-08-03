@@ -30,21 +30,21 @@ class LocalHandler implements ISocket {
     public send(type: number, body: any): void {
         var callback;
         switch (type) {
-            case MsgType.REQ_LOGIN:
-                callback = this.login;
-                break;
-            case MsgType.REQ_ANTEINFO:
-                callback = this.anteInfo;
-                break;
-            case MsgType.REQ_CHIPIN:
-                callback = this.shipIn;
-                break;
-            case MsgType.REQ_DUXLIVETICK:
-                callback = this.liveTick;
-                break;
-            case MsgType.REQ_HELP:
-                callback = this.help;
-                break;
+            // case MsgType.REQ_LOGIN:
+            //     callback = this.login;
+            //     break;
+            // case MsgType.REQ_ANTEINFO:
+            //     callback = this.anteInfo;
+            //     break;
+            // case MsgType.REQ_CHIPIN:
+            //     callback = this.shipIn;
+            //     break;
+            // case MsgType.REQ_DUXLIVETICK:
+            //     callback = this.liveTick;
+            //     break;
+            // case MsgType.REQ_HELP:
+            //     callback = this.help;
+            //     break;
         }
         // try {
         callback(type, body);
@@ -66,23 +66,22 @@ class LocalHandler implements ISocket {
     }
 
     private login(type: number, body: any): void {
-        LocalHandler.that.tempCls = LocalHandler.that.message.build("ReqLogin");
-        var login = LocalHandler.that.tempCls.decode(body);
+        // LocalHandler.that.tempCls = LocalHandler.that.message.build("ReqLogin");
+        // var login = LocalHandler.that.tempCls.decode(body);
 
-        var reqCls: any = LocalHandler.that.message.build("AckLogin");
-        var req = new reqCls({
-            "result": 0,
-            "reason": 0,
-            "userMoney": LocalHandler.that.userMoney,
-            "username": login.userName,
-            "rolename": login.userName,
-            "freeInfo": LocalHandler.that.getFreeHit()
-        });
-        LocalHandler.that.name = login.roleName;
-        LocalHandler.that.returnMsg(MsgType.ACK_LOGIN, req);
-        LocalHandler.that.jpPool();
-        TimerManager.instance.doLoop(1500, LocalHandler.that.jpPool);
-        // TimerManager.instance.doOnce(4000, LocalHandler.that.loseTooMuch);
+        // var reqCls: any = LocalHandler.that.message.build("AckLogin");
+        // var req = new reqCls({
+        //     "result": 0,
+        //     "reason": 0,
+        //     "userMoney": LocalHandler.that.userMoney,
+        //     "username": login.userName,
+        //     "rolename": login.userName,
+        //     "freeInfo": LocalHandler.that.getFreeHit()
+        // });
+        // LocalHandler.that.name = login.roleName;
+        // LocalHandler.that.returnMsg(MsgType.ACK_LOGIN, req);
+        // LocalHandler.that.jpPool();
+        // TimerManager.instance.doLoop(1500, LocalHandler.that.jpPool);
 
     }
 
@@ -91,7 +90,7 @@ class LocalHandler implements ISocket {
         var req = new reqCls({
             "mlist": LocalHandler.that.getHelpList()
         });
-        LocalHandler.that.returnMsg(MsgType.ACK_HELP, req);
+        // LocalHandler.that.returnMsg(MsgType.ACK_HELP, req);
     }
 
     private shipIn(type: number, body: any): void {
@@ -135,7 +134,7 @@ class LocalHandler implements ISocket {
                 LocalHandler.that.checkBigWin(true);
             }
         }
-        LocalHandler.that.returnMsg(MsgType.ACK_CHIPIN, req);
+        // LocalHandler.that.returnMsg(MsgType.ACK_CHIPIN, req);
     }
 
     private anteInfo(): void {
@@ -160,7 +159,7 @@ class LocalHandler implements ISocket {
     private liveTick(type: number, body: any): void {
         LocalHandler.that.tempCls = LocalHandler.that.message.build("DuxLiveTick");
         var proto = LocalHandler.that.tempCls.decode(body);
-        LocalHandler.that.returnMsg(MsgType.REQ_DUXLIVETICK, proto);
+        // LocalHandler.that.returnMsg(MsgType.REQ_DUXLIVETICK, proto);
     }
 
     private jpPool(): void {
@@ -170,7 +169,7 @@ class LocalHandler implements ISocket {
             var ack = new betCls({
                 "pool": LocalHandler.that.pool
             });
-            LocalHandler.that.returnMsg(MsgType.ACK_JPPOOL, ack);
+            // LocalHandler.that.returnMsg(MsgType.ACK_JPPOOL, ack);
         } else {
             LocalHandler.that.pool = Math.floor(Math.random() * 555555555);
         }
@@ -192,7 +191,7 @@ class LocalHandler implements ISocket {
             if (LocalHandler.that.pool < 1) {
                 LocalHandler.that.pool = Math.floor(Math.random() * 555555555);
             }
-            LocalHandler.that.returnMsg(MsgType.ACK_HEGUAWARD, ack);
+            // LocalHandler.that.returnMsg(MsgType.ACK_HEGUAWARD, ack);
         }
     }
     //================================================以下都是辅助方法====================================================
@@ -321,6 +320,6 @@ class LocalHandler implements ISocket {
         var data = new clazz({
             "msgType": 1
         });
-        LocalHandler.that.returnMsg(MsgType.ACK_ALERT, data);
+        // LocalHandler.that.returnMsg(MsgType.ACK_ALERT, data);
     }
 }

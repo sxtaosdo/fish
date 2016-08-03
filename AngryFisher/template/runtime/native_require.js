@@ -74,6 +74,8 @@ var game_file_list = [
 	"bin-debug/com/ourgame/angryFisher/net/handler/SocketIoHandler.js",
 	"bin-debug/com/ourgame/angryFisher/net/handler/WebSocketHandler.js",
 	"bin-debug/com/ourgame/angryFisher/net/ISocket.js",
+	"bin-debug/com/ourgame/angryFisher/net/message/BaseMessage.js",
+	"bin-debug/com/ourgame/angryFisher/net/message/MsgLoginReq.js",
 	"bin-debug/com/ourgame/angryFisher/net/MsgReceiveHelper.js",
 	"bin-debug/com/ourgame/angryFisher/net/MsgSendHelper.js",
 	"bin-debug/com/ourgame/angryFisher/net/MsgType.js",

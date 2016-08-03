@@ -19,7 +19,7 @@ class HelpPanel extends BaseComponent implements IWindow {
     public enter(data?: any): void {
         this.stage.addEventListener(egret.TouchEvent.TOUCH_END, this.exit, this);
         GameDispatcher.addEventListener(BaseEvent.HELP_DATA_EVENT, this.onData, this);
-        ConnectionManager.instance.sendHelper.help();
+        // ConnectionManager.instance.sendHelper.help();
     }
 
     public exit(data?: any): void {

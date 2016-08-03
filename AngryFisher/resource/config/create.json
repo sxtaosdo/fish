@@ -53,7 +53,7 @@
             "radius": 1,
             "interval": 100,
             "randomSeed": 0,
-            "pathID": 4
+            "pathID": 5
         },
         {
             "id": 6,
@@ -64,7 +64,29 @@
             "radius": 1,
             "interval": 500,
             "randomSeed": 0,
-            "pathID": 4
+            "pathID": 6
+        },
+        {
+            "id": 7,
+            "fishType": 1,
+            "createTime": 1,
+            "speed": 5,
+            "fishCount": 200,
+            "radius": 1,
+            "interval": 105,
+            "randomSeed": 0,
+            "pathID": 7
+        },
+        {
+            "id": 8,
+            "fishType": 2,
+            "createTime": 1,
+            "speed": 5,
+            "fishCount": 999,
+            "radius": 1,
+            "interval": 105,
+            "randomSeed": 0,
+            "pathID": 8
         }
     ]
 }

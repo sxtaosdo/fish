@@ -3,7 +3,6 @@ class GameWorld extends egret.Sprite implements IBase {
 
     private static that: GameWorld;
     private client: ClientModel;
-    // private currentPath: any;
     private bg: DeabedPanel;
     private createList: Array<FishCreateVo>;
 
@@ -18,9 +17,8 @@ class GameWorld extends egret.Sprite implements IBase {
     }
 
     private test(): void {
-        // console.log();
         var obj: Object = {};
-        while (this.createList.length < 3) {
+        while (this.createList.length < 1) {
             var key = RandomUtil.randInt(0, ConfigModel.instance.createList.length - 1);
             if (obj[key]) {
                 continue;

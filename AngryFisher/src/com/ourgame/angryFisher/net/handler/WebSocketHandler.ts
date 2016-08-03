@@ -52,19 +52,11 @@ class WebSocketHandler implements ISocket {
                 var id: number = byte.readInt();
                 var len: number = byte.readInt();
                 var temp: number = byte.readInt();
-                if (id == 304) {
-
-                } else {
-                    if (id != MsgType.ACK_JPPOOL) {
-                        // console.log("收到消息，消息号：" + id + "\t长度：" + len);
-                    } else {
-                    }
-                    //消息体
-                    var body: egret.ByteArray = new egret.ByteArray();
-                    body.writeBytes(byte, byte.position, len);
-                    body.position = 0;
-                    this.callback(id, body);
-                }
+                //消息体
+                var body: egret.ByteArray = new egret.ByteArray();
+                body.writeBytes(byte, byte.position, len);
+                body.position = 0;
+                this.callback(id, body);
             }
         } else {
             console.error("非法消息。可用字节：" + byte.bytesAvailable + "/长度：" + byte.length + "/指针位置：" + byte.position);

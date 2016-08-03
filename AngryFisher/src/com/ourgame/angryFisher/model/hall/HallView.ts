@@ -13,7 +13,7 @@ class HallView extends BaseComponent implements IBase {
 	}
 
 	public enter(data?: any): void {
-		console.log(egret.Capabilities.runtimeType);
+		// console.log(egret.Capabilities.runtimeType);
 
 		if (!egret.Capabilities.isMobile) {
 			// this.lightMc = MovieclipUtils.createMc("lightMc_png", "lightMc_json");

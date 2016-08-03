@@ -16,12 +16,12 @@ class RoomInfoListPanel extends BaseComponent implements IBase {
 		// this.width = Main.GAME_WIDTH;
 		// this.height = Main.GAME_HEIGHT;
 		this.skinName = "resource/game_skins/LabbyRoomInfoListSkin.exml";
-		this.dataList.itemRenderer = RoomInfoListRenderer;
 		this.collection = new eui.ArrayCollection();
 	}
 
 	protected onSkinComplete(e: any): void {
 		super.onSkinComplete(e);
+		this.dataList.itemRenderer = RoomInfoListRenderer;
 		this.x = (Main.GAME_WIDTH - this.width) / 3;
 		this.y = (Main.GAME_HEIGHT - this.height) >> 1;
 	}
