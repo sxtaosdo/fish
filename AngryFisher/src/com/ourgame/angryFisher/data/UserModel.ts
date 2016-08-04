@@ -11,6 +11,7 @@ class UserModel {
     private _money: number = 0;
     private _ticket: string;
     private _isAnteVoChange: boolean = false;
+    private _vo: PlayerVo;
 
 
     public constructor() {
@@ -37,6 +38,10 @@ class UserModel {
 
     public set userName(value: string) {
         this._userName = value;
+        if (this._vo == null) {
+            this._vo = new PlayerVo();
+            this._vo.name = this._userName;
+        }
     }
 
     public get roleName(): string {
@@ -53,6 +58,10 @@ class UserModel {
 
     public set nickName(value: string) {
         this._nickName = value;
+    }
+
+    public get vo(): PlayerVo {
+        return this._vo;
     }
 
 }

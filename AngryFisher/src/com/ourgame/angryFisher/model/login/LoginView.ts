@@ -63,10 +63,10 @@ class LoginView extends egret.Sprite implements IBase {
 		if (LoginView.that.parent != null) {
 			LoginView.that.parent.removeChild(LoginView.that);
 		}
+		UserModel.instance.userName = this.nameText.text;
 	}
 
 	public execute(data?: any): void {
-
 	}
 
 	private onTap(): void {

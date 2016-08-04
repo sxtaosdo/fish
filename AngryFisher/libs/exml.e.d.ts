@@ -70,6 +70,12 @@ declare class TopSkin extends eui.Skin{
 }
 declare class AlertSkin extends eui.Skin{
 }
+declare class HelpPanelSkin extends eui.Skin{
+}
+declare class MailPanelSkin extends eui.Skin{
+}
+declare class SettingPanelSkin extends eui.Skin{
+}
 declare class HallRoomInfoListItemSkin extends eui.Skin{
 }
 declare class PlayerGun extends eui.Skin{

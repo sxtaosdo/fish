@@ -108,10 +108,11 @@ class ShellMovingEntityStateArrive implements IState {
 			if (element.isDestroy == false) {
 				if (HitTestUtils.hitTest(dis, element.getDisplayObject())) {
 					element.getFSM().ChangeState(FishStateDeath.instance);
+					(<PlayerGunRenderer>shell.owner).data.currentExp++;
+					(<PlayerGunRenderer>shell.owner).data.moeny += element.getDataVo<FishVo>(FishVo).rate;
 				}
 			}
 		});
-
 		entity.getFSM().ChangeState(ShellMovingEntityStateDeath.instance);
 	}
 

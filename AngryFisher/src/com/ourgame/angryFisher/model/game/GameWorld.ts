@@ -26,7 +26,7 @@ class GameWorld extends egret.Sprite implements IBase {
                 obj[key] = true;
             }
             var vo: FishCreateVo = ConfigModel.instance.createList[key]
-            console.log(vo.fishType);
+            // console.log(vo.fishType);
             this.createList.push(vo);
             this.drawPathPoint(ConfigModel.instance.pathList[vo.pathID]);
         }

@@ -41,6 +41,9 @@
     "resource/game_skins/TestSkin.exml",
     "resource/game_skins/TopSkin.exml",
     "resource/game_skins/window/AlertSkin.exml",
+    "resource/game_skins/window/HelpPanelSkin.exml",
+    "resource/game_skins/window/MailPanelSkin.exml",
+    "resource/game_skins/window/SettingPanelSkin.exml",
     "resource/renderer/HallRoomInfoListItemSkin.exml",
     "resource/renderer/PlayerGun.exml"
   ]

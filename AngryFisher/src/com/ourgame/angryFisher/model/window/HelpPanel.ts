@@ -3,23 +3,32 @@
  */
 class HelpPanel extends BaseComponent implements IWindow {
 
-    private list: eui.List;
-    private data: eui.ArrayCollection;
+    // private list: eui.List;
+    // private data: eui.ArrayCollection;
+    public closeBtn: eui.Button;
+    public btn1: eui.RadioButton;
+    public btn2: eui.RadioButton;
+    public btn3: eui.RadioButton;
+    public btn4: eui.RadioButton;
+    public btn5: eui.RadioButton;
+    public btn6: eui.RadioButton;
+    public btn7: eui.RadioButton;
+
 
     public constructor() {
         super();
-        this.skinName = "resource/skin/panel/HelpPanelSkin.exml";
+        this.skinName = "resource/game_skins/window/HelpPanelSkin.exml";
     }
 
     protected onSkinComplete(e: any): void {
         super.onSkinComplete(e);
-        this.init();
     }
 
     public enter(data?: any): void {
-        this.stage.addEventListener(egret.TouchEvent.TOUCH_END, this.exit, this);
-        GameDispatcher.addEventListener(BaseEvent.HELP_DATA_EVENT, this.onData, this);
+        // this.stage.addEventListener(egret.TouchEvent.TOUCH_END, this.exit, this);
+        // GameDispatcher.addEventListener(BaseEvent.HELP_DATA_EVENT, this.onData, this);
         // ConnectionManager.instance.sendHelper.help();
+        this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this);
     }
 
     public exit(data?: any): void {
@@ -28,47 +37,38 @@ class HelpPanel extends BaseComponent implements IWindow {
         }
         ClientModel.instance.openWindow(null);
     }
-    public execute(data ?: any): void {
 
-}
+    public execute(data?: any): void {
+    }
 
-    public onData(): void {
-        if (this.list != null) {
-            this.list.dataProvider = this.getData();
+    /**
+ * 初始化
+ */
+    public init(): void { }
+    /**
+     * 销毁
+     */
+    public destroy(): void { }
+
+    private onTap(evt: egret.TouchEvent): void {
+        if (evt.target instanceof eui.Button) {
+            switch (evt.target) {
+                case this.btn1:
+                    break;
+                case this.btn2:
+                    break;
+                case this.btn3:
+                    break;
+                case this.btn4:
+                    break;
+                case this.btn5:
+                    break;
+                case this.btn6:
+                    break;
+                case this.btn7:
+                    break;
+            }
         }
     }
 
-    public destroy(): void {
-        this.exit();
-    }
-
-    public init(): void {
-        if (this.list != null) {
-            // this.list.itemRenderer = HelpItemRenderer;
-            this.list.layout = this.getLayout();
-        }
-    }
-
-    private getLayout(): eui.LayoutBase {
-        var la: eui.TileLayout = new eui.TileLayout();
-        // la.gap=1;
-        return la;
-    }
-
-
-    private getData(): eui.ArrayCollection {
-        if (this.data == null) {
-            this.data = new eui.ArrayCollection();
-        }
-        this.data.removeAll();
-        // var len: number = ClientModel.instance.helpData.length;
-        // for (var i: number = 0; i < len; i++) {
-        //     if (ClientModel.instance.helpData[i] != null) {
-        //         this.data.addItem(ClientModel.instance.helpData[i]);
-        //     } else {
-        //         this.data.addItemAt(null, i);
-        //     }
-        // }
-        return this.data;
-    }
 }

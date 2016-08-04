@@ -1,6 +1,5 @@
 class PlayerGunRenderer extends BaseComponent implements IBase {
 
-	private robot: eui.Image;
 	private centerPoint: egret.Point;
 	private shellList: Array<ShellRenderer>;
 	// private isTouchDown: boolean = false;
@@ -8,6 +7,16 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 	private lastSendTime: number = 0;
 	private sendInterval: number = 300;
 	private position: Vector2Ds;
+
+	public data: PlayerVo;
+
+	public nameText: eui.Label;
+	public lvText: eui.Label;
+	public lvBar: eui.ProgressBar;
+	public robot: eui.Image;
+	public gunText: eui.Label;
+	public moneyText: eui.Label;
+
 
 	public constructor() {
 		super(false);
@@ -17,12 +26,14 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 
 	public onSkinComplete(e): void {
 		super.onSkinComplete(e);
-		this.y = 550;
+		this.y = Main.GAME_HEIGHT - this.height;
 		this.x = 100;
 	}
 
 	public enter(data?: any): void {
+		this.data = UserModel.instance.vo;
 		if (this.skinLoaded) {
+			this.fillData();
 		}
 		this.centerPoint = this.localToGlobal(this.robot.x, this.robot.y);
 		this.position = new Vector2Ds(this.centerPoint.x, this.centerPoint.y);
@@ -43,6 +54,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 		this.shellList.forEach(element => {
 			element.getFSM().Update();
 		});
+		this.updateData();
 	}
 
 	private onAdd(): void {
@@ -80,7 +92,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 		shell.speed = 10;
 		shell.getFSM().ChangeState(ShellMovingEntityStateSeek.instance);
 		shell.rotation = this.robot.rotation;
-		// console.log("rotation" + shell.rotation.toString());
+		this.data.gunCount--;
 		this.parent.addChild(shell.displayObject);
 		this.lastSendTime = egret.getTimer();
 
@@ -99,5 +111,20 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 
 	public clearnShell(id: string): void {
 		delete this.shellList[id];
+	}
+
+	public fillData(): void {
+		this.nameText.text = this.data.name;
+		this.lvText.text = this.data.level.toString();
+		this.lvBar.maximum = this.data.totalExp;
+		this.lvBar.minimum = 0;
+	}
+
+	public updateData(): void {
+		if (this.skinLoaded) {
+			this.lvBar.value = this.data.currentExp;
+			this.gunText.text = this.data.gunCount.toString();
+			this.moneyText.text = this.data.moeny.toString();
+		}
 	}
 }

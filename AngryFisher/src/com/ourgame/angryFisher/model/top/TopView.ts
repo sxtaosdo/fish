@@ -3,9 +3,13 @@
  */
 class TopView extends BaseComponent implements IBase {
 
-	private exitBtn: eui.Button;
-	private autoBtn: eui.Button;
-	private operationBtn: eui.Button;
+	public exitBtn: eui.Button;
+	public rechargeBtn: eui.Button;
+	public mailBtn: eui.Button;
+	public helpBtn: eui.Button;
+	public operationBtn: eui.Button;
+	public autoBtn: eui.Button;
+
 
 	public constructor() {
 		super(false);
@@ -16,7 +20,10 @@ class TopView extends BaseComponent implements IBase {
 		if (this.skinLoaded) {
 			this.exitBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onExit, this);
 			this.operationBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onOperation, this);
+			this.helpBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onHelp, this);
 			this.autoBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onAuto, this);
+			this.mailBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onMail, this);
+			this.rechargeBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onRechargel, this);
 			this.execute(ClientModel.instance.gameState);
 		}
 	}
@@ -24,7 +31,7 @@ class TopView extends BaseComponent implements IBase {
 	public exit(): void {
 		this.exitBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onExit, this);
 		this.operationBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onOperation, this);
-			this.autoBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onAuto, this);
+		this.autoBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onAuto, this);
 	}
 
 	public execute(data?: any): void {
@@ -50,9 +57,24 @@ class TopView extends BaseComponent implements IBase {
             this.stage.addChild(test);
             test.enter(this.parent.parent);
         }
+		ClientModel.instance.openWindow(OperationPanel);
 	}
 
-	private onAuto():void{
-		
+	private onHelp(): void {
+		ClientModel.instance.openWindow(HelpPanel);
+	}
+	private onMail(): void {
+		ClientModel.instance.openWindow(MailPanel);
+	}
+	private onRechargel(): void {
+		InterfaceManager.instance.recharge();
+	}
+
+	private onAuto(): void {
+
+	}
+
+	private onData(): void {
+
 	}
 }

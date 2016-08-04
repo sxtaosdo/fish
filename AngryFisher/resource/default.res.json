@@ -17,7 +17,7 @@
 			"name":"main"
 		},
 		{
-			"keys":"playerBg_png,playerLvBarBar_png,playerLvBarBg_png,robot_png,playerShell_png,net_png,hitAwardGold_json,hitAwardGold_png",
+			"keys":"playerBg_png,playerLvBarBar_png,playerLvBarBg_png,robot_png,playerShell_png,net_png,hitAwardGold_json,hitAwardGold_png,playerConeIcon_png,playerGunIcon_png",
 			"name":"player"
 		},
 		{
@@ -29,7 +29,7 @@
 			"name":"loading"
 		},
 		{
-			"keys":"lobbyBg_png,lobbyJpBg_png,lobbyRankBg_png,pageBtn1_png,pageBtn2_png,pageBtn3_png,lobbyRoomListBg_png,lobbyRoom1Btn1_png,lobbyRoom1Btn2_png,lobbyRoom2Btn1_png,lobbyRoom2Btn2_png,lobbyRoom3Btn1_png,lobbyRoom3Btn2_png,lobbyRoom4Btn1_png,lobbyRoom4Btn2_png,lobbyRoomListCloseBtn1_png,lobbyRoomListCloseBtn2_png,lobbyTeammateBg_png,lobbyRoonListItemBg_png,lightMc_json,lightMc_png,qiPaoMc_json,qiPaoMc_png",
+			"keys":"lobbyBg_png,lobbyJpBg_png,lobbyRankBg_png,pageBtn1_png,pageBtn2_png,pageBtn3_png,lobbyRoomListBg_png,lobbyRoom1Btn1_png,lobbyRoom1Btn2_png,lobbyRoom2Btn1_png,lobbyRoom2Btn2_png,lobbyRoom3Btn1_png,lobbyRoom3Btn2_png,lobbyRoom4Btn1_png,lobbyRoom4Btn2_png,lobbyRoomListCloseBtn1_png,lobbyRoomListCloseBtn2_png,lobbyTeammateBg_png,lobbyRoonListItemBg_png,lightMc_json,lightMc_png,qiPaoMc_json,qiPaoMc_png,paopao_json,paopao_png",
 			"name":"labby"
 		},
 		{
@@ -51,6 +51,10 @@
 		{
 			"keys":"sy1_fnt",
 			"name":"font"
+		},
+		{
+			"keys":"SettingBar1_png,SettingBar2_png,SettingBg_png,SettingBgText_png,SettingSelectBox1_png,SettingSelectBox2_png,xbtn1_png,xbtn2_png,helpBg_png,page1_png,page2_png,page4_png,page5_png,page6_png,page7_png,helpMBtn2_png,helpMBtn1_png,emailArrowBtn1_png,emailArrowBtn2_png,emailBg_png,emailClearnBtn1_png,emailClearnBtn2_png,emailContentBg_png,emailDeleteBtn1_png,emailDeleteBtn2_png,emailIcon1_png,emailNBtn1_png,emailNBtn2_png,emailPBtn1_png,emailPBtn2_png",
+			"name":"window"
 		}
 	],
 	"resources":[
@@ -1273,6 +1277,176 @@
 			"name":"fishd6_json",
 			"type":"json",
 			"url":"assets/fish1/fishd6.json"
+		},
+		{
+			"name":"paopao_json",
+			"type":"json",
+			"url":"assets/lobby/mc/paopao.json"
+		},
+		{
+			"name":"paopao_png",
+			"type":"image",
+			"url":"assets/lobby/mc/paopao.png"
+		},
+		{
+			"name":"SettingBar1_png",
+			"type":"image",
+			"url":"assets/window/setting/SettingBar1.png"
+		},
+		{
+			"name":"SettingBar2_png",
+			"type":"image",
+			"url":"assets/window/setting/SettingBar2.png"
+		},
+		{
+			"name":"SettingBg_png",
+			"type":"image",
+			"url":"assets/window/setting/SettingBg.png"
+		},
+		{
+			"name":"SettingBgText_png",
+			"type":"image",
+			"url":"assets/window/setting/SettingBgText.png"
+		},
+		{
+			"name":"SettingSelectBox1_png",
+			"type":"image",
+			"url":"assets/window/setting/SettingSelectBox1.png"
+		},
+		{
+			"name":"SettingSelectBox2_png",
+			"type":"image",
+			"url":"assets/window/setting/SettingSelectBox2.png"
+		},
+		{
+			"name":"xbtn1_png",
+			"type":"image",
+			"url":"assets/window/xbtn1.png"
+		},
+		{
+			"name":"xbtn2_png",
+			"type":"image",
+			"url":"assets/window/xbtn2.png"
+		},
+		{
+			"name":"helpBg_png",
+			"type":"image",
+			"url":"assets/window/help/helpBg.png"
+		},
+		{
+			"name":"page1_png",
+			"type":"image",
+			"url":"assets/window/help/page1.png"
+		},
+		{
+			"name":"page2_png",
+			"type":"image",
+			"url":"assets/window/help/page2.png"
+		},
+		{
+			"name":"page4_png",
+			"type":"image",
+			"url":"assets/window/help/page4.png"
+		},
+		{
+			"name":"page5_png",
+			"type":"image",
+			"url":"assets/window/help/page5.png"
+		},
+		{
+			"name":"page6_png",
+			"type":"image",
+			"url":"assets/window/help/page6.png"
+		},
+		{
+			"name":"page7_png",
+			"type":"image",
+			"url":"assets/window/help/page7.png"
+		},
+		{
+			"name":"helpMBtn2_png",
+			"type":"image",
+			"url":"assets/window/help/helpMBtn2.png"
+		},
+		{
+			"name":"helpMBtn1_png",
+			"type":"image",
+			"url":"assets/window/help/helpMBtn1.png"
+		},
+		{
+			"name":"emailArrowBtn1_png",
+			"type":"image",
+			"url":"assets/window/mail/emailArrowBtn1.png"
+		},
+		{
+			"name":"emailArrowBtn2_png",
+			"type":"image",
+			"url":"assets/window/mail/emailArrowBtn2.png"
+		},
+		{
+			"name":"emailBg_png",
+			"type":"image",
+			"url":"assets/window/mail/emailBg.png"
+		},
+		{
+			"name":"emailClearnBtn1_png",
+			"type":"image",
+			"url":"assets/window/mail/emailClearnBtn1.png"
+		},
+		{
+			"name":"emailClearnBtn2_png",
+			"type":"image",
+			"url":"assets/window/mail/emailClearnBtn2.png"
+		},
+		{
+			"name":"emailContentBg_png",
+			"type":"image",
+			"url":"assets/window/mail/emailContentBg.png"
+		},
+		{
+			"name":"emailDeleteBtn1_png",
+			"type":"image",
+			"url":"assets/window/mail/emailDeleteBtn1.png"
+		},
+		{
+			"name":"emailDeleteBtn2_png",
+			"type":"image",
+			"url":"assets/window/mail/emailDeleteBtn2.png"
+		},
+		{
+			"name":"emailIcon1_png",
+			"type":"image",
+			"url":"assets/window/mail/emailIcon1.png"
+		},
+		{
+			"name":"emailNBtn1_png",
+			"type":"image",
+			"url":"assets/window/mail/emailNBtn1.png"
+		},
+		{
+			"name":"emailNBtn2_png",
+			"type":"image",
+			"url":"assets/window/mail/emailNBtn2.png"
+		},
+		{
+			"name":"emailPBtn1_png",
+			"type":"image",
+			"url":"assets/window/mail/emailPBtn1.png"
+		},
+		{
+			"name":"emailPBtn2_png",
+			"type":"image",
+			"url":"assets/window/mail/emailPBtn2.png"
+		},
+		{
+			"name":"playerConeIcon_png",
+			"type":"image",
+			"url":"assets/player/playerConeIcon.png"
+		},
+		{
+			"name":"playerGunIcon_png",
+			"type":"image",
+			"url":"assets/player/playerGunIcon.png"
 		}
 	]
 }

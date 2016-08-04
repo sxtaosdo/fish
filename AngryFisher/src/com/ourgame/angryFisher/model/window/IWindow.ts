@@ -14,3 +14,12 @@ interface IWindow extends IBase {
      */
     destroy(): void;
 }
+
+
+	// public init(): void{
+
+	// }
+
+    // public destroy(): void{
+
+	// }
