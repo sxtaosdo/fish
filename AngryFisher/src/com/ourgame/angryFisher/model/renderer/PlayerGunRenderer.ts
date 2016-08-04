@@ -2,7 +2,6 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 
 	private centerPoint: egret.Point;
 	private shellList: Array<ShellRenderer>;
-	// private isTouchDown: boolean = false;
 	private touchEvt: egret.TouchEvent;
 	private lastSendTime: number = 0;
 	private sendInterval: number = 300;
@@ -16,7 +15,6 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 	public robot: eui.Image;
 	public gunText: eui.Label;
 	public moneyText: eui.Label;
-
 
 	public constructor() {
 		super(false);
@@ -54,7 +52,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 		this.shellList.forEach(element => {
 			element.getFSM().Update();
 		});
-		this.updateData();
+		// this.updateData();
 	}
 
 	private onAdd(): void {
@@ -63,21 +61,14 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 	}
 
 	private onBegin(evt: egret.TouchEvent): void {
-		// TimerManager.instance.doFrameLoop(1, this.onMove, this, [evt]);
-		// this.isTouchDown = true;
 		this.touchEvt = evt;
 	}
 
 	private onEnd(evt: egret.TouchEvent): void {
-		// TimerManager.instance.clearTimer(this.onMove);
-		// this.isTouchDown = false;
 		this.touchEvt = null;
 	}
 
 	private onMove(evt: egret.TouchEvent): void {
-		// console.log(evt.stageX, evt.stageY);
-		// console.log(this.centerPoint.x, this.centerPoint.y);
-		// (Math.atan((目标Y -中心Y) / (目标X - 中心X))) % (Math.PI)
 		var disY: number = evt.stageY - this.centerPoint.y;
 		if (disY > -1) {
 			disY = -1;
@@ -125,6 +116,20 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 			this.lvBar.value = this.data.currentExp;
 			this.gunText.text = this.data.gunCount.toString();
 			this.moneyText.text = this.data.moeny.toString();
+			this.lvText.text = this.data.level.toString();
 		}
+	}
+
+	public killFish(fish: FishVo): void {
+		this.data.currentExp++;
+		if (this.data.currentExp > this.data.totalExp) {
+			this.data.currentExp = 0;
+			this.data.level++;
+			this.data.totalExp = (this.data.totalExp + this.data.level * 5);
+			this.lvBar.maximum = this.data.totalExp;
+			this.lvBar.minimum = 0;
+		}
+		this.data.moeny += fish.rate;
+		this.updateData();
 	}
 }

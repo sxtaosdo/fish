@@ -46,7 +46,7 @@ class BaseComponent extends eui.Component {
                 }
             }, this);
         } catch (e) {
-            console.log(e);
+            // console.log(e);
         }
     }
 

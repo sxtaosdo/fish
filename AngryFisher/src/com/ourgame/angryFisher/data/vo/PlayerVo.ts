@@ -8,7 +8,7 @@ class PlayerVo {
 	public vipLevel: number = 0;
 	public gunLevel: number = 0;
 	public gunCount: number = 0;
-	public totalExp: number = 50;
+	public totalExp: number = 10;
 	public currentExp: number = 0;
 
 	public constructor() {
