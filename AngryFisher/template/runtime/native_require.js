@@ -66,6 +66,7 @@ var game_file_list = [
 	"bin-debug/com/ourgame/angryFisher/model/window/Alert.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/BindPanel.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/HelpPanel.js",
+	"bin-debug/com/ourgame/angryFisher/model/window/HitInfoPanel.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/IWindow.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/MailPanel.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/OperationPanel.js",
@@ -100,7 +101,6 @@ var game_file_list = [
 	"bin-debug/com/ourgame/test/TestWindow.js",
 	"bin-debug/Main.js",
 	"bin-debug/ThemeAdapter.js",
-	"bin-debug/com/ourgame/angryFisher/model/window/HitInfoPanel.js",
 	//----auto game_file_list end----
 ];
 

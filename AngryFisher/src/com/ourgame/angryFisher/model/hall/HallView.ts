@@ -13,11 +13,10 @@ class HallView extends BaseComponent implements IBase {
 		super();
 		this.skinName = "resource/game_skins/LabbySkin.exml";
 		this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this);
+		this.touchEnabled = false;
 	}
 
 	public enter(data?: any): void {
-		// console.log(egret.Capabilities.runtimeType);
-
 		if (!egret.Capabilities.isMobile) {
 			this.lightMc = MovieclipUtils.createMc("lightMc_png", "lightMc_json");
 			this.lightMc.play(-1);
@@ -27,8 +26,7 @@ class HallView extends BaseComponent implements IBase {
 
 			this.paopao = MovieclipUtils.createMc("paopao_png", "paopao_json");
 			this.paopao.play(-1);
-			// this.lightMc.scaleX = this.lightMc.scaleY = 2;
-			// this.lightMc.alpha = 0.9;
+
 			this.paopao.x = 300;
 			this.paopao.y = Main.GAME_HEIGHT - 200;
 			this.addChildAt(this.paopao, 1);
