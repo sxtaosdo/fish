@@ -45,7 +45,6 @@ class TopView extends BaseComponent implements IBase {
 	}
 
 	private onExit(): void {
-		// ClientModel.instance.changeGameState(new HallView());
 		ClientModel.instance.openAlert("确定要退出吗？", () => {
 			ClientModel.instance.changeGameState(new HallView());
 		})

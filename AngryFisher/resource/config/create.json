@@ -87,6 +87,28 @@
             "interval": 105,
             "randomSeed": 0,
             "pathID": 8
+        },
+        {
+            "id": 9,
+            "fishType": 2,
+            "createTime": 1,
+            "speed": 5,
+            "fishCount": 9999,
+            "radius": 1,
+            "interval": 105,
+            "randomSeed": 0,
+            "pathID": 9
+        },
+        {
+            "id": 10,
+            "fishType": 3,
+            "createTime": 1,
+            "speed": 59,
+            "fishCount": 9999,
+            "radius": 1,
+            "interval": 105,
+            "randomSeed": 0,
+            "pathID": 10
         }
     ]
 }

@@ -48,10 +48,12 @@ var game_file_list = [
 	"bin-debug/com/ourgame/angryFisher/event/BaseEvent.js",
 	"bin-debug/com/ourgame/angryFisher/event/GameDispatcher.js",
 	"bin-debug/com/ourgame/angryFisher/GameMain.js",
+	"bin-debug/com/ourgame/angryFisher/model/window/BaseComponent.js",
+	"bin-debug/com/ourgame/angryFisher/model/dice/DiceGamePanel.js",
+	"bin-debug/com/ourgame/angryFisher/model/dice/DiceView.js",
 	"bin-debug/com/ourgame/angryFisher/model/game/DeabedPanel.js",
 	"bin-debug/com/ourgame/angryFisher/model/game/GameWorld.js",
 	"bin-debug/com/ourgame/angryFisher/model/game/HitGoldAnimation.js",
-	"bin-debug/com/ourgame/angryFisher/model/window/BaseComponent.js",
 	"bin-debug/com/ourgame/angryFisher/model/hall/HallView.js",
 	"bin-debug/com/ourgame/angryFisher/model/hall/RoomInfoListPanel.js",
 	"bin-debug/com/ourgame/angryFisher/model/loading/LoadingUI.js",
@@ -62,6 +64,7 @@ var game_file_list = [
 	"bin-debug/com/ourgame/angryFisher/model/renderer/ShellRenderer.js",
 	"bin-debug/com/ourgame/angryFisher/model/top/TopView.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/Alert.js",
+	"bin-debug/com/ourgame/angryFisher/model/window/BindPanel.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/HelpPanel.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/IWindow.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/MailPanel.js",
@@ -97,6 +100,7 @@ var game_file_list = [
 	"bin-debug/com/ourgame/test/TestWindow.js",
 	"bin-debug/Main.js",
 	"bin-debug/ThemeAdapter.js",
+	"bin-debug/com/ourgame/angryFisher/model/window/HitInfoPanel.js",
 	//----auto game_file_list end----
 ];
 

@@ -2,6 +2,7 @@ class HallView extends BaseComponent implements IBase {
 
 	private room1Btn: eui.Button;
 	private room2Btn: eui.Button;
+	private diceBtn: eui.Button;
 	private roomInfoPanel: RoomInfoListPanel;
 	private lightMc: egret.MovieClip;
 	private qpMc: egret.MovieClip;
@@ -42,7 +43,7 @@ class HallView extends BaseComponent implements IBase {
 		this.jpText = new egret.BitmapText();
 		this.jpText.font = RES.getRes("sy1_fnt");
 		this.jpText.text = "500000000";
-		TimerManager.instance.doLoop(1000, () => {
+		TimerManager.instance.doLoop(100, () => {
 			this.jpText.text = (parseInt(this.jpText.text) + RandomUtil.randInt(1, 100)).toString();
 		});
 		this.jpText.x = 190;
@@ -75,6 +76,14 @@ class HallView extends BaseComponent implements IBase {
 				break;
 			case this.room2Btn:
 				this.showRoomInfoListPanel(ConfigModel.instance.roomList[1]);
+				break;
+			case this.diceBtn:
+				// ClientModel.instance.changeGameState(new DiceView());
+				ClientModel.instance.changeGameState(LoadingUI.instance);
+				LoadingUI.instance.enter("resource/game_skins/LoadRoomSkin.exml");
+				LoadingUI.instance.loadAssets(() => {
+					ClientModel.instance.changeGameState(new DiceView());
+				}, LoadingUI.assets3);
 				break;
 		}
 	}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="DiceGameSkin" width="1500" height="760" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="diceGameBg_png" x="0" y="0"/>
+	<e:Image source="diceGameSton_png" x="157" y="57"/>
+	<e:Image source="diceGamePlant_png" x="215" y="62"/>
+</e:Skin>

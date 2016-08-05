@@ -8,6 +8,7 @@ class LoadingUI extends BaseComponent implements IBase {
 
     public static assets1: Array<any> = ["config", "loading", "labby", "alert", "top", "font"];
     public static assets2: Array<any> = ["fish", "player", "bg", "bgPlant", "fish1"];
+    public static assets3: Array<any> = ["dice", "diceWindow"];
 
     private versionText: eui.Label;
     private bar: eui.ProgressBar;

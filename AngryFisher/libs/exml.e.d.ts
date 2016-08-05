@@ -56,6 +56,10 @@ declare class LoadingRoomPBSkin extends eui.Skin{
 }
 declare class PlayerLvProgressBarSkin extends eui.Skin{
 }
+declare class DiceGameSkin extends eui.Skin{
+}
+declare class DicePanelSkin extends eui.Skin{
+}
 declare class LabbyRoomInfoListSkin extends eui.Skin{
 }
 declare class LabbySkin extends eui.Skin{
@@ -69,6 +73,10 @@ declare class TestSkin extends eui.Skin{
 declare class TopSkin extends eui.Skin{
 }
 declare class AlertSkin extends eui.Skin{
+}
+declare class DiceBindPanelSkin extends eui.Skin{
+}
+declare class DiceHitInfoPanelSkin extends eui.Skin{
 }
 declare class HelpPanelSkin extends eui.Skin{
 }
