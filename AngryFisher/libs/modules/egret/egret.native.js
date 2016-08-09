@@ -2420,6 +2420,7 @@ var egret;
                 egret.sys.RenderBuffer = native.NativeRenderTextureRenderBuffer;
             }
             egret.sys.systemRenderer = new egret.CanvasRenderer();
+            egret.sys.canvasRenderer = egret.sys.systemRenderer;
             egret.Capabilities.$renderMode = "canvas";
         }
         function updateAllScreens() {
@@ -4734,7 +4735,9 @@ var egret;
                     "width": textfield.width,
                     "height": textfield.height,
                     "font_size": values[0 /* fontSize */],
-                    "font_color": values[2 /* textColor */]
+                    "font_color": values[2 /* textColor */],
+                    "textAlign": values[9 /* textAlign */],
+                    "verticalAlign": values[10 /* verticalAlign */]
                 }));
             };
             /**

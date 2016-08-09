@@ -2894,13 +2894,7 @@ var egret;
          * @private
          */
         function createContext() {
-            if (egret.Capabilities.renderMode == "canvas") {
-                context = egret.sys.hitTestBuffer.context;
-            }
-            else {
-                var canvas = document.createElement("canvas");
-                context = canvas.getContext("2d");
-            }
+            context = egret.sys.hitTestBuffer.context;
             context.textAlign = "left";
             context.textBaseline = "middle";
         }
@@ -3814,12 +3808,7 @@ var egret;
                 var player = new web.WebPlayer(container, options);
                 container["egret-player"] = player;
             }
-            // TODO hitTestBuffer创建目前必须在主buffer创建之后
-            if (egret.Capabilities.renderMode == "webgl") {
-                egret.sys.hitTestBuffer = new web.WebGLRenderBuffer(3, 3);
-            }
-            else {
-            }
+            egret.sys.hitTestBuffer = new web.CanvasRenderBuffer(3, 3);
         }
         /**
          * 设置渲染模式。"auto","webgl","canvas"
@@ -3829,14 +3818,13 @@ var egret;
             if (renderMode == "webgl" && egret.WebGLUtils.checkCanUseWebGL()) {
                 egret.sys.RenderBuffer = web.WebGLRenderBuffer;
                 egret.sys.systemRenderer = new web.WebGLRenderer();
-                //屏蔽掉cacheAsBitmap,webgl模式不能有太多的RenderContext
-                //DisplayObject.prototype.$setHasDisplayList = function(){};
+                egret.sys.canvasRenderer = new egret.CanvasRenderer();
                 egret.Capabilities.$renderMode = "webgl";
             }
             else {
-                egret.sys.hitTestBuffer = new web.CanvasRenderBuffer(3, 3);
                 egret.sys.RenderBuffer = web.CanvasRenderBuffer;
                 egret.sys.systemRenderer = new egret.CanvasRenderer();
+                egret.sys.canvasRenderer = egret.sys.systemRenderer;
                 egret.Capabilities.$renderMode = "canvas";
             }
         }
@@ -4617,17 +4605,11 @@ var egret;
             var buffer = egret.sys.hitTestBuffer;
             buffer.resize(3, 3);
             var context = buffer.context;
-            if (!context.translate) {
-                context = buffer;
-            }
             context.translate(1 - x, 1 - y);
             var width = this._bitmapWidth;
             var height = this._bitmapHeight;
             var scale = egret.$TextureScaleFactor;
             context.drawImage(this._bitmapData, this._bitmapX, this._bitmapY, width, this._bitmapHeight, this._offsetX, this._offsetY, width * scale, height * scale);
-            if (context.$drawWebGL) {
-                context.$drawWebGL();
-            }
             try {
                 var data = buffer.getPixel(1, 1);
             }
@@ -5490,18 +5472,16 @@ var egret;
                 this.fragmentSrc = "precision mediump float;\n" +
                     "varying vec2 vTextureCoord;\n" +
                     "varying vec4 vColor;\n" +
-                    "uniform float invert;\n" +
                     "uniform mat4 matrix;\n" +
                     "uniform vec4 colorAdd;\n" +
                     "uniform sampler2D uSampler;\n" +
                     "void main(void) {\n" +
                     "vec4 texColor = texture2D(uSampler, vTextureCoord);\n" +
-                    "vec4 locColor = texColor * matrix;\n" +
-                    "locColor += colorAdd;\n" +
-                    "if(locColor.a <= 0.0){\n" +
-                    "discard;\n" +
-                    "}\n" +
-                    "locColor = clamp(locColor, 0., 1.);" +
+                    "if(texColor.a > 0.) {" +
+                    // 抵消预乘的alpha通道
+                    "texColor = vec4(texColor.rgb / texColor.a, texColor.a);\n" +
+                    "}" +
+                    "vec4 locColor = clamp(texColor * matrix + colorAdd, 0., 1.);\n" +
                     "gl_FragColor = vColor * vec4(locColor.rgb * locColor.a, locColor.a);\n" +
                     "}";
                 this.uniforms = {
@@ -8153,9 +8133,6 @@ var egret;
                         break;
                     case 4 /* GroupNode */:
                         this.renderGroup(node, buffer);
-                        break;
-                    case 5 /* SetTransformNode */:
-                        buffer.setTransform(node.drawData[0], node.drawData[1], node.drawData[2], node.drawData[3], node.drawData[4], node.drawData[5]);
                         break;
                     case 6 /* SetAlphaNode */:
                         buffer.globalAlpha = node.drawData[0];

@@ -207,8 +207,8 @@ class FishStateDeath implements IState {
 		bt.y = fish.displayObject.y;
 		bt.text = "x" + fish.getDataVo<FishVo>(FishVo).rate;
 		fish.displayObject.parent.addChild(bt);
-		mc.gotoAndPlay(1, 1);
-		egret.Tween.get(this).wait(mc.totalFrames / 30 * 1000).call((bt: egret.BitmapText) => {
+		mc.gotoAndPlay(1, 2);
+		egret.Tween.get(this).wait(mc.totalFrames * 2 / 30 * 1000).call((bt: egret.BitmapText) => {
 			bt.parent.removeChild(bt);
 			entity.getFSM().ChangeState(FishStateDestroy.instance);
 		}, this, [bt]);

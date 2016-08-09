@@ -29,7 +29,7 @@
 			"name":"loading"
 		},
 		{
-			"keys":"lobbyBg_png,lobbyJpBg_png,lobbyRankBg_png,pageBtn1_png,pageBtn2_png,pageBtn3_png,lobbyRoomListBg_png,lobbyRoom1Btn1_png,lobbyRoom1Btn2_png,lobbyRoom2Btn1_png,lobbyRoom2Btn2_png,lobbyRoom3Btn1_png,lobbyRoom3Btn2_png,lobbyRoom4Btn1_png,lobbyRoom4Btn2_png,lobbyRoomListCloseBtn1_png,lobbyRoomListCloseBtn2_png,lobbyTeammateBg_png,lobbyRoonListItemBg_png,lightMc_json,lightMc_png,qiPaoMc_json,qiPaoMc_png,paopao_json,paopao_png,diceBtn2_png,diceBtn1_png",
+			"keys":"lobbyBg_png,lobbyJpBg_png,lobbyRankBg_png,pageBtn1_png,pageBtn2_png,pageBtn3_png,lobbyRoomListBg_png,lobbyRoomListCloseBtn1_png,lobbyRoomListCloseBtn2_png,lobbyTeammateBg_png,lobbyRoonListItemBg_png,lightMc_json,lightMc_png,qiPaoMc_json,qiPaoMc_png,paopao_json,paopao_png,diceBtn2_png,diceBtn1_png,lobbyRoomBtnbg1_png,lobbyRoomBtnbg2_png,lobbyRoomBtnbg3_png,lobbyRoomBtnbg4_png,lobbyWareMc_png,lobbyWareMc_json,lobbyStartBtn2_png,lobbyStartBtn1_png",
 			"name":"labby"
 		},
 		{
@@ -45,7 +45,7 @@
 			"name":"bgPlant"
 		},
 		{
-			"keys":"fish1_json,fish1_png,fishd1_json,fishd1_png,fishd2_json,fishd2_png,fish2_json,fish2_png,fishd4_png,fish3_json,fish3_png,fish4_json,fish4_png,fishd3_json,fishd3_png,fishd4_json,fish6_png,fish5_json,fish5_png,fish6_json,fishd6_png,fishd5_json,fishd5_png,fishd6_json",
+			"keys":"fish1_json,fish1_png,fishd1_json,fishd1_png,fishd2_json,fishd2_png,fish2_json,fish2_png,fishd4_png,fish3_json,fish3_png,fish4_json,fish4_png,fishd3_json,fishd3_png,fishd4_json,fish6_png,fish5_json,fish5_png,fish6_json,fishd6_png,fishd5_json,fishd5_png,fishd6_json,fishd12_json,fishd12_png,fishd13_json,fishd13_png,fish7_json,fish7_png,fish8_json,fish8_png,fish9_json,fish9_png,fish10_json,fish10_png,fish11_json,fish11_png,fish12_json,fish12_png,fish13_json,fish13_png,fishd7_json,fishd7_png,fishd8_json,fishd8_png,fishd9_json,fishd9_png,fishd10_json,fishd10_png,fishd11_json,fishd11_png",
 			"name":"fish1"
 		},
 		{
@@ -53,7 +53,7 @@
 			"name":"font"
 		},
 		{
-			"keys":"SettingBar1_png,SettingBar2_png,SettingBg_png,SettingBgText_png,SettingSelectBox1_png,SettingSelectBox2_png,xbtn1_png,xbtn2_png,helpBg_png,page1_png,page2_png,page4_png,page5_png,page6_png,page7_png,helpMBtn2_png,helpMBtn1_png,emailArrowBtn1_png,emailArrowBtn2_png,emailBg_png,emailClearnBtn1_png,emailClearnBtn2_png,emailContentBg_png,emailDeleteBtn1_png,emailDeleteBtn2_png,emailIcon1_png,emailNBtn1_png,emailNBtn2_png,emailPBtn1_png,emailPBtn2_png",
+			"keys":"SettingBar1_png,SettingBar2_png,SettingBg_png,SettingBgText_png,SettingSelectBox1_png,SettingSelectBox2_png,xbtn1_png,xbtn2_png,helpBg_png,page1_png,page2_png,page4_png,page5_png,page6_png,page7_png,helpMBtn2_png,helpMBtn1_png,emailArrowBtn1_png,emailArrowBtn2_png,emailBg_png,emailClearnBtn1_png,emailClearnBtn2_png,emailContentBg_png,emailDeleteBtn1_png,emailDeleteBtn2_png,emailIcon1_png,emailNBtn1_png,emailNBtn2_png,emailPBtn1_png,emailPBtn2_png,rank1kBtn1_png,rank1kBtn2_png,rank30Btn1_png,rank30Btn2_png,rankBg_png,rankText1_png,rankText2_png",
 			"name":"window"
 		},
 		{
@@ -890,46 +890,6 @@
 			"name":"lobbyRoomListBg_png",
 			"type":"image",
 			"url":"assets/lobby/lobbyRoomListBg.png"
-		},
-		{
-			"name":"lobbyRoom1Btn1_png",
-			"type":"image",
-			"url":"assets/lobby/lobbyRoom1Btn1.png"
-		},
-		{
-			"name":"lobbyRoom1Btn2_png",
-			"type":"image",
-			"url":"assets/lobby/lobbyRoom1Btn2.png"
-		},
-		{
-			"name":"lobbyRoom2Btn1_png",
-			"type":"image",
-			"url":"assets/lobby/lobbyRoom2Btn1.png"
-		},
-		{
-			"name":"lobbyRoom2Btn2_png",
-			"type":"image",
-			"url":"assets/lobby/lobbyRoom2Btn2.png"
-		},
-		{
-			"name":"lobbyRoom3Btn1_png",
-			"type":"image",
-			"url":"assets/lobby/lobbyRoom3Btn1.png"
-		},
-		{
-			"name":"lobbyRoom3Btn2_png",
-			"type":"image",
-			"url":"assets/lobby/lobbyRoom3Btn2.png"
-		},
-		{
-			"name":"lobbyRoom4Btn1_png",
-			"type":"image",
-			"url":"assets/lobby/lobbyRoom4Btn1.png"
-		},
-		{
-			"name":"lobbyRoom4Btn2_png",
-			"type":"image",
-			"url":"assets/lobby/lobbyRoom4Btn2.png"
 		},
 		{
 			"name":"lobbyRoomListCloseBtn1_png",
@@ -1805,6 +1765,221 @@
 			"name":"diceAward10_png",
 			"type":"image",
 			"url":"assets/dice/award/diceAward10.png"
+		},
+		{
+			"name":"fishd12_json",
+			"type":"json",
+			"url":"assets/fish1/fishd12.json"
+		},
+		{
+			"name":"fishd12_png",
+			"type":"image",
+			"url":"assets/fish1/fishd12.png"
+		},
+		{
+			"name":"fishd13_json",
+			"type":"json",
+			"url":"assets/fish1/fishd13.json"
+		},
+		{
+			"name":"fishd13_png",
+			"type":"image",
+			"url":"assets/fish1/fishd13.png"
+		},
+		{
+			"name":"fish7_json",
+			"type":"json",
+			"url":"assets/fish1/fish7.json"
+		},
+		{
+			"name":"fish7_png",
+			"type":"image",
+			"url":"assets/fish1/fish7.png"
+		},
+		{
+			"name":"fish8_json",
+			"type":"json",
+			"url":"assets/fish1/fish8.json"
+		},
+		{
+			"name":"fish8_png",
+			"type":"image",
+			"url":"assets/fish1/fish8.png"
+		},
+		{
+			"name":"fish9_json",
+			"type":"json",
+			"url":"assets/fish1/fish9.json"
+		},
+		{
+			"name":"fish9_png",
+			"type":"image",
+			"url":"assets/fish1/fish9.png"
+		},
+		{
+			"name":"fish10_json",
+			"type":"json",
+			"url":"assets/fish1/fish10.json"
+		},
+		{
+			"name":"fish10_png",
+			"type":"image",
+			"url":"assets/fish1/fish10.png"
+		},
+		{
+			"name":"fish11_json",
+			"type":"json",
+			"url":"assets/fish1/fish11.json"
+		},
+		{
+			"name":"fish11_png",
+			"type":"image",
+			"url":"assets/fish1/fish11.png"
+		},
+		{
+			"name":"fish12_json",
+			"type":"json",
+			"url":"assets/fish1/fish12.json"
+		},
+		{
+			"name":"fish12_png",
+			"type":"image",
+			"url":"assets/fish1/fish12.png"
+		},
+		{
+			"name":"fish13_json",
+			"type":"json",
+			"url":"assets/fish1/fish13.json"
+		},
+		{
+			"name":"fish13_png",
+			"type":"image",
+			"url":"assets/fish1/fish13.png"
+		},
+		{
+			"name":"fishd7_json",
+			"type":"json",
+			"url":"assets/fish1/fishd7.json"
+		},
+		{
+			"name":"fishd7_png",
+			"type":"image",
+			"url":"assets/fish1/fishd7.png"
+		},
+		{
+			"name":"fishd8_json",
+			"type":"json",
+			"url":"assets/fish1/fishd8.json"
+		},
+		{
+			"name":"fishd8_png",
+			"type":"image",
+			"url":"assets/fish1/fishd8.png"
+		},
+		{
+			"name":"fishd9_json",
+			"type":"json",
+			"url":"assets/fish1/fishd9.json"
+		},
+		{
+			"name":"fishd9_png",
+			"type":"image",
+			"url":"assets/fish1/fishd9.png"
+		},
+		{
+			"name":"fishd10_json",
+			"type":"json",
+			"url":"assets/fish1/fishd10.json"
+		},
+		{
+			"name":"fishd10_png",
+			"type":"image",
+			"url":"assets/fish1/fishd10.png"
+		},
+		{
+			"name":"fishd11_json",
+			"type":"json",
+			"url":"assets/fish1/fishd11.json"
+		},
+		{
+			"name":"fishd11_png",
+			"type":"image",
+			"url":"assets/fish1/fishd11.png"
+		},
+		{
+			"name":"rank1kBtn1_png",
+			"type":"image",
+			"url":"assets/window/rank/rank1kBtn1.png"
+		},
+		{
+			"name":"rank1kBtn2_png",
+			"type":"image",
+			"url":"assets/window/rank/rank1kBtn2.png"
+		},
+		{
+			"name":"rank30Btn1_png",
+			"type":"image",
+			"url":"assets/window/rank/rank30Btn1.png"
+		},
+		{
+			"name":"rank30Btn2_png",
+			"type":"image",
+			"url":"assets/window/rank/rank30Btn2.png"
+		},
+		{
+			"name":"rankBg_png",
+			"type":"image",
+			"url":"assets/window/rank/rankBg.png"
+		},
+		{
+			"name":"rankText1_png",
+			"type":"image",
+			"url":"assets/window/rank/rankText1.png"
+		},
+		{
+			"name":"rankText2_png",
+			"type":"image",
+			"url":"assets/window/rank/rankText2.png"
+		},
+		{
+			"name":"lobbyRoomBtnbg1_png",
+			"type":"image",
+			"url":"assets/lobby/lobbyRoomBtnbg1.png"
+		},
+		{
+			"name":"lobbyRoomBtnbg2_png",
+			"type":"image",
+			"url":"assets/lobby/lobbyRoomBtnbg2.png"
+		},
+		{
+			"name":"lobbyRoomBtnbg3_png",
+			"type":"image",
+			"url":"assets/lobby/lobbyRoomBtnbg3.png"
+		},
+		{
+			"name":"lobbyRoomBtnbg4_png",
+			"type":"image",
+			"url":"assets/lobby/lobbyRoomBtnbg4.png"
+		},
+		{
+			"name":"lobbyWareMc_png",
+			"type":"image",
+			"url":"assets/lobby/mc/lobbyWareMc.png"
+		},
+		{
+			"name":"lobbyWareMc_json",
+			"type":"json",
+			"url":"assets/lobby/mc/lobbyWareMc.json"
+		},
+		{
+			"name":"lobbyStartBtn2_png",
+			"type":"image",
+			"url":"assets/lobby/lobbyStartBtn2.png"
+		},
+		{
+			"name":"lobbyStartBtn1_png",
+			"type":"image",
+			"url":"assets/lobby/lobbyStartBtn1.png"
 		}
 	]
 }

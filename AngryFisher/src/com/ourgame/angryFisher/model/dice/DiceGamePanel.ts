@@ -1,6 +1,6 @@
 class DiceGamePanel extends BaseComponent implements IBase {
-	public static ZERO_POINT_X: number = 130;
-	public static ZERO_POINT_Y: number = 160;
+	public static ZERO_POINT_X: number = 145;
+	public static ZERO_POINT_Y: number = 157;
 
 	public static ARMATURE_ZERO_X: number = 70;
 	public static ARMATURE_ZERO_Y: number = 80;
@@ -10,8 +10,10 @@ class DiceGamePanel extends BaseComponent implements IBase {
 	public constructor() {
 		super(false);
 		this.skinName = "resource/game_skins/dice/DiceGameSkin.exml";
-		this.x = DiceGamePanel.ZERO_POINT_X;
-		this.y = DiceGamePanel.ZERO_POINT_Y;
+		// this.x = DiceGamePanel.ZERO_POINT_X;
+		// this.y = DiceGamePanel.ZERO_POINT_Y;
+		this.touchEnabled = true;
+		this.touchChildren = false;
 	}
 
 	protected onSkinComplete(e: any): void {
@@ -46,10 +48,10 @@ class DiceGamePanel extends BaseComponent implements IBase {
 			var bmp: egret.DisplayObject
 			switch (element.rewardType) {
 				case 0:
-					bmp = MovieclipUtils.createMc("DiceGateMc_png", "DiceGateMc_json");
-					bmp.x = element.x;
-					bmp.y = element.y;
-					this.addChild(bmp);
+					// bmp = MovieclipUtils.createMc("DiceGateMc_png", "DiceGateMc_json");
+					// bmp.x = element.x;
+					// bmp.y = element.y;
+					// this.addChild(bmp);
 					bmp = MovieclipUtils.createMc("DiceGateBoxMc_png", "DiceGateBoxMc_json");
 					break;
 				case 1:
@@ -67,6 +69,9 @@ class DiceGamePanel extends BaseComponent implements IBase {
 			}
 			this.addChild(bmp);
 		});
+
+		this.armature.display.x = DiceGamePanel.ARMATURE_ZERO_X + vo.girdList[0].x;
+		this.armature.display.y = DiceGamePanel.ARMATURE_ZERO_Y / 2 + vo.girdList[0].y;
 	}
 
 	public enter(data?: any): void {

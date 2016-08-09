@@ -1042,7 +1042,7 @@ declare module egret {
          * @private
          * 标记这个显示对象在父级容器的位置发生了改变。
          */
-        private invalidatePosition();
+        $invalidatePosition(): void;
         /**
          * @private
          * 能够含有子项的类将子项列表存储在这个属性里。
@@ -1160,7 +1160,7 @@ declare module egret {
          * @private
          * 设置矩阵
          */
-        $setMatrix(matrix: Matrix, useProperties?: boolean): boolean;
+        $setMatrix(matrix: Matrix, needUpdateProperties?: boolean): boolean;
         /**
          * @private
          * 获得这个显示对象以及它所有父级对象的连接矩阵。
@@ -2254,15 +2254,7 @@ declare module egret {
          * @private
          */
         private hitTestPixel(stageX, stageY);
-        /**
-         * @private
-         */
         static $drawImage(node: sys.BitmapNode, image: any, bitmapX: number, bitmapY: number, bitmapWidth: number, bitmapHeight: number, offsetX: number, offsetY: number, textureWidth: number, textureHeight: number, destW: number, destH: number, sourceWidth: number, sourceHeight: number, scale9Grid: egret.Rectangle, fillMode: string, smoothing: boolean): void;
-        /**
-         * @private
-         * 绘制九宫格位图
-         */
-        private static drawScale9GridImage(node, scale9Grid, bitmapX, bitmapY, bitmapWidth, bitmapHeight, offsetX, offsetY, textureWidth, textureHeight, destW, destH);
     }
 }
 declare module egret {
@@ -3115,26 +3107,24 @@ declare module egret {
          * @language en_US
          * Specifies a gradient fill used by subsequent calls to other Graphics methods (such as lineTo() or drawCircle()) for the object.
          * Calling the clear() method clears the fill.
-         * Note: Only support on Canvas
          * @param type A value from the GradientType class that specifies which gradient type to use: GradientType.LINEAR or GradientType.RADIAL.
          * @param colors An array of RGB hexadecimal color values used in the gradient; for example, red is 0xFF0000, blue is 0x0000FF, and so on. You can specify up to 15 colors. For each color, specify a corresponding value in the alphas and ratios parameters.
          * @param alphas An array of alpha values for the corresponding colors in the colors array;
          * @param ratios An array of color distribution ratios; valid values are 0-255.
          * @param matrix A transformation matrix as defined by the egret.Matrix class. The egret.Matrix class includes a createGradientBox() method, which lets you conveniently set up the matrix for use with the beginGradientFill() method.
-         * @platform Web
+         * @platform Web,Native
          * @version Egret 2.4
          */
         /**
          * @language zh_CN
-         * 指定一种简单的单一颜色填充，在绘制时该填充将在随后对其他 Graphics 方法（如 lineTo() 或 drawCircle()）的调用中使用。
+         * 指定一种渐变填充，用于随后调用对象的其他 Graphics 方法（如 lineTo() 或 drawCircle()）。
          * 调用 clear() 方法会清除填充。
-         * 注：该方法目前仅支持H5 Canvas
          * @param type 用于指定要使用哪种渐变类型的 GradientType 类的值：GradientType.LINEAR 或 GradientType.RADIAL。
          * @param colors 渐变中使用的 RGB 十六进制颜色值的数组（例如，红色为 0xFF0000，蓝色为 0x0000FF，等等）。对于每种颜色，请在 alphas 和 ratios 参数中指定对应值。
          * @param alphas colors 数组中对应颜色的 alpha 值数组。
          * @param ratios 颜色分布比率的数组。有效值为 0 到 255。
          * @param matrix 一个由 egret.Matrix 类定义的转换矩阵。egret.Matrix 类包括 createGradientBox() 方法，通过该方法可以方便地设置矩阵，以便与 beginGradientFill() 方法一起使用
-         * @platform Web
+         * @platform Web,Native
          * @version Egret 2.4
          */
         beginGradientFill(type: string, colors: number[], alphas: number[], ratios: number[], matrix?: egret.Matrix): void;
@@ -3533,24 +3523,12 @@ declare module egret {
     /**
      * OrientationMode 类为舞台初始旋转模式提供值。
      */
-    class OrientationMode {
-        /**
-         * 适配屏幕
-         */
-        static AUTO: string;
-        /**
-         * 默认竖屏
-         */
-        static PORTRAIT: string;
-        /**
-         * 默认横屏，舞台顺时针旋转90度
-         */
-        static LANDSCAPE: string;
-        /**
-         * 默认横屏，舞台逆时针旋转90度
-         */
-        static LANDSCAPE_FLIPPED: string;
-    }
+    const OrientationMode: {
+        AUTO: string;
+        PORTRAIT: string;
+        LANDSCAPE: string;
+        LANDSCAPE_FLIPPED: string;
+    };
 }
 declare module egret {
     var $TextureScaleFactor: number;
@@ -9880,7 +9858,15 @@ declare module egret {
     }
 }
 declare module egret.sys {
+    /**
+     * @private
+     */
     var systemRenderer: SystemRenderer;
+    /**
+     * @private
+     * 用于碰撞检测绘制
+     */
+    var canvasRenderer: SystemRenderer;
     /**
      * @private
      * 显示渲染器接口
@@ -9978,6 +9964,8 @@ declare module egret.sys {
          * @private
          */
         private frameInterval;
+        private frameDeltaTime;
+        private lastTimeStamp;
         /**
          * @private
          * 设置全局帧率
@@ -10205,6 +10193,16 @@ declare module egret.sys {
          * 在显示对象的$render()方法被调用前，自动清空自身的drawData数据。
          */
         cleanBeforeRender(): void;
+        static $updateTextureData(node: sys.BitmapNode, image: any, bitmapX: number, bitmapY: number, bitmapWidth: number, bitmapHeight: number, offsetX: number, offsetY: number, textureWidth: number, textureHeight: number, destW: number, destH: number, sourceWidth: number, sourceHeight: number, scale9Grid: egret.Rectangle, fillMode: string, smoothing: boolean): void;
+        /**
+         * @private
+         * 绘制九宫格位图
+         */
+        private static $updateTextureDataWithScale9Grid(node, scale9Grid, bitmapX, bitmapY, bitmapWidth, bitmapHeight, offsetX, offsetY, textureWidth, textureHeight, destW, destH);
+        /**
+  * @private
+  */
+        private static drawClipImage(node, scale, bitmapX, bitmapY, scaledBitmapW, scaledBitmapH, offsetX, offsetY, destW, destH, startX?, startY?);
     }
 }
 declare module egret.sys {
@@ -10356,19 +10354,6 @@ declare module egret.sys {
          * 绘制一次位图
          */
         setAlpha(alpha: number): void;
-    }
-}
-declare module egret.sys {
-    /**
-     * @private
-     * 位图渲染节点
-     */
-    class SetTransformNode extends RenderNode {
-        constructor();
-        /**
-         * 绘制一次位图
-         */
-        setTransform(a: number, b: number, c: number, d: number, tx: number, ty: number): void;
     }
 }
 declare module egret.sys {
@@ -14532,6 +14517,10 @@ declare module egret {
          * @private
          */
         private lastCount;
+        /**
+         * @private
+         */
+        private lastTimeStamp;
         /**
          * @private
          * Ticker以60FPS频率刷新此方法

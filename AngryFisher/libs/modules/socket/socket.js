@@ -198,6 +198,7 @@ var egret;
          *
          */
         p.onClose = function () {
+            this.connectCount--;
             this._connected = false;
             this.dispatchEventWith(egret.Event.CLOSE);
         };
@@ -277,12 +278,12 @@ var egret;
                 this._writeMessage += message;
             }
             this.flush();
-            return;
-            if (this._isReadySend) {
-                return;
-            }
-            this._isReadySend = true;
-            egret.callLater(this.flush, this);
+            // return;
+            // if (this._isReadySend) {
+            //     return;
+            // }
+            // this._isReadySend = true;
+            // egret.callLater(this.flush, this);
         };
         /**
          * @language en_US

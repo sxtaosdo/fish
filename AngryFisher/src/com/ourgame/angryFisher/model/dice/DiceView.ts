@@ -1,11 +1,13 @@
 class DiceView extends BaseComponent implements IBase {
 
 
+	public contentScroller: eui.Scroller;
+	public contentGroup: eui.Group;
 	public closeBtn: eui.Button;
 	public singeBtn: eui.Button;
 	public getBtn: eui.Button;
 	public infoBtn: eui.Button;
-	public contentScroller: eui.Scroller;
+
 
 
 	private light: egret.MovieClip;
@@ -23,18 +25,21 @@ class DiceView extends BaseComponent implements IBase {
 		this.y = 25;
 
 		this.gameMask = new egret.Sprite();
-		this.gameMask.width = 750;
-		this.gameMask.height = 350;
+		this.gameMask.width = 745;
+		this.gameMask.height = 355;
 		this.gameMask.graphics.beginFill(0x000000);
-		this.gameMask.graphics.drawRect(0, 0, 750, 350);
+		this.gameMask.graphics.drawRoundRect(0, 0, 745, 355, 60, 60);
 		this.gameMask.graphics.endFill();
 		this.gameMask.x = DiceGamePanel.ZERO_POINT_X;
 		this.gameMask.y = DiceGamePanel.ZERO_POINT_Y;
 		this.addChild(this.gameMask);
 
 		this.game = new DiceGamePanel();
-		this.game.mask = this.gameMask;
-		this.addChildAt(this.game, 0);
+		this.contentScroller.mask = this.gameMask;
+
+		this.contentGroup.addChild(this.game);
+		this.contentScroller.viewport = this.contentGroup;
+		this.contentGroup.setLayoutBoundsSize(1500, 760)
 
 		this.bg = BitMapUtil.createBitmapByName("lobbyBg_png");
 		this.bg.alpha = 0.8;

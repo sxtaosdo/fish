@@ -24,7 +24,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 
 	public onSkinComplete(e): void {
 		super.onSkinComplete(e);
-		this.y = Main.GAME_HEIGHT - this.height;
+		this.y = Main.GAME_HEIGHT - this.height - 40;
 		this.x = 100;
 	}
 

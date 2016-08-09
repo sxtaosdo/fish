@@ -47,8 +47,10 @@
     "resource/game_skins/window/DiceHitInfoPanelSkin.exml",
     "resource/game_skins/window/HelpPanelSkin.exml",
     "resource/game_skins/window/MailPanelSkin.exml",
+    "resource/game_skins/window/RankPanelSkin.exml",
     "resource/game_skins/window/SettingPanelSkin.exml",
     "resource/renderer/HallRoomInfoListItemSkin.exml",
-    "resource/renderer/PlayerGun.exml"
+    "resource/renderer/PlayerGun.exml",
+    "resource/renderer/RoomItenSkin.exml"
   ]
 }
