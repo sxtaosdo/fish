@@ -1,9 +1,12 @@
 class DiceView extends BaseComponent implements IBase {
 
+
 	public closeBtn: eui.Button;
 	public singeBtn: eui.Button;
 	public getBtn: eui.Button;
 	public infoBtn: eui.Button;
+	public contentScroller: eui.Scroller;
+
 
 	private light: egret.MovieClip;
 	private bomb: egret.MovieClip;
@@ -65,6 +68,7 @@ class DiceView extends BaseComponent implements IBase {
 			this.getBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onGetBtn, this);
 			this.infoBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onInfoBtn, this);
 		}
+		this.game.enter();
 	}
 
 	public exit(): void {
@@ -72,6 +76,7 @@ class DiceView extends BaseComponent implements IBase {
 			this.parent.removeChild(this);
 			ClientModel.instance.changeGameState(new HallView());
 		}
+		this.game.exit();
 	}
 
 	public execute(data?: any): void {

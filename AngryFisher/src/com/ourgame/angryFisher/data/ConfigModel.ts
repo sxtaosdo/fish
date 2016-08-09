@@ -19,6 +19,7 @@ class ConfigModel {
     private _fishList: Array<FishVo>;
     private _deabedList: Array<DeabedVo>;
     private _createList: Array<FishCreateVo>;
+    private _diceMapGrid: DiceVo;
 
 
     public constructor() {
@@ -196,6 +197,19 @@ class ConfigModel {
         }
     }
 
+    public parseGridList(data: any, callback: Function, thisObj: any): void {
+        // var key: any;
+        // var list = data.Grids.Grid;
+        // for (key in list) {
+        //     var vo: GridVo = new GridVo();
+        //     vo.analysis(list[key]);
+        //     this._girdsList.push(vo);
+        // }
+        this._diceMapGrid = new DiceVo();
+        this._diceMapGrid.analysis(data.Grids);
+        callback.apply(thisObj)
+    }
+
     public get version(): string {
         return this._version;
     }
@@ -234,6 +248,10 @@ class ConfigModel {
 
     public get createList(): Array<FishCreateVo> {
         return this._createList;
+    }
+
+    public get diceMapGrid(): DiceVo {
+        return this._diceMapGrid;
     }
 
 }

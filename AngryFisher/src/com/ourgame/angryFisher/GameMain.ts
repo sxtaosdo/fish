@@ -5,6 +5,7 @@
  * 其他界面
  * 弹出框管理
  * top条
+ * 步步为营
  */
 class GameMain extends egret.Sprite implements IBase {
 
@@ -32,7 +33,7 @@ class GameMain extends egret.Sprite implements IBase {
 		if (this.topBar == null) {
 			this.topBar = new TopView();
 		}
-		this.addChildAt(this.topBar,0);
+		this.addChildAt(this.topBar, 0);
 		this.topBar.enter();
 	}
 

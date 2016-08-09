@@ -9,7 +9,7 @@
 			"name":"fish"
 		},
 		{
-			"keys":"game_json,fish_json,A_star1[12]_track,A_star2[12]_track,A_tai[2]_track,A_w[2]_track,A_w[8]_track,A_wave1[8]_track,A_wave2[6]_track,A_wave3[6]_track,A_wave4[6]_track,A_well[8]_track,A_wire[2]_track,A_x[4]_track,B99lb[5]_track,B99lb_r[3]_track,B99lt[5]_track,B99lt_r[3]_track,B99mb[5]_track,B99mb_r[3]_track,B99mt[5]_track,B99mt_r[3]_track,B99rb[5]_track,B99rb_r[3]_track,B99rt[5]_track,B99rt_r[3]_track,BombFish_track,C04[6]_track,C05[6]_track,C06[6]_track,C10[6]_track,C13[1]_track,C15[6]_track,C16[6]_track,C17[1]_track,C17[4]_track,C18[4]_track,C19[4]_track,C20[4]_track,C21[4]_track,C22[6]_track,Golden_Shark_track,GoldenShark_track,LC17[3]_track,shark_track,T_2at_track,T_2gt_track,T_at_track,T_bt_track,T_ct_track,T_dt_track,T_et_track,T_gt_track,xiao1_track,xiao3_track,xiao4_track,xiao6_track,-4[13]_track,A_a[24]_track,-A_a[24]_track,A_bone[4]_track,A_c[4]_track,A_cross[4]_track,A_d[8]_track,A_diamond[8]_track,A_grid[4]_track,A_heart[2]_track,A_net[10]_track,A_parallel1[4]_track,A_parallel2[6]_track,A_parallel3[8]_track,A_parallel4[2]_track,A_r[4]_track,A_rainbow[4]_track,A_rice[8]_track,A_semicircle[6]_track,little_golden_shark_track,room_json,deabed_json,create_json",
+			"keys":"game_json,fish_json,A_star1[12]_track,A_star2[12]_track,A_tai[2]_track,A_w[2]_track,A_w[8]_track,A_wave1[8]_track,A_wave2[6]_track,A_wave3[6]_track,A_wave4[6]_track,A_well[8]_track,A_wire[2]_track,A_x[4]_track,B99lb[5]_track,B99lb_r[3]_track,B99lt[5]_track,B99lt_r[3]_track,B99mb[5]_track,B99mb_r[3]_track,B99mt[5]_track,B99mt_r[3]_track,B99rb[5]_track,B99rb_r[3]_track,B99rt[5]_track,B99rt_r[3]_track,BombFish_track,C04[6]_track,C05[6]_track,C06[6]_track,C10[6]_track,C13[1]_track,C15[6]_track,C16[6]_track,C17[1]_track,C17[4]_track,C18[4]_track,C19[4]_track,C20[4]_track,C21[4]_track,C22[6]_track,Golden_Shark_track,GoldenShark_track,LC17[3]_track,shark_track,T_2at_track,T_2gt_track,T_at_track,T_bt_track,T_ct_track,T_dt_track,T_et_track,T_gt_track,xiao1_track,xiao3_track,xiao4_track,xiao6_track,-4[13]_track,A_a[24]_track,-A_a[24]_track,A_bone[4]_track,A_c[4]_track,A_cross[4]_track,A_d[8]_track,A_diamond[8]_track,A_grid[4]_track,A_heart[2]_track,A_net[10]_track,A_parallel1[4]_track,A_parallel2[6]_track,A_parallel3[8]_track,A_parallel4[2]_track,A_r[4]_track,A_rainbow[4]_track,A_rice[8]_track,A_semicircle[6]_track,little_golden_shark_track,room_json,deabed_json,create_json,grids_json",
 			"name":"config"
 		},
 		{
@@ -57,7 +57,7 @@
 			"name":"window"
 		},
 		{
-			"keys":"diceBg_png,diceBox300_png,diceBox500_png,diceBox1000_png,diceBox2000_png,diceBox3000_png,diceBox5000_png,diceBox10000_png,diceBox20000_png,DiceCharBg_png,diceCloseBtn1_png,diceCloseBtn2_png,diceGameBg_png,diceGamePlant_png,diceGameSton_png,diceImage1_png,diceImage2_png,diceImage3_png,DiceBombMc_json,DiceBombMc_png,DiceGateBoxMc_json,DiceGateBoxMc_png,DiceGateMc_json,DiceGateMc_png,DiceGoBtnMc_json,DiceGoBtnMc_png,DiceLightMc_json,DiceLightMc_png,DiceLogoMc_json,DiceLogoMc_png,diceTimePanel_png,diceCompleteBtn1_png,diceCompleteBtn2_png,diceDoingBtn1_png,diceDoingBtn2_png,diceBox200_png,diceBox50_png,diceBox100_png,diceGetBtn_png,diceInfoBtn_png,diceSingeBtn_png",
+			"keys":"diceBg_png,DiceCharBg_png,diceCloseBtn1_png,diceCloseBtn2_png,diceGameBg_png,diceGamePlant_png,diceGameSton_png,diceImage1_png,diceImage2_png,diceImage3_png,DiceBombMc_json,DiceBombMc_png,DiceGateBoxMc_json,DiceGateBoxMc_png,DiceGateMc_json,DiceGateMc_png,DiceGoBtnMc_json,DiceGoBtnMc_png,DiceLightMc_json,DiceLightMc_png,DiceLogoMc_json,DiceLogoMc_png,diceTimePanel_png,diceCompleteBtn1_png,diceCompleteBtn2_png,diceDoingBtn1_png,diceDoingBtn2_png,diceGetBtn_png,diceInfoBtn_png,diceSingeBtn_png,fishDb_json,texture_json,texture_png,diceBox50_png,diceBox100_png,diceBox200_png,diceBox300_png,diceBox500_png,diceBox1000_png,diceBox2000_png,diceBox3000_png,diceBox5000_png,diceBox10000_png,diceBox20000_png,diceAward1_png,diceAward2_json,diceAward2_png,diceAward3_png,diceAward4_json,diceAward4_png,diceAward5_png,diceAward6_json,diceAward6_png,diceAward7_png,diceAward8_json,diceAward8_png,diceAward9_png,diceAward10_json,diceAward10_png",
 			"name":"dice"
 		},
 		{
@@ -1457,81 +1457,6 @@
 			"url":"assets/player/playerGunIcon.png"
 		},
 		{
-			"name":"diceAward1_png",
-			"type":"image",
-			"url":"assets/dice/award/diceAward1.png"
-		},
-		{
-			"name":"diceAward10_json",
-			"type":"json",
-			"url":"assets/dice/award/diceAward10.json"
-		},
-		{
-			"name":"diceAward10_png",
-			"type":"image",
-			"url":"assets/dice/award/diceAward10.png"
-		},
-		{
-			"name":"diceAward2_json",
-			"type":"json",
-			"url":"assets/dice/award/diceAward2.json"
-		},
-		{
-			"name":"diceAward2_png",
-			"type":"image",
-			"url":"assets/dice/award/diceAward2.png"
-		},
-		{
-			"name":"diceAward3_png",
-			"type":"image",
-			"url":"assets/dice/award/diceAward3.png"
-		},
-		{
-			"name":"diceAward4_json",
-			"type":"json",
-			"url":"assets/dice/award/diceAward4.json"
-		},
-		{
-			"name":"diceAward4_png",
-			"type":"image",
-			"url":"assets/dice/award/diceAward4.png"
-		},
-		{
-			"name":"diceAward5_png",
-			"type":"image",
-			"url":"assets/dice/award/diceAward5.png"
-		},
-		{
-			"name":"diceAward6_json",
-			"type":"json",
-			"url":"assets/dice/award/diceAward6.json"
-		},
-		{
-			"name":"diceAward6_png",
-			"type":"image",
-			"url":"assets/dice/award/diceAward6.png"
-		},
-		{
-			"name":"diceAward7_png",
-			"type":"image",
-			"url":"assets/dice/award/diceAward7.png"
-		},
-		{
-			"name":"diceAward8_json",
-			"type":"json",
-			"url":"assets/dice/award/diceAward8.json"
-		},
-		{
-			"name":"diceAward8_png",
-			"type":"image",
-			"url":"assets/dice/award/diceAward8.png"
-		},
-		{
-			"name":"diceAward9_png",
-			"type":"image",
-			"url":"assets/dice/award/diceAward9.png"
-		},
-		{
 			"name":"DiceGateBoxMc_json",
 			"type":"json",
 			"url":"assets/dice/mc/DiceGateBoxMc.json"
@@ -1575,46 +1500,6 @@
 			"name":"diceBg_png",
 			"type":"image",
 			"url":"assets/dice/diceBg.png"
-		},
-		{
-			"name":"diceBox300_png",
-			"type":"image",
-			"url":"assets/dice/diceBox300.png"
-		},
-		{
-			"name":"diceBox500_png",
-			"type":"image",
-			"url":"assets/dice/diceBox500.png"
-		},
-		{
-			"name":"diceBox1000_png",
-			"type":"image",
-			"url":"assets/dice/diceBox1000.png"
-		},
-		{
-			"name":"diceBox2000_png",
-			"type":"image",
-			"url":"assets/dice/diceBox2000.png"
-		},
-		{
-			"name":"diceBox3000_png",
-			"type":"image",
-			"url":"assets/dice/diceBox3000.png"
-		},
-		{
-			"name":"diceBox5000_png",
-			"type":"image",
-			"url":"assets/dice/diceBox5000.png"
-		},
-		{
-			"name":"diceBox10000_png",
-			"type":"image",
-			"url":"assets/dice/diceBox10000.png"
-		},
-		{
-			"name":"diceBox20000_png",
-			"type":"image",
-			"url":"assets/dice/diceBox20000.png"
 		},
 		{
 			"name":"DiceCharBg_png",
@@ -1717,21 +1602,6 @@
 			"url":"assets/lobby/diceBtn1.png"
 		},
 		{
-			"name":"diceBox200_png",
-			"type":"image",
-			"url":"assets/dice/diceBox200.png"
-		},
-		{
-			"name":"diceBox50_png",
-			"type":"image",
-			"url":"assets/dice/diceBox50.png"
-		},
-		{
-			"name":"diceBox100_png",
-			"type":"image",
-			"url":"assets/dice/diceBox100.png"
-		},
-		{
 			"name":"diceGetBtn_png",
 			"type":"image",
 			"url":"assets/dice/diceGetBtn.png"
@@ -1785,6 +1655,156 @@
 			"name":"diceHitInfoBg_png",
 			"type":"image",
 			"url":"assets/window/diceHitInfo/diceHitInfoBg.png"
+		},
+		{
+			"name":"fishDb_json",
+			"type":"json",
+			"url":"assets/dice/db/fishDb.json"
+		},
+		{
+			"name":"texture_json",
+			"type":"json",
+			"url":"assets/dice/db/texture.json"
+		},
+		{
+			"name":"texture_png",
+			"type":"image",
+			"url":"assets/dice/db/texture.png"
+		},
+		{
+			"name":"diceBox50_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox50.png"
+		},
+		{
+			"name":"diceBox100_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox100.png"
+		},
+		{
+			"name":"diceBox200_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox200.png"
+		},
+		{
+			"name":"diceBox300_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox300.png"
+		},
+		{
+			"name":"diceBox500_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox500.png"
+		},
+		{
+			"name":"diceBox1000_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox1000.png"
+		},
+		{
+			"name":"diceBox2000_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox2000.png"
+		},
+		{
+			"name":"diceBox3000_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox3000.png"
+		},
+		{
+			"name":"diceBox5000_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox5000.png"
+		},
+		{
+			"name":"diceBox10000_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox10000.png"
+		},
+		{
+			"name":"diceBox20000_png",
+			"type":"image",
+			"url":"assets/dice/tile/diceBox20000.png"
+		},
+		{
+			"name":"grids_json",
+			"type":"json",
+			"url":"config/grids.json"
+		},
+		{
+			"name":"diceAward1_png",
+			"type":"image",
+			"url":"assets/dice/award/diceAward1.png"
+		},
+		{
+			"name":"diceAward2_json",
+			"type":"json",
+			"url":"assets/dice/award/diceAward2.json"
+		},
+		{
+			"name":"diceAward2_png",
+			"type":"image",
+			"url":"assets/dice/award/diceAward2.png"
+		},
+		{
+			"name":"diceAward3_png",
+			"type":"image",
+			"url":"assets/dice/award/diceAward3.png"
+		},
+		{
+			"name":"diceAward4_json",
+			"type":"json",
+			"url":"assets/dice/award/diceAward4.json"
+		},
+		{
+			"name":"diceAward4_png",
+			"type":"image",
+			"url":"assets/dice/award/diceAward4.png"
+		},
+		{
+			"name":"diceAward5_png",
+			"type":"image",
+			"url":"assets/dice/award/diceAward5.png"
+		},
+		{
+			"name":"diceAward6_json",
+			"type":"json",
+			"url":"assets/dice/award/diceAward6.json"
+		},
+		{
+			"name":"diceAward6_png",
+			"type":"image",
+			"url":"assets/dice/award/diceAward6.png"
+		},
+		{
+			"name":"diceAward7_png",
+			"type":"image",
+			"url":"assets/dice/award/diceAward7.png"
+		},
+		{
+			"name":"diceAward8_json",
+			"type":"json",
+			"url":"assets/dice/award/diceAward8.json"
+		},
+		{
+			"name":"diceAward8_png",
+			"type":"image",
+			"url":"assets/dice/award/diceAward8.png"
+		},
+		{
+			"name":"diceAward9_png",
+			"type":"image",
+			"url":"assets/dice/award/diceAward9.png"
+		},
+		{
+			"name":"diceAward10_json",
+			"type":"json",
+			"url":"assets/dice/award/diceAward10.json"
+		},
+		{
+			"name":"diceAward10_png",
+			"type":"image",
+			"url":"assets/dice/award/diceAward10.png"
 		}
 	]
 }

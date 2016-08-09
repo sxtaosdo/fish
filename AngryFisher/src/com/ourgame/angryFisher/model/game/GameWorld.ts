@@ -14,11 +14,12 @@ class GameWorld extends egret.Sprite implements IBase {
         this.createList = new Array<FishCreateVo>();
         this.client.playerList = new Array<PlayerGunRenderer>();
         this.bg = new DeabedPanel();
+        this.y = 40;
     }
 
     private test(): void {
         var obj: Object = {};
-        while (this.createList.length < 1) {
+        while (this.createList.length < 3) {
             var key = RandomUtil.randInt(0, ConfigModel.instance.createList.length - 1);
             if (obj[key]) {
                 continue;
@@ -48,12 +49,12 @@ class GameWorld extends egret.Sprite implements IBase {
     }
 
     public enter(data?: any): void {
-        this.addChild(this.bg);
-        this.bg.enter();
         var player: PlayerGunRenderer = new PlayerGunRenderer();
         this.addChild(player);
         player.enter();
         this.client.playerList.push(player);
+        this.addChildAt(this.bg, 0);
+        this.bg.enter();
 
         TimerManager.instance.doOnce(1000, this.test, this);
         TimerManager.instance.doFrameLoop(1, this.execute, this);

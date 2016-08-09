@@ -57,4 +57,7 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
+	<e:Scroller id="contentScroller" width="745" height="354" x="146" y="156">
+		<e:Group/>
+	</e:Scroller>
 </e:Skin>

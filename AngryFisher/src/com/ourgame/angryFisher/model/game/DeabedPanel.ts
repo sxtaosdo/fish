@@ -1,3 +1,6 @@
+/**
+ * 海底
+ */
 class DeabedPanel extends egret.Sprite implements IBase {
 
 	private static bgNameList: Array<string> = ["bg2_png", "bg3_png", "bg4_png", "bg6_png", "bg7_png", "bg8_png", "BattleBackground1_png", "bg_png", "bg1_png"];
@@ -16,7 +19,7 @@ class DeabedPanel extends egret.Sprite implements IBase {
 	}
 
 	public enter(data?: any): void {
-		this.addChild(this.bg);
+		this.addChildAt(this.bg, 0);
 		this.plantList.push();
 		this.ripple = MovieclipUtils.createMc("wave1_png", "wave1_json");
 		this.ripple.scaleX = Main.GAME_WIDTH / this.ripple.width;
