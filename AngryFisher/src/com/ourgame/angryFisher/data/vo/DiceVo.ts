@@ -5,6 +5,7 @@ class DiceVo {
 	public final: number = 0;
 	public awardMap: Object;
 	public girdList: Array<GridVo>;
+	
 
 	public constructor() {
 		this.awardMap = {};

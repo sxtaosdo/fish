@@ -33,8 +33,6 @@ class DiceGamePanel extends BaseComponent implements IBase {
 		this.armature.display.y = DiceGamePanel.ARMATURE_ZERO_Y;
 		this.armature.animation.gotoAndPlay("newAnimation");
 		TimerManager.instance.doLoop(33, this.initDb, this);
-
-		this.addChild(this.armature.display);
 	}
 
 	private initDb(): void {
@@ -76,15 +74,21 @@ class DiceGamePanel extends BaseComponent implements IBase {
 
 	public enter(data?: any): void {
 		ConfigModel.instance.parseGridList(RES.getRes("grids_json"), this.init, this);
+		this.addChild(this.armature.display);
 	}
 
 	public exit(): void {
 		TimerManager.instance.clearTimer(this.initDb);
+		// if (this.armature.display.parent) {
+		// 	this.armature.display.parent.removeChild(this.armature.display);
+		// }
 		this.armature.dispose();	//不知道为什么报错
 	}
 
 	public execute(data?: any): void {
-
+		// this.armature.display.x = ConfigModel.instance.diceMapGrid.girdList[data].x + DiceGamePanel.ARMATURE_ZERO_X;
+		// this.armature.display.y = ConfigModel.instance.diceMapGrid.girdList[data].y + DiceGamePanel.ARMATURE_ZERO_Y;
+		egret.Tween.get(this.armature.display).to({ x: ConfigModel.instance.diceMapGrid.girdList[data].x + DiceGamePanel.ARMATURE_ZERO_X, y: ConfigModel.instance.diceMapGrid.girdList[data].y + DiceGamePanel.ARMATURE_ZERO_Y }, 1000);
 	}
 
 	private createAward(type: number): egret.DisplayObject {

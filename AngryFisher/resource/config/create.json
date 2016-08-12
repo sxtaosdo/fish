@@ -218,5 +218,17 @@
             "randomSeed": 0,
             "pathID": 19
         }
+        ,
+        {
+            "id": 20,
+            "fishType": 11,
+            "createTime": 1,
+            "speed": 10,
+            "fishCount": 500,
+            "radius": 1,
+            "interval": 200,
+            "randomSeed": 0,
+            "pathID": 20
+        }
     ]
 }

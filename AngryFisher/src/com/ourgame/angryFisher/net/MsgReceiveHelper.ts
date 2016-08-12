@@ -61,6 +61,12 @@ class MsgReceiveHelper {
             //     // ClientModel.instance.openAlert();
             // }
             // break;
+            case MsgType.GLFS_PeriodChangeACK:
+                HallClientModel.instance.onGoResult(body);
+                break;
+            case MsgType.A_DICE_INFO:
+                HallClientModel.instance.onDiceInfo(body);
+                break;
         }
     }
 }

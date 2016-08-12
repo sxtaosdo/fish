@@ -15,12 +15,12 @@ class MsgSendHelper {
         this._message = message;
     }
 
-    public get msg(): any {
-        return this._message;
-    }
-
     public sender(value: any): void {
         this._sender = value;
+    }
+
+    public get msg(): any {
+        return this._message;
     }
 
 	/**
@@ -46,5 +46,14 @@ class MsgSendHelper {
         // var byts: ArrayBuffer = login.toArrayBuffer();
         // ConnectionManager.instance.send(MsgType.REQ_LOGIN, byts);
         return 2;
+    }
+
+    public diceInfo():void{
+        ConnectionManager.instance.send(MsgType.R_DICE_INFO, {});
+    }
+
+    /**步步为营go按钮 */
+    public diceGo(): void {
+        ConnectionManager.instance.send(MsgType.GLFS_Ping, {});
     }
 }

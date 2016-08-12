@@ -94,19 +94,7 @@ class BaseEvent {
      */
     public static BIGWIN_SELF_EVENT: string = "bigWinSelfEvent";
     /**
-     * free信息(更新)
+     * 升级
      */
-    public static FREE_EVENT: string = "freeEVENT";
-    /**
-     * free进入
-     */
-    public static FREE_ENTER: string = "freeEnter";
-    /**
-     * free退出
-     */
-    public static FREE_EXIT: string = "freeExit";
-    /**
-     * 强制解锁hit按钮
-     */
-    public static UNLOCK_HIT: string = "unlockHit";
+    public static LEVEL_UP_EVENT:string="levelUpEvent";
 }

@@ -29,7 +29,7 @@ class WindowManager extends egret.Sprite {
     public open(panel: any, data?: any): void {
         // console.error("进入了WindowManager的open方法，panel：" + panel + "\tdata:" + data);
         // if ((panel != null) && (panel["name"] == "Alert")) {
-        console.log(panel == Alert);
+        // console.log(panel == Alert);
         if ((panel != null) && (panel == Alert)) {
             this._alertDataList.push(data);
         } else {

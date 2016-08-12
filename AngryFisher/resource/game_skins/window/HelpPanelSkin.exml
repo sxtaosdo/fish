@@ -44,7 +44,7 @@
         <e:skinName>
             <e:Skin states="up,down,disabled">
                 <e:Image width="15" height="14" source="SettingSelectBox1_png" source.down="SettingSelectBox2_png" />
-                <e:Label id="labelDisplay" horizontalCenter="10" verticalCenter="0" size="14" textColor="#F3FF00" />
+                <e:Label id="labelDisplay" horizontalCenter="10" verticalCenter="0" size="14" textColor="0xF3FF00" />
             </e:Skin>
         </e:skinName>
     </e:ToggleSwitch>

@@ -8,7 +8,7 @@ class ConnectionManager {
     /**
      * 连接类型
      */
-    public static CONN_TYPE: number = 2;
+    public static CONN_TYPE: number = 1;
     /**
      * 重连间隔
      */

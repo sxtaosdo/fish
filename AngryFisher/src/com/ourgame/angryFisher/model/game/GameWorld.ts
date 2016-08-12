@@ -5,6 +5,7 @@ class GameWorld extends egret.Sprite implements IBase {
     private client: ClientModel;
     private bg: DeabedPanel;
     private createList: Array<FishCreateVo>;
+    private jpBar: JpBarPanel;
 
     public constructor() {
         super();
@@ -15,6 +16,11 @@ class GameWorld extends egret.Sprite implements IBase {
         this.client.playerList = new Array<PlayerGunRenderer>();
         this.bg = new DeabedPanel();
         this.y = 40;
+
+        this.jpBar = new JpBarPanel();
+        this.jpBar.x = 200;
+        this.jpBar.y = 70;
+        this.addChild(this.jpBar);
     }
 
     private test(): void {
@@ -55,18 +61,22 @@ class GameWorld extends egret.Sprite implements IBase {
         this.client.playerList.push(player);
         this.addChildAt(this.bg, 0);
         this.bg.enter();
+        this.jpBar.enter();
 
         TimerManager.instance.doOnce(1000, this.test, this);
         TimerManager.instance.doFrameLoop(1, this.execute, this);
         GameDispatcher.addEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
         GameDispatcher.addEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
         GameDispatcher.addEventListener(TestEvent.CHANGE_MAP, this.changeMap, this);
+        GameDispatcher.addEventListener(BaseEvent.LEVEL_UP_EVENT, this.onLevelUp, this);
     }
 
     public exit(data?: any): void {
         if (this.parent != null) {
             this.parent.removeChild(this);
         }
+        this.bg.exit();
+        this.jpBar.exit();
         TimerManager.instance.clearTimer(this.test);
         TimerManager.instance.clearTimer(this.execute);
         GameDispatcher.removeEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
@@ -133,6 +143,9 @@ class GameWorld extends egret.Sprite implements IBase {
 
     private changeMap(): void {
         this.bg.execute(true);
+    }
+    private onLevelUp(): void {
+        ClientModel.instance.openWindow(LevelUpPanel);
     }
 
 }

@@ -27,7 +27,45 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
+	
 	<e:Scroller id="listScroller" width="512" height="235" x="110" y="212">
 		<e:List id="roomList" x="96" y="219" />
 	</e:Scroller>
+	
+	<e:ViewStack width="315" height="72" x="412" y="4" id="viewStack" selectedIndex="0">
+		<e:Group width="315" height="100%" name="视图">
+			<e:Rect width="100%" height="100%" x="0" y="0" />
+		</e:Group>
+		<e:Group width="315" height="100%" name="视图">
+			<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0xf50607" />
+		</e:Group>
+		<e:Group width="315" height="100%" name="视图">
+			<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0xffc900" />
+		</e:Group>
+		<e:Group width="315" height="100%" name="视图">
+			<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0xebfe50" />
+		</e:Group>
+		<e:Group width="315" height="100%" name="视图">
+			<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0x00ff1b" />
+		</e:Group>
+		<e:Group width="315" height="100%" name="视图">
+			<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0x00ffa4" />
+		</e:Group>
+		<e:Group width="315" height="100%" name="视图">
+			<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0x0051ff" />
+		</e:Group>
+		<e:Group width="315" height="100%" name="视图">
+			<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0xff0099" />
+		</e:Group>
+		<e:Group width="315" height="100%" name="视图">
+			<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0xf7f6f6" />
+		</e:Group>
+	</e:ViewStack>
+	<e:TabBar id="tabBar" width="315" height="71" x="412" y="4" dataProvider="{viewStack}">
+		<e:itemRendererSkinName>
+			<e:Skin states="up,down" height="10">
+				<e:Rect width="10" height="10" x="0" y="0" fillColor.up="0xffffff" fillColor.down="0xaaaaaa" />
+			</e:Skin>
+		</e:itemRendererSkinName>
+	</e:TabBar>
 </e:Skin>

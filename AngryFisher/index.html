@@ -66,9 +66,11 @@
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/def/EntityType.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/def/GameStateDef.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/def/StateDef.js"></script>
+	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/HallClientModel.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/LanguageConfig.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/UserModel.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/DeabedVo.js"></script>
+	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/DiceInfo.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/DiceVo.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/FishCreateVo.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/FishVo.js"></script>
@@ -78,6 +80,7 @@
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/RoomInfoVo.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/event/BaseEvent.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/event/GameDispatcher.js"></script>
+	<script egret="game" src="bin-debug/com/ourgame/angryFisher/event/HallEvent.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/GameMain.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/BaseComponent.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/dice/DiceGamePanel.js"></script>
@@ -85,6 +88,7 @@
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/game/DeabedPanel.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/game/GameWorld.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/game/HitGoldAnimation.js"></script>
+	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/game/JpBarPanel.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/hall/HallView.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/hall/RoomInfoListPanel.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/loading/LoadingUI.js"></script>
@@ -97,9 +101,11 @@
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/top/TopView.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/Alert.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/BindPanel.js"></script>
+	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/DiceAlert.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/HelpPanel.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/HitInfoPanel.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/IWindow.js"></script>
+	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/LevelUpPanel.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/MailPanel.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/OperationPanel.js"></script>
 	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/RankPanel.js"></script>
@@ -147,7 +153,7 @@
          data-content-height="650"
          data-show-paint-rect="false"
          data-multi-fingered="2"
-         data-show-fps="true" data-show-log="false"
+         data-show-fps="false" data-show-log="false"
          data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.5">
     </div>
     <script>

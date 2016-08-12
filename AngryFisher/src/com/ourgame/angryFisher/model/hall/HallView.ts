@@ -8,6 +8,9 @@ class HallView extends BaseComponent implements IBase {
 	private jpBtn: eui.Image;
 	private roomList: eui.List;
 	private listScroller: eui.Scroller;
+	public viewStack: eui.ViewStack;
+	public tabBar: eui.TabBar;
+
 
 	private roomInfoPanel: RoomInfoListPanel;
 	private lightMc: egret.MovieClip;
@@ -29,11 +32,21 @@ class HallView extends BaseComponent implements IBase {
 
 	protected onSkinComplete(e: any): void {
 		super.onSkinComplete(e);
+		this.listScroller.bounces = false;
 		var la = new eui.HorizontalLayout();
 		la.gap = 50;
 		this.roomList.layout = la;
 		this.roomList.itemRenderer = RoomBtnItemRenderer;
 		this.roomList.dataProvider = this.dataArray;
+
+		var la: eui.HorizontalLayout = new eui.HorizontalLayout();
+		la.gap = 5;
+		la.horizontalAlign = egret.HorizontalAlign.RIGHT;
+		la.verticalAlign = egret.VerticalAlign.BOTTOM;
+		la.paddingBottom = 10;
+		la.paddingRight = 10;
+		this.tabBar.layout = la;
+
 		this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this);
 		this.roomList.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onItemTap, this);
 	}
@@ -71,6 +84,8 @@ class HallView extends BaseComponent implements IBase {
 		this.jpText.width = 210;
 		this.jpText.textAlign = egret.HorizontalAlign.CENTER;
 		this.addChild(this.jpText);
+
+		TimerManager.instance.doLoop(2000, this.changePage, this);
 	}
 
 	public exit(): void {
@@ -83,6 +98,7 @@ class HallView extends BaseComponent implements IBase {
 		this.qpMc.stop();
 		this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this)
 		this.roomList.removeEventListener(eui.ItemTapEvent.ITEM_TAP, this.onItemTap, this);
+		TimerManager.instance.clearTimer(this.changePage);
 	}
 
 	public execute(data?: any): void {
@@ -113,8 +129,24 @@ class HallView extends BaseComponent implements IBase {
 				ClientModel.instance.openWindow(RankPanel);
 				break;
 			case this.pBtn:
+				if (this.roomList.scrollH > 0) {
+					this.roomList.validateNow();
+					// this.roomList.scrollH = this.roomList.scrollH - (230 + 50);
+					egret.Tween.get(this.roomList).to({ scrollH: this.roomList.scrollH - (230 + 50) }, 300)
+					if (this.roomList.scrollH < 0) {
+						this.roomList.scrollH = 0;
+					}
+				}
 				break;
 			case this.nBtn:
+				if (this.roomList.scrollH < 558) {
+					this.roomList.validateNow();
+					// this.roomList.scrollH = this.roomList.scrollH + 230 + 50;
+					egret.Tween.get(this.roomList).to({ scrollH: this.roomList.scrollH + 230 + 50 }, 300)
+					if (this.roomList.scrollH > 558) {
+						this.roomList.scrollH = 558;
+					}
+				}
 				break;
 		}
 	}
@@ -125,5 +157,18 @@ class HallView extends BaseComponent implements IBase {
 		}
 		this.addChild(this.roomInfoPanel);
 		this.roomInfoPanel.enter(data);
+	}
+
+	private changePage(): void {
+		console.log();
+
+		if (this.tabBar.selectedIndex >= (this.tabBar.numElements - 1)) {
+			this.tabBar.selectedIndex = 0;
+		} else {
+			this.tabBar.selectedIndex = (this.tabBar.selectedIndex + 1);
+		}
+		this.viewStack.selectedIndex = this.tabBar.selectedIndex;
+		console.log(this.tabBar.selectedIndex);
+
 	}
 }

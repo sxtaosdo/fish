@@ -9,11 +9,11 @@
 			"name":"fish"
 		},
 		{
-			"keys":"game_json,fish_json,A_star1[12]_track,A_star2[12]_track,A_tai[2]_track,A_w[2]_track,A_w[8]_track,A_wave1[8]_track,A_wave2[6]_track,A_wave3[6]_track,A_wave4[6]_track,A_well[8]_track,A_wire[2]_track,A_x[4]_track,B99lb[5]_track,B99lb_r[3]_track,B99lt[5]_track,B99lt_r[3]_track,B99mb[5]_track,B99mb_r[3]_track,B99mt[5]_track,B99mt_r[3]_track,B99rb[5]_track,B99rb_r[3]_track,B99rt[5]_track,B99rt_r[3]_track,BombFish_track,C04[6]_track,C05[6]_track,C06[6]_track,C10[6]_track,C13[1]_track,C15[6]_track,C16[6]_track,C17[1]_track,C17[4]_track,C18[4]_track,C19[4]_track,C20[4]_track,C21[4]_track,C22[6]_track,Golden_Shark_track,GoldenShark_track,LC17[3]_track,shark_track,T_2at_track,T_2gt_track,T_at_track,T_bt_track,T_ct_track,T_dt_track,T_et_track,T_gt_track,xiao1_track,xiao3_track,xiao4_track,xiao6_track,-4[13]_track,A_a[24]_track,-A_a[24]_track,A_bone[4]_track,A_c[4]_track,A_cross[4]_track,A_d[8]_track,A_diamond[8]_track,A_grid[4]_track,A_heart[2]_track,A_net[10]_track,A_parallel1[4]_track,A_parallel2[6]_track,A_parallel3[8]_track,A_parallel4[2]_track,A_r[4]_track,A_rainbow[4]_track,A_rice[8]_track,A_semicircle[6]_track,little_golden_shark_track,room_json,deabed_json,create_json,grids_json",
+			"keys":"game_json,fish_json,A_star1[12]_track,A_star2[12]_track,A_tai[2]_track,A_w[2]_track,A_w[8]_track,A_wave1[8]_track,A_wave2[6]_track,A_wave3[6]_track,A_wave4[6]_track,A_well[8]_track,A_wire[2]_track,A_x[4]_track,B99lb[5]_track,B99lb_r[3]_track,B99lt[5]_track,B99lt_r[3]_track,B99mb[5]_track,B99mb_r[3]_track,B99mt[5]_track,B99mt_r[3]_track,B99rb[5]_track,B99rb_r[3]_track,B99rt[5]_track,B99rt_r[3]_track,BombFish_track,C04[6]_track,C05[6]_track,C06[6]_track,C10[6]_track,C13[1]_track,C15[6]_track,C16[6]_track,C17[1]_track,C17[4]_track,C18[4]_track,C19[4]_track,C20[4]_track,C21[4]_track,C22[6]_track,Golden_Shark_track,GoldenShark_track,LC17[3]_track,shark_track,T_2at_track,T_2gt_track,T_at_track,T_bt_track,T_ct_track,T_dt_track,T_et_track,T_gt_track,xiao1_track,xiao3_track,xiao4_track,xiao6_track,-4[13]_track,A_a[24]_track,-A_a[24]_track,A_bone[4]_track,A_c[4]_track,A_cross[4]_track,A_d[8]_track,A_diamond[8]_track,A_grid[4]_track,A_heart[2]_track,A_net[10]_track,A_parallel1[4]_track,A_parallel2[6]_track,A_parallel3[8]_track,A_parallel4[2]_track,A_r[4]_track,A_rainbow[4]_track,A_rice[8]_track,A_semicircle[6]_track,little_golden_shark_track,room_json,deabed_json,create_json,grids_json,PokerSlotsMessage_proto",
 			"name":"config"
 		},
 		{
-			"keys":"",
+			"keys":"levelUpPanelBg_png",
 			"name":"main"
 		},
 		{
@@ -49,20 +49,24 @@
 			"name":"fish1"
 		},
 		{
-			"keys":"sy1_fnt",
+			"keys":"sy1_fnt,dice1_fnt",
 			"name":"font"
 		},
 		{
-			"keys":"SettingBar1_png,SettingBar2_png,SettingBg_png,SettingBgText_png,SettingSelectBox1_png,SettingSelectBox2_png,xbtn1_png,xbtn2_png,helpBg_png,page1_png,page2_png,page4_png,page5_png,page6_png,page7_png,helpMBtn2_png,helpMBtn1_png,emailArrowBtn1_png,emailArrowBtn2_png,emailBg_png,emailClearnBtn1_png,emailClearnBtn2_png,emailContentBg_png,emailDeleteBtn1_png,emailDeleteBtn2_png,emailIcon1_png,emailNBtn1_png,emailNBtn2_png,emailPBtn1_png,emailPBtn2_png,rank1kBtn1_png,rank1kBtn2_png,rank30Btn1_png,rank30Btn2_png,rankBg_png,rankText1_png,rankText2_png",
+			"keys":"SettingBar1_png,SettingBar2_png,SettingBg_png,SettingBgText_png,SettingSelectBox1_png,SettingSelectBox2_png,xbtn1_png,xbtn2_png,helpBg_png,page1_png,page2_png,page4_png,page5_png,page6_png,page7_png,helpMBtn2_png,helpMBtn1_png,emailArrowBtn1_png,emailArrowBtn2_png,emailBg_png,emailClearnBtn1_png,emailClearnBtn2_png,emailContentBg_png,emailDeleteBtn1_png,emailDeleteBtn2_png,emailIcon1_png,emailNBtn1_png,emailNBtn2_png,emailPBtn1_png,emailPBtn2_png,rank1kBtn1_png,rank1kBtn2_png,rank30Btn1_png,rank30Btn2_png,rankBg_png,rankText1_png,rankText2_png,diceAlertBg_png,diceAlertBtn1_png,diceAlertBtn2_png",
 			"name":"window"
 		},
 		{
-			"keys":"diceBg_png,DiceCharBg_png,diceCloseBtn1_png,diceCloseBtn2_png,diceGameBg_png,diceGamePlant_png,diceGameSton_png,diceImage1_png,diceImage2_png,diceImage3_png,DiceBombMc_json,DiceBombMc_png,DiceGateBoxMc_json,DiceGateBoxMc_png,DiceGateMc_json,DiceGateMc_png,DiceGoBtnMc_json,DiceGoBtnMc_png,DiceLightMc_json,DiceLightMc_png,DiceLogoMc_json,DiceLogoMc_png,diceTimePanel_png,diceCompleteBtn1_png,diceCompleteBtn2_png,diceDoingBtn1_png,diceDoingBtn2_png,diceGetBtn_png,diceInfoBtn_png,diceSingeBtn_png,fishDb_json,texture_json,texture_png,diceBox50_png,diceBox100_png,diceBox200_png,diceBox300_png,diceBox500_png,diceBox1000_png,diceBox2000_png,diceBox3000_png,diceBox5000_png,diceBox10000_png,diceBox20000_png,diceAward1_png,diceAward2_json,diceAward2_png,diceAward3_png,diceAward4_json,diceAward4_png,diceAward5_png,diceAward6_json,diceAward6_png,diceAward7_png,diceAward8_json,diceAward8_png,diceAward9_png,diceAward10_json,diceAward10_png",
+			"keys":"diceBg_png,DiceCharBg_png,diceCloseBtn1_png,diceCloseBtn2_png,diceGameBg_png,diceGamePlant_png,diceGameSton_png,diceImage1_png,diceImage2_png,diceImage3_png,DiceBombMc_json,DiceBombMc_png,DiceGateBoxMc_json,DiceGateBoxMc_png,DiceGateMc_json,DiceGateMc_png,DiceGoBtnMc_json,DiceGoBtnMc_png,DiceLightMc_json,DiceLightMc_png,DiceLogoMc_json,DiceLogoMc_png,diceTimePanel_png,diceCompleteBtn1_png,diceCompleteBtn2_png,diceDoingBtn1_png,diceDoingBtn2_png,diceGetBtn_png,diceInfoBtn_png,diceSingeBtn_png,fishDb_json,texture_json,texture_png,diceBox50_png,diceBox100_png,diceBox200_png,diceBox300_png,diceBox500_png,diceBox1000_png,diceBox2000_png,diceBox3000_png,diceBox5000_png,diceBox10000_png,diceBox20000_png,diceAward1_png,diceAward2_json,diceAward2_png,diceAward3_png,diceAward4_json,diceAward4_png,diceAward5_png,diceAward6_json,diceAward6_png,diceAward7_png,diceAward8_json,diceAward8_png,diceAward9_png,diceAward10_json,diceAward10_png,dice2_png,dice3_png,dice4_png,dice5_png,dice6_png,DiceBoxMc_png,DiceBoxMc_json,DicePaoPao_json,DicePaoPao_png",
 			"name":"dice"
 		},
 		{
 			"keys":"diceBindBg_png,diceBindCloseBtn1_png,diceBindCloseBtn2_png,diceBindCodeBtn1_png,diceBindCodeBtn2_png,diceBindGetBtn1_png,diceBindGetBtn2_png,diceHitInfoBg_png",
 			"name":"diceWindow"
+		},
+		{
+			"keys":"jpBarBg_png,jpBarText_png,jpBarFlashMc_json,jpBarFlashMc_png,jpBarLightMc_json,jpBarLightMc_png,jpBarText2_png",
+			"name":"jpBar"
 		}
 	],
 	"resources":[
@@ -1980,6 +1984,121 @@
 			"name":"lobbyStartBtn1_png",
 			"type":"image",
 			"url":"assets/lobby/lobbyStartBtn1.png"
+		},
+		{
+			"name":"dice2_png",
+			"type":"image",
+			"url":"assets/dice/dice2.png"
+		},
+		{
+			"name":"dice3_png",
+			"type":"image",
+			"url":"assets/dice/dice3.png"
+		},
+		{
+			"name":"dice4_png",
+			"type":"image",
+			"url":"assets/dice/dice4.png"
+		},
+		{
+			"name":"dice5_png",
+			"type":"image",
+			"url":"assets/dice/dice5.png"
+		},
+		{
+			"name":"dice6_png",
+			"type":"image",
+			"url":"assets/dice/dice6.png"
+		},
+		{
+			"name":"DiceBoxMc_png",
+			"type":"image",
+			"url":"assets/dice/mc/DiceBoxMc.png"
+		},
+		{
+			"name":"DiceBoxMc_json",
+			"type":"json",
+			"url":"assets/dice/mc/DiceBoxMc.json"
+		},
+		{
+			"name":"PokerSlotsMessage_proto",
+			"type":"text",
+			"url":"config/PokerSlotsMessage.proto"
+		},
+		{
+			"name":"dice1_fnt",
+			"type":"font",
+			"url":"assets/font/dice1.fnt"
+		},
+		{
+			"name":"dice1_png",
+			"type":"image",
+			"url":"assets/dice/dice1.png"
+		},
+		{
+			"name":"diceAlertBg_png",
+			"type":"image",
+			"url":"assets/window/diceAlert/diceAlertBg.png"
+		},
+		{
+			"name":"diceAlertBtn1_png",
+			"type":"image",
+			"url":"assets/window/diceAlert/diceAlertBtn1.png"
+		},
+		{
+			"name":"diceAlertBtn2_png",
+			"type":"image",
+			"url":"assets/window/diceAlert/diceAlertBtn2.png"
+		},
+		{
+			"name":"jpBarBg_png",
+			"type":"image",
+			"url":"assets/jpBar/jpBarBg.png"
+		},
+		{
+			"name":"jpBarText_png",
+			"type":"image",
+			"url":"assets/jpBar/jpBarText.png"
+		},
+		{
+			"name":"jpBarFlashMc_json",
+			"type":"json",
+			"url":"assets/jpBar/mc/jpBarFlashMc.json"
+		},
+		{
+			"name":"jpBarFlashMc_png",
+			"type":"image",
+			"url":"assets/jpBar/mc/jpBarFlashMc.png"
+		},
+		{
+			"name":"jpBarLightMc_json",
+			"type":"json",
+			"url":"assets/jpBar/mc/jpBarLightMc.json"
+		},
+		{
+			"name":"jpBarLightMc_png",
+			"type":"image",
+			"url":"assets/jpBar/mc/jpBarLightMc.png"
+		},
+		{
+			"name":"jpBarText2_png",
+			"type":"image",
+			"url":"assets/jpBar/jpBarText2.png"
+		},
+		{
+			"name":"DicePaoPao_json",
+			"type":"json",
+			"url":"assets/dice/mc/DicePaoPao.json"
+		},
+		{
+			"name":"DicePaoPao_png",
+			"type":"image",
+			"url":"assets/dice/mc/DicePaoPao.png"
+		},
+		{
+			"name":"levelUpPanelBg_png",
+			"type":"image",
+			"url":"assets/game/levelUpPanelBg.png"
 		}
 	]
 }

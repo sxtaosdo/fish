@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="DicePanelSkin" width="953" height="549" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing">
-	
+	<w:Config id="1567c8cc8e3" />
 	<e:Image source="DiceCharBg_png" x="11" y="117" />
-	<e:Button label="" x="9" y="108">
+	<e:RadioButton label="" x="9" y="108" id="diceDoingBtn">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="diceDoingBtn1_png" source.down="diceDoingBtn2_png" />
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
 			</e:Skin>
 		</e:skinName>
-	</e:Button>
-	<e:Button label="" x="70" y="109">
+	</e:RadioButton>
+	<e:RadioButton label="" x="70" y="109" id="diceCompleteBtn">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="diceCompleteBtn1_png" source.down="diceCompleteBtn2_png" />
 				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
 			</e:Skin>
 		</e:skinName>
-	</e:Button>
+	</e:RadioButton>
 	<e:Image source="diceBg_png" x="132" y="48" />
 	<e:Image source="diceImage1_png" x="0" y="20" touchEnabled="flase" />
 	<e:Image source="diceImage2_png" x="104" y="335" touchEnabled="flase" />

@@ -2,8 +2,8 @@
 <e:Skin class="PlayerGun" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="110" width="303">
 	<e:Image x="82" y="28" source="playerBg_png" width="119" height="80" />
 	<e:Label id="nameText" text="名称" x="0" y="50" size="12" width="84" textAlign="center" />
-	<e:Label id="lvText" text="等级" x="0" y="62" size="12" width="83" textColor="0xFFF900" textAlign="center" />
-	<e:ProgressBar id="lvBar" x="0" y="75" width="83" skinName="PlayerLvProgressBarSkin" />
+	<e:Label id="lvText" text="等级" x="0" y="66" size="12" width="83" textColor="0xFFF900" textAlign="center" />
+	<e:ProgressBar id="lvBar" x="0" y="85" width="83" skinName="PlayerLvProgressBarSkin"  height="5"/>
 	<e:ProgressBar x="116" y="8" />
 	<e:Image id="robot" x="143" y="75" source="robot_png" width="104" height="73" anchorOffsetX="40" anchorOffsetY="36" rotation="270"/>
 	<e:Label id="gunText" text="88888" x="224" y="68" size="14" width="76"/>
