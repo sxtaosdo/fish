@@ -2,9 +2,9 @@
  * 捕鱼HTML5
  */
 class Main extends eui.UILayer {
-    public static GAME_WIDTH: number = 950;
-    public static GAME_HEIGHT: number = 650;
-    public static VERSION: string = "α1.0.0：160719-1111";
+    public static STAGE_WIDTH: number = 960;
+    public static STAGE_HEIGHT: number = 570;
+    public static VERSION: string = "α1.0.0：160815-1514";
     public game: GameMain;
 
     protected createChildren(): void {

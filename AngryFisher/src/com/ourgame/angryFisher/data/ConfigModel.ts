@@ -85,17 +85,17 @@ class ConfigModel {
             var tempList0: Array<any> = new Array<any>();
             for (var index = 0; index < pathNum; index++) {
                 var len = data.readUnsignedInt();       //32大小  10
-                var templist: Array<PathPoint> = new Array<PathPoint>();
+                var templist: Array<PathPointVo> = new Array<PathPointVo>();
                 for (var i: number = 0; i < len; i++) {
-                    var pp: PathPoint = new PathPoint();
-                    pp.x = data.readFloat() * Main.GAME_WIDTH;
-                    pp.y = data.readFloat() * Main.GAME_HEIGHT;
+                    var pp: PathPointVo = new PathPointVo();
+                    pp.x = data.readFloat() * GameWorld.GAME_WIDTH;
+                    pp.y = data.readFloat() * GameWorld.GAME_HEIGHT;
                     pp.speed = 9;
                     templist.push(pp);//32小数，32小数
                 }
                 /*****************************计算客户端需要的路径点*贝塞尔曲线*************************/
-                var temp: Array<PathPoint> = [];
-                var temp1: Array<PathPoint>;
+                var temp: Array<PathPointVo> = [];
+                var temp1: Array<PathPointVo>;
                 if (templist.length <= 3) {
                     temp = templist;
                     return;
@@ -105,7 +105,7 @@ class ConfigModel {
                     //首点
                     if (i == 0) {
                         temp.push(templist[0]);
-                        var vo1: PathPoint = new PathPoint();
+                        var vo1: PathPointVo = new PathPointVo();
                         vo1.x = templist[0].x + (templist[0].x - templist[1].x) / 100;
                         vo1.y = templist[0].y + (templist[0].y - templist[1].y) / 100;
                         temp1 = FishPathUtil.createPath(1, vo1, templist[0], templist[1], templist[2])
@@ -113,7 +113,7 @@ class ConfigModel {
                     }
                     //尾点
                     else if (i == templist.length - 2) {
-                        var vo2: PathPoint = new PathPoint();
+                        var vo2: PathPointVo = new PathPointVo();
                         vo2.x = templist[i + 1].x + (templist[i + 1].x - templist[i].x) / 100;
                         vo2.y = templist[i + 1].y + (templist[i + 1].y - templist[i].y) / 100;
                         temp1 = FishPathUtil.createPath(temp.length, templist[i - 1], templist[i], templist[i + 1], templist[i + 1]);
@@ -127,10 +127,10 @@ class ConfigModel {
                 }
                 /*************************计算详细路径点取代原线**************************************/
                 //计算客户端需要的路径点
-                var lastPoint: PathPoint = temp[0];
-                var stepList: Array<PathPoint> = [];
+                var lastPoint: PathPointVo = temp[0];
+                var stepList: Array<PathPointVo> = [];
                 for (var i: number = 0; i < temp.length; i++) {
-                    var next: PathPoint = temp[i + 1];
+                    var next: PathPointVo = temp[i + 1];
                     if (next != null) {
                         var disX: number = next.x - lastPoint.x;
                         var disY: number = next.y - lastPoint.y;
@@ -146,7 +146,7 @@ class ConfigModel {
 
                         //起始点为上次计算的终点，不计入
                         for (var j: number = 1; j < advanceTime; j++) {
-                            var pp: PathPoint = new PathPoint();
+                            var pp: PathPointVo = new PathPointVo();
                             pp.x = lastPoint.x + j * speedX;
                             pp.y = lastPoint.y + j * speedY;
                             pp.rotation = rotation;

@@ -41,6 +41,7 @@
     "resource/game_skins/LabbySkin.exml",
     "resource/game_skins/LoadRoomSkin.exml",
     "resource/game_skins/LoadSkin.exml",
+    "resource/game_skins/RightPanelSkin.exml",
     "resource/game_skins/TestSkin.exml",
     "resource/game_skins/TopSkin.exml",
     "resource/game_skins/window/AlertSkin.exml",

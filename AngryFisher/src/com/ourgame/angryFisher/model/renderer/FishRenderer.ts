@@ -3,18 +3,18 @@
  */
 class FishRenderer extends BaseMovingEntity implements IMovingEneity {
 	/**配置的路径点 */
-	public pathList: Array<PathPoint>;
+	public pathList: Array<PathPointVo>;
 	/**客户端计算后的路径点 */
-	public clientPathList: Array<PathPoint>;
+	public clientPathList: Array<PathPointVo>;
 	public pathStep: number = 0;
-	public currentPath: PathPoint;
-	public nextPath: PathPoint;
+	public currentPath: PathPointVo;
+	public nextPath: PathPointVo;
 	private vo: FishVo;
 
 	public constructor() {
 		super();
-		this.pathList = new Array<PathPoint>();
-		this.clientPathList = new Array<PathPoint>();
+		this.pathList = new Array<PathPointVo>();
+		this.clientPathList = new Array<PathPointVo>();
 		this.stateMachine = new StateMachine(this);
 	}
 

@@ -13,7 +13,7 @@
 			"name":"config"
 		},
 		{
-			"keys":"levelUpPanelBg_png",
+			"keys":"levelUpPanelBg_png,charBg_png,charInputBg_png,charSendBtn1_png,charSendBtn2_png,userListBg_png",
 			"name":"main"
 		},
 		{
@@ -2099,6 +2099,31 @@
 			"name":"levelUpPanelBg_png",
 			"type":"image",
 			"url":"assets/game/levelUpPanelBg.png"
+		},
+		{
+			"name":"charBg_png",
+			"type":"image",
+			"url":"assets/game/charBg.png"
+		},
+		{
+			"name":"charInputBg_png",
+			"type":"image",
+			"url":"assets/game/charInputBg.png"
+		},
+		{
+			"name":"charSendBtn1_png",
+			"type":"image",
+			"url":"assets/game/charSendBtn1.png"
+		},
+		{
+			"name":"charSendBtn2_png",
+			"type":"image",
+			"url":"assets/game/charSendBtn2.png"
+		},
+		{
+			"name":"userListBg_png",
+			"type":"image",
+			"url":"assets/game/userListBg.png"
 		}
 	]
 }

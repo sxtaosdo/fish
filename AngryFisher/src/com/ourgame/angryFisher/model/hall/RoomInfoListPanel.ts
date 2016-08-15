@@ -10,7 +10,7 @@ class RoomInfoListPanel extends BaseComponent implements IBase {
 		super(false);
 		var sp: egret.Sprite = new egret.Sprite();
 		sp.graphics.beginFill(0x000000, 0);
-		sp.graphics.drawRect(-207, -155, Main.GAME_WIDTH, Main.GAME_HEIGHT);
+		sp.graphics.drawRect(-207, -155, Main.STAGE_WIDTH, Main.STAGE_HEIGHT);
 		sp.graphics.endFill();
 		this.addChild(sp);
 		// this.width = Main.GAME_WIDTH;
@@ -22,8 +22,8 @@ class RoomInfoListPanel extends BaseComponent implements IBase {
 	protected onSkinComplete(e: any): void {
 		super.onSkinComplete(e);
 		this.dataList.itemRenderer = RoomInfoListRenderer;
-		this.x = (Main.GAME_WIDTH - this.width) / 3;
-		this.y = (Main.GAME_HEIGHT - this.height) >> 1;
+		this.x = (Main.STAGE_WIDTH - this.width) / 3;
+		this.y = (Main.STAGE_HEIGHT - this.height) >> 1;
 	}
 
 	public enter(data?: any): void {

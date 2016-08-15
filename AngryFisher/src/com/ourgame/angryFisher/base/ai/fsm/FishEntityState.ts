@@ -39,7 +39,7 @@ class FishStateSeek implements IState {
 
     public execute(entity: IMovingEneity): void {
 		var fish: FishRenderer = (<FishRenderer>entity);
-		var pp: PathPoint = fish.clientPathList[fish.pathStep];
+		var pp: PathPointVo = fish.clientPathList[fish.pathStep];
 		if (pp == null) {
 			entity.getFSM().ChangeState(FishStateDestroy.instance);
 		} else {

@@ -6,7 +6,6 @@ class DiceVo {
 	public awardMap: Object;
 	public girdList: Array<GridVo>;
 	
-
 	public constructor() {
 		this.awardMap = {};
 		this.girdList = new Array<GridVo>();

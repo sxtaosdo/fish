@@ -1,12 +1,12 @@
 class FishVo {
 	public name: string;
 	public id: number;
-	public path: Array<PathPoint>;
+	public path: Array<PathPointVo>;
 	public index: number;
 	public rate: number;
 
 	public constructor() {
-		this.path = new Array<PathPoint>();
+		this.path = new Array<PathPointVo>();
 	}
 
 	public analysis(data: any): void {
@@ -16,7 +16,7 @@ class FishVo {
 		var key: any;
 		var index: number = 0;
 		for (key in data.path) {
-			var vo: PathPoint = new PathPoint();
+			var vo: PathPointVo = new PathPointVo();
 			vo.analysis(data.path[key]);
 			vo.index = index;
 			this.path.push(vo);

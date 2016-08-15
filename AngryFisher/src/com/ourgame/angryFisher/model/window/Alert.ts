@@ -63,7 +63,7 @@ class Alert extends BaseComponent implements IWindow {
     public init(): void {
         this.bg = new egret.Sprite();
         this.bg.graphics.beginFill(0xffffff, 0);
-        this.bg.graphics.drawRect(0, 0, Main.GAME_WIDTH, Main.GAME_HEIGHT);
+        this.bg.graphics.drawRect(0, 0, Main.STAGE_WIDTH, Main.STAGE_HEIGHT);
         this.bg.graphics.endFill();
         this.addChildAt(this.bg, 0);
     }

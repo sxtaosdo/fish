@@ -70,6 +70,8 @@ declare class LoadRoomSkin extends eui.Skin{
 }
 declare class LoadSkin extends eui.Skin{
 }
+declare class RightPanel extends eui.Skin{
+}
 declare class TestSkin extends eui.Skin{
 }
 declare class TopSkin extends eui.Skin{

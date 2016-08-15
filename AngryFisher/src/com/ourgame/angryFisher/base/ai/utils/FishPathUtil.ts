@@ -6,8 +6,8 @@
 class FishPathUtil {
     private static smooth_value: number = 0.6;
 
-    public static createPath(startIndex:number,beforeStartPoint:PathPoint,startPoint:PathPoint, endPoint:PathPoint,afterEndPoint:PathPoint): Array<PathPoint> {
-        var pointList:Array<PathPoint>=[];
+    public static createPath(startIndex:number,beforeStartPoint:PathPointVo,startPoint:PathPointVo, endPoint:PathPointVo,afterEndPoint:PathPointVo): Array<PathPointVo> {
+        var pointList:Array<PathPointVo>=[];
         // Assume we need to calculate the control
         // points between (x1,y1) and (x2,y2).
         // Then x0,y0 - the previous vertex,
@@ -86,7 +86,7 @@ class FishPathUtil {
             dfy += ddfy;
             ddfx += dddfx;
             ddfy += dddfy;
-            var p:PathPoint=new PathPoint();
+            var p:PathPointVo=new PathPointVo();
             p.index=startIndex;
             p.x=fx;
             p.y=fy;

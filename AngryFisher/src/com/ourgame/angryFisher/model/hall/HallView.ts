@@ -63,7 +63,7 @@ class HallView extends BaseComponent implements IBase {
 			this.paopao.play(-1);
 
 			this.paopao.x = 300;
-			this.paopao.y = Main.GAME_HEIGHT - 200;
+			this.paopao.y = Main.STAGE_HEIGHT - 200;
 			this.addChildAt(this.paopao, 1);
 		}
 

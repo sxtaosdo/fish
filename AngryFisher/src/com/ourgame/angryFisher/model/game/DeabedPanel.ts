@@ -22,8 +22,8 @@ class DeabedPanel extends egret.Sprite implements IBase {
 		this.addChildAt(this.bg, 0);
 		this.plantList.push();
 		this.ripple = MovieclipUtils.createMc("wave1_png", "wave1_json");
-		this.ripple.scaleX = Main.GAME_WIDTH / this.ripple.width;
-		this.ripple.scaleY = Main.GAME_HEIGHT / this.ripple.height;
+		this.ripple.scaleX = GameWorld.GAME_WIDTH / this.ripple.width;
+		this.ripple.scaleY = GameWorld.GAME_HEIGHT / this.ripple.height;
 		this.ripple.alpha = 0.5;
 		// this.ripple.setf
 		this.addChild(this.ripple);
@@ -70,11 +70,11 @@ class DeabedPanel extends egret.Sprite implements IBase {
 	private playWave(): void {
 		if (this.wave == null) {
 			this.wave = BitMapUtil.createBitmapByName("wave_png");
-			var key: number = Main.GAME_HEIGHT / this.wave.height;
+			var key: number = Main.STAGE_HEIGHT / this.wave.height;
 			this.wave.scaleX = this.wave.scaleY = key;
 		}
 		this.addChild(this.wave);
-		this.wave.x = Main.GAME_WIDTH;
+		this.wave.x = Main.STAGE_WIDTH;
 		egret.Tween.get(this.wave).to({ x: -this.wave.width }, 1000);
 	}
 }

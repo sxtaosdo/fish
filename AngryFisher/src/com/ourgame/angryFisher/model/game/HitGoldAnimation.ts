@@ -28,7 +28,7 @@ class HitGoldAnimation implements IBase {
 			mc.gotoAndPlay(1, -1);
 			owner.parent.addChild(mc);
 			// egret.Tween.get(mc).to({ y: mc.y - 30 }, 100).wait(400 + (index * 50)).to({ x: owner.x, y: owner.y }, 200).call((mcc) => {
-			egret.Tween.get(mc).to({ y: data.y - 60 + 50 * parseInt(((index - 1) / 3) + ""), x: data.x - 60 + 50 * parseInt((index % 3) + "") }, 150).wait(400 + (index * 50)).to({ x: owner.x, y: owner.y }, 200).call((mcc) => {
+			egret.Tween.get(mc).to({ y: data.y - 60 + 50 * parseInt(((index - 1) / 3) + ""), x: data.x - 60 + 50 * parseInt((index % 3) + "") }, 150).wait(400 + (index * 50)).to({ x: owner.x + 190, y: owner.y + 65 }, 200).call((mcc) => {
 				mcc.stop();
 				if (mcc.parent) {
 					mcc.parent.removeChild(mcc);

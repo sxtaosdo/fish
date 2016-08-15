@@ -1,4 +1,4 @@
-class PathPoint {
+class PathPointVo {
 
 	public index: number;
 	public x: number;

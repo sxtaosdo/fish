@@ -12,9 +12,9 @@ class LoginView extends egret.Sprite implements IBase {
 
 		var sp: egret.Sprite = new egret.Sprite();
 		sp.graphics.beginFill(0x111101);
-		sp.graphics.drawRect(0, 0, Main.GAME_WIDTH, Main.GAME_HEIGHT);
-		sp.width = Main.GAME_WIDTH;
-		sp.height = Main.GAME_HEIGHT;
+		sp.graphics.drawRect(0, 0, Main.STAGE_WIDTH, Main.STAGE_HEIGHT);
+		sp.width = Main.STAGE_WIDTH;
+		sp.height = Main.STAGE_HEIGHT;
 		sp.graphics.endFill();
 		sp.touchEnabled = true;
 		this.addChild(sp);

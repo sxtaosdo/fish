@@ -6,6 +6,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 	private lastSendTime: number = 0;
 	private sendInterval: number = 300;
 	private position: Vector2Ds;
+	private shellContent: egret.Sprite;
 
 	public data: PlayerVo;
 
@@ -16,15 +17,16 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 	public gunText: eui.Label;
 	public moneyText: eui.Label;
 
-	public constructor() {
+	public constructor(content: egret.Sprite) {
 		super(false);
+		this.shellContent = content;
 		this.skinName = "resource/renderer/PlayerGun.exml";
 		this.shellList = new Array<ShellRenderer>();
 	}
 
 	public onSkinComplete(e): void {
 		super.onSkinComplete(e);
-		this.y = Main.GAME_HEIGHT - this.height - 40;
+		this.y = Main.STAGE_HEIGHT - this.height - 40;
 		this.x = 100;
 	}
 
@@ -34,7 +36,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 			this.fillData();
 		}
 		this.centerPoint = this.localToGlobal(this.robot.x, this.robot.y);
-		this.position = new Vector2Ds(this.centerPoint.x, this.centerPoint.y);
+		this.position = new Vector2Ds(this.centerPoint.x, this.centerPoint.y - 50);
 		this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAdd, this);
 	}
 
@@ -84,7 +86,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 		shell.getFSM().ChangeState(ShellMovingEntityStateSeek.instance);
 		shell.rotation = this.robot.rotation;
 		this.data.gunCount--;
-		this.parent.addChild(shell.displayObject);
+		this.shellContent.addChild(shell.displayObject);
 		this.lastSendTime = egret.getTimer();
 
 	}

@@ -1,11 +1,15 @@
 class GameWorld extends egret.Sprite implements IBase {
 
+    public static GAME_WIDTH: number = 730;
+    public static GAME_HEIGHT: number = 530;
 
     private static that: GameWorld;
     private client: ClientModel;
     private bg: DeabedPanel;
     private createList: Array<FishCreateVo>;
     private jpBar: JpBarPanel;
+    private right: PlayerList;
+    private contentSp: egret.Sprite;
 
     public constructor() {
         super();
@@ -21,6 +25,14 @@ class GameWorld extends egret.Sprite implements IBase {
         this.jpBar.x = 200;
         this.jpBar.y = 70;
         this.addChild(this.jpBar);
+
+        this.right = new PlayerList();
+        this.right.x = Main.STAGE_WIDTH - this.right.width;
+        this.addChild(this.right);
+
+        this.contentSp = new egret.Sprite();
+        this.contentSp.touchChildren = this.contentSp.touchEnabled = false;
+        this.addChildAt(this.contentSp, 0);
     }
 
     private test(): void {
@@ -46,7 +58,7 @@ class GameWorld extends egret.Sprite implements IBase {
         try {
             vo.path = path[RandomUtil.randInt(0, path.length - 1)];
             fish.setData(vo);
-            GameWorld.that.addChild(fish.getDisplayObject());
+            GameWorld.that.contentSp.addChild(fish.getDisplayObject());
             fish.getFSM().ChangeState(FishStateSeek.instance);
             GameWorld.that.client.fishList[fish.sid] = fish;
         } catch (e) {
@@ -55,7 +67,7 @@ class GameWorld extends egret.Sprite implements IBase {
     }
 
     public enter(data?: any): void {
-        var player: PlayerGunRenderer = new PlayerGunRenderer();
+        var player: PlayerGunRenderer = new PlayerGunRenderer(this.contentSp);
         this.addChild(player);
         player.enter();
         this.client.playerList.push(player);
