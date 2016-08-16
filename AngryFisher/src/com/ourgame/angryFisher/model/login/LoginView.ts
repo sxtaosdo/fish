@@ -56,7 +56,7 @@ class LoginView extends egret.Sprite implements IBase {
 	}
 
 	public enter(data?: any): void {
-
+		GameDispatcher.addEventListener(BaseEvent.LOGIN_RESULT_EVENT, this.onLoginResult, this);
 	}
 
 	public exit(): void {
@@ -71,7 +71,12 @@ class LoginView extends egret.Sprite implements IBase {
 
 	private onTap(): void {
 		UserModel.instance.userName = this.nameText.text;
-		ClientModel.instance.changeGameState(LoadingUI.instance);	//应该等服务器的登陆结果
+		ConnectionManager.instance.sendHelper.login();
+	}
+
+	/**登陆结果处理 */
+	private onLoginResult(): void {
+		ClientModel.instance.changeGameState(LoadingUI.instance);
 		LoadingUI.instance.loadAssets(() => {
 			ClientModel.instance.changeGameState(new HallView());
 		}, LoadingUI.assets1);

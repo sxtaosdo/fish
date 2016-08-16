@@ -19,12 +19,12 @@ class HallClientModel {
 
 	public onGoResult(data: any): void {
 		this._goResult = data.num;
-		GameDispatcher.send(HallEvent.DICE_GO_RESULT_EVENT);
+		GameDispatcher.send(BaseEvent.DICE_GO_RESULT_EVENT);
 	}
 
 	public onDiceInfo(data: any): void {
 		this._diceInfo = data;
-		GameDispatcher.send(HallEvent.DICE_INFO_EVENT);
+		GameDispatcher.send(BaseEvent.DICE_INFO_EVENT);
 	}
 
 	public get goResult(): number {

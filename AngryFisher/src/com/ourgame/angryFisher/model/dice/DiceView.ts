@@ -100,8 +100,8 @@ class DiceView extends BaseComponent implements IBase {
 			this.goBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onGoBtn, this);
 		}
 		this.game.enter();
-		GameDispatcher.addEventListener(HallEvent.DICE_GO_RESULT_EVENT, this.onGoResult, this);
-		GameDispatcher.addEventListener(HallEvent.DICE_INFO_EVENT, this.onDiceInfo, this);
+		GameDispatcher.addEventListener(BaseEvent.DICE_GO_RESULT_EVENT, this.onGoResult, this);
+		GameDispatcher.addEventListener(BaseEvent.DICE_INFO_EVENT, this.onDiceInfo, this);
 		ConnectionManager.instance.sendHelper.diceInfo();
 	}
 

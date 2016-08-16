@@ -37,7 +37,7 @@ class GameWorld extends egret.Sprite implements IBase {
 
     private test(): void {
         var obj: Object = {};
-        while (this.createList.length < 3) {
+        while (this.createList.length < 2) {
             var key = RandomUtil.randInt(0, ConfigModel.instance.createList.length - 1);
             if (obj[key]) {
                 continue;

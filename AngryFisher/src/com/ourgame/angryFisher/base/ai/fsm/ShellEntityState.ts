@@ -35,8 +35,8 @@ class ShellMovingEntityStateSeek implements IState {
 			dis.x = 0;
 			entity.speedX = -entity.speedX;
 			change = true;
-		} else if (dis.x > dis.stage.stageWidth) {
-			dis.x = dis.stage.stageWidth;
+		} else if (dis.x > GameWorld.GAME_WIDTH) {
+			dis.x = GameWorld.GAME_WIDTH;
 			entity.speedX = -entity.speedX;
 			change = true;
 		}
@@ -45,8 +45,8 @@ class ShellMovingEntityStateSeek implements IState {
 			entity.speedY = -entity.speedY;
 			change = true;
 		}
-		else if (dis.y > dis.stage.stageHeight) {
-			dis.y = dis.stage.stageHeight;
+		else if (dis.y > GameWorld.GAME_HEIGHT) {
+			dis.y = GameWorld.GAME_HEIGHT;
 			entity.speedY = -entity.speedY;
 			change = true;
 		}

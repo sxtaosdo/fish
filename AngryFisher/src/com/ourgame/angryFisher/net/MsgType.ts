@@ -404,7 +404,16 @@ class MsgType {
     //=====================================new===============================================
     //=======================================================================================
 
+    /**登陆 */
+    public static R_LOGIN: number = MsgType.REQ_BASE + 1;
+    public static A_LOGIN: number = MsgType.ACK_BASE + 1;
+
+
     /**步步为营-信息 */
-    public static R_DICE_INFO: number = MsgType.REQ_BASE + 1;
-    public static A_DICE_INFO: number = MsgType.ACK_BASE + 1;
+    public static R_DICE_INFO: number = MsgType.REQ_BASE + 10;
+    public static A_DICE_INFO: number = MsgType.ACK_BASE + 10;
+
+
+    /**巨奖池 */
+    public static A_GAME_POOL: number = MsgType.REQ_BASE + 100;
 }

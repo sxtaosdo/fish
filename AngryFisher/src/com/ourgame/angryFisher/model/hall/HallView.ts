@@ -160,15 +160,12 @@ class HallView extends BaseComponent implements IBase {
 	}
 
 	private changePage(): void {
-		console.log();
-
 		if (this.tabBar.selectedIndex >= (this.tabBar.numElements - 1)) {
 			this.tabBar.selectedIndex = 0;
 		} else {
 			this.tabBar.selectedIndex = (this.tabBar.selectedIndex + 1);
 		}
 		this.viewStack.selectedIndex = this.tabBar.selectedIndex;
-		console.log(this.tabBar.selectedIndex);
-
+		// console.log(this.tabBar.selectedIndex);
 	}
 }
