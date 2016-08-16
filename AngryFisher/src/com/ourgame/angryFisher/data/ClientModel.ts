@@ -99,7 +99,7 @@ class ClientModel {
         //     case GameStateDef.GAME_STATE_LOTTERY_FREE:
         //         break;
         // }
-        GameDispatcher.send(BaseEvent.GAME_STATE_EVENT);
+        GameDispatcher.send(GameEvent.GAME_STATE_EVENT);
     }
 
     public get gameState(): IBase {
@@ -154,7 +154,7 @@ class ClientModel {
         } else {
             ClientModel.instance._currentWin = value;
         }
-        GameDispatcher.send(BaseEvent.WINDOW_EVENT);
+        GameDispatcher.send(GameEvent.WINDOW_EVENT);
         WindowManager.instance.open(value, data);
     }
 
@@ -192,12 +192,12 @@ class ClientModel {
     }
 
     public onConn(): void {
-        GameDispatcher.send(BaseEvent.GAME_NET_CONN);
+        GameDispatcher.send(GameEvent.GAME_NET_CONN);
     }
 
     public onAssetsComplete(data?: any): void {
         this._resLoaded = true;
-        GameDispatcher.send(BaseEvent.ASSETS_COMPLETE_EVENT);
+        GameDispatcher.send(GameEvent.ASSETS_COMPLETE_EVENT);
     }
 
     public resLoaded(): boolean {

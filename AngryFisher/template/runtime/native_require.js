@@ -52,7 +52,7 @@ var game_file_list = [
 	"bin-debug/com/ourgame/angryFisher/data/vo/RoomInfoVo.js",
 	"bin-debug/com/ourgame/angryFisher/event/BaseEvent.js",
 	"bin-debug/com/ourgame/angryFisher/event/GameDispatcher.js",
-	"bin-debug/com/ourgame/angryFisher/event/HallEvent.js",
+	"bin-debug/com/ourgame/angryFisher/event/GameEvent.js",
 	"bin-debug/com/ourgame/angryFisher/GameMain.js",
 	"bin-debug/com/ourgame/angryFisher/model/window/BaseComponent.js",
 	"bin-debug/com/ourgame/angryFisher/model/dice/DiceGamePanel.js",

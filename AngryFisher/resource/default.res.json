@@ -49,7 +49,7 @@
 			"name":"fish1"
 		},
 		{
-			"keys":"sy1_fnt,dice1_fnt",
+			"keys":"sy1_fnt,dice1_fnt,hallPool_fnt",
 			"name":"font"
 		},
 		{
@@ -57,7 +57,7 @@
 			"name":"window"
 		},
 		{
-			"keys":"diceBg_png,DiceCharBg_png,diceCloseBtn1_png,diceCloseBtn2_png,diceGameBg_png,diceGamePlant_png,diceGameSton_png,diceImage1_png,diceImage2_png,diceImage3_png,DiceBombMc_json,DiceBombMc_png,DiceGateBoxMc_json,DiceGateBoxMc_png,DiceGateMc_json,DiceGateMc_png,DiceGoBtnMc_json,DiceGoBtnMc_png,DiceLightMc_json,DiceLightMc_png,DiceLogoMc_json,DiceLogoMc_png,diceTimePanel_png,diceCompleteBtn1_png,diceCompleteBtn2_png,diceDoingBtn1_png,diceDoingBtn2_png,diceGetBtn_png,diceInfoBtn_png,diceSingeBtn_png,fishDb_json,texture_json,texture_png,diceBox50_png,diceBox100_png,diceBox200_png,diceBox300_png,diceBox500_png,diceBox1000_png,diceBox2000_png,diceBox3000_png,diceBox5000_png,diceBox10000_png,diceBox20000_png,diceAward1_png,diceAward2_json,diceAward2_png,diceAward3_png,diceAward4_json,diceAward4_png,diceAward5_png,diceAward6_json,diceAward6_png,diceAward7_png,diceAward8_json,diceAward8_png,diceAward9_png,diceAward10_json,diceAward10_png,dice2_png,dice3_png,dice4_png,dice5_png,dice6_png,DiceBoxMc_png,DiceBoxMc_json,DicePaoPao_json,DicePaoPao_png",
+			"keys":"diceBg_png,DiceCharBg_png,diceCloseBtn1_png,diceCloseBtn2_png,diceGameBg_png,diceGamePlant_png,diceGameSton_png,diceImage1_png,diceImage2_png,diceImage3_png,DiceBombMc_json,DiceBombMc_png,DiceGateBoxMc_json,DiceGateBoxMc_png,DiceGateMc_json,DiceGateMc_png,DiceGoBtnMc_json,DiceGoBtnMc_png,DiceLightMc_json,DiceLightMc_png,DiceLogoMc_json,DiceLogoMc_png,diceTimePanel_png,diceCompleteBtn1_png,diceCompleteBtn2_png,diceDoingBtn1_png,diceDoingBtn2_png,diceGetBtn_png,diceInfoBtn_png,diceSingeBtn_png,fishDb_json,texture_json,texture_png,diceBox50_png,diceBox100_png,diceBox200_png,diceBox300_png,diceBox500_png,diceBox1000_png,diceBox2000_png,diceBox3000_png,diceBox5000_png,diceBox10000_png,diceBox20000_png,diceAward1_png,diceAward2_json,diceAward2_png,diceAward3_png,diceAward4_json,diceAward4_png,diceAward5_png,diceAward6_json,diceAward6_png,diceAward7_png,diceAward8_json,diceAward8_png,diceAward9_png,diceAward10_json,diceAward10_png,dice2_png,dice3_png,dice4_png,dice5_png,dice6_png,DiceBoxMc_png,DiceBoxMc_json,DicePaoPao_json,DicePaoPao_png,dice1_png",
 			"name":"dice"
 		},
 		{
@@ -2124,6 +2124,11 @@
 			"name":"userListBg_png",
 			"type":"image",
 			"url":"assets/game/userListBg.png"
+		},
+		{
+			"name":"hallPool_fnt",
+			"type":"font",
+			"url":"assets/font/hallPool.fnt"
 		}
 	]
 }

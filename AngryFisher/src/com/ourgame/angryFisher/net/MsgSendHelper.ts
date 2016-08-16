@@ -45,10 +45,11 @@ class MsgSendHelper {
 
         // var byts: ArrayBuffer = login.toArrayBuffer();
         // ConnectionManager.instance.send(MsgType.REQ_LOGIN, byts);
+        ConnectionManager.instance.send(MsgType.R_LOGIN, { name: UserModel.instance.userName });
         return 2;
     }
 
-    public diceInfo():void{
+    public diceInfo(): void {
         ConnectionManager.instance.send(MsgType.R_DICE_INFO, {});
     }
 

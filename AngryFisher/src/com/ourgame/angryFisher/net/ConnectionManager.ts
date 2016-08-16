@@ -37,7 +37,7 @@ class ConnectionManager {
 
         var temp = RES.getRes("PokerSlotsMessage_proto");
         // console.log(temp);
-        this.message = dcodeIO.ProtoBuf.loadProto(temp);
+        // this.message = dcodeIO.ProtoBuf.loadProto(temp);
 
         this._sendHelper = new MsgSendHelper(this.message);
         this._receiveHelper = new MsgReceiveHelper(this.message);

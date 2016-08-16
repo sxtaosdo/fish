@@ -130,7 +130,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 			this.data.totalExp = (this.data.totalExp + this.data.level * 5);
 			this.lvBar.maximum = this.data.totalExp;
 			this.lvBar.minimum = 0;
-			GameDispatcher.send(BaseEvent.LEVEL_UP_EVENT);
+			GameDispatcher.send(GameEvent.LEVEL_UP_EVENT);
 		}
 		this.data.moeny += fish.rate;
 		this.updateData();

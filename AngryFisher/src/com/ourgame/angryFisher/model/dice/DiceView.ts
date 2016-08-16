@@ -138,7 +138,7 @@ class DiceView extends BaseComponent implements IBase {
 				this.playing = true;
 				ConnectionManager.instance.sendHelper.diceGo();
 			} else {
-				ClientModel.instance.openWindow(DiceAlert);
+				ClientModel.instance.openWindow(DiceAlert, "前方路障，完成任务就可以继续拉");
 			}
 		}
 	}
@@ -153,7 +153,7 @@ class DiceView extends BaseComponent implements IBase {
 		}
 		this.addChild(this.diceMc);
 		this.diceMc.gotoAndPlay(1, 1);
-		console.log("摇骰子结果：" + HallClientModel.instance.goResult);
+		// console.log("摇骰子结果：" + HallClientModel.instance.goResult);
 
 		this.diceImage = BitMapUtil.createBitmapByName("dice" + HallClientModel.instance.goResult + "_png");
 		this.diceImage.x = 365;

@@ -5,6 +5,7 @@ class HallClientModel {
 
 	private _goResult: number = 0;
 	private _diceInfo: DiceInfo;
+	private _pool: number = 0;
 
 	public constructor() {
 
@@ -18,7 +19,7 @@ class HallClientModel {
     }
 
 	public onGoResult(data: any): void {
-		this._goResult = data.num;
+		this._goResult = data.dice;
 		GameDispatcher.send(BaseEvent.DICE_GO_RESULT_EVENT);
 	}
 
@@ -27,8 +28,17 @@ class HallClientModel {
 		GameDispatcher.send(BaseEvent.DICE_INFO_EVENT);
 	}
 
+	public onPool(value: number): void {
+		this._pool = value;
+		GameDispatcher.send(BaseEvent.POOL_EVENT);
+	}
+
 	public get goResult(): number {
 		return this._goResult;
+	}
+
+	public get pool(): number {
+		return this._pool;
 	}
 
 	public get diceInfo(): DiceInfo {

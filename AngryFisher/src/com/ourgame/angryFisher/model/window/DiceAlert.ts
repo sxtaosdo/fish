@@ -1,4 +1,6 @@
 class DiceAlert extends BaseComponent implements IBase {
+	public closeBtn: eui.Button;
+	public contentText: eui.Label;
 
 	public constructor() {
 		super();
@@ -10,7 +12,8 @@ class DiceAlert extends BaseComponent implements IBase {
     }
 
 	public enter(data?: any): void {
-
+		console.log(data);
+		this.contentText.text = data;
 	}
 
 	public exit(): void {

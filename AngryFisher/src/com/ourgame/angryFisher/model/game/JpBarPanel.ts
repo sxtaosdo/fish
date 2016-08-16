@@ -2,15 +2,24 @@ class JpBarPanel extends BaseComponent implements IBase {
 
 	private mc: egret.MovieClip;
 	private flash: egret.MovieClip;
+	private poolText: egret.BitmapText;
 
 	public constructor() {
 		super(false);
-		this.skinName = "resource/game_skins/JpBarSkin.exml";
 		this.touchChildren = false;
+
+		this.poolText = new egret.BitmapText();
+		this.poolText.font = RES.getRes("hallPool_fnt");
+		this.poolText.width = 240;
+		this.poolText.x = 50;
+		this.poolText.y = 20;
+		this.poolText.textAlign = egret.HorizontalAlign.CENTER;
+		this.skinName = "resource/game_skins/JpBarSkin.exml";
 	}
 
 	protected onSkinComplete(e: any): void {
         super.onSkinComplete(e);
+		this.addChild(this.poolText);
     }
 
 	public enter(data?: any): void {
@@ -27,10 +36,12 @@ class JpBarPanel extends BaseComponent implements IBase {
 		this.addChild(this.mc);
 
 		this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this);
+		GameDispatcher.addEventListener(BaseEvent.POOL_EVENT, this.changePool, this);
 	}
 
 	public exit(): void {
 		ClientModel.instance.openWindow(null);
+		GameDispatcher.removeEventListener(BaseEvent.POOL_EVENT, this.changePool, this);
 	}
 
 	public execute(data?: any): void {
@@ -48,4 +59,8 @@ class JpBarPanel extends BaseComponent implements IBase {
 	private onTap(): void {
 		ClientModel.instance.openWindow(RankPanel);
 	}
+
+	private changePool(): void {
+		this.poolText.text = StringUtils.numSection(HallClientModel.instance.pool);
+    }
 }

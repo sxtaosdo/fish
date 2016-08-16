@@ -23,7 +23,7 @@ class LocalHandler implements ISocket {
     public constructor(callback?: Function) {
         LocalHandler.that = this;
         this.callback = callback;
-        this.message = dcodeIO.ProtoBuf.loadProto(RES.getRes("PokerSlotsMessage_proto"));
+        // this.message = dcodeIO.ProtoBuf.loadProto(RES.getRes("PokerSlotsMessage_proto"));
 
         this.diceInfo = new DiceInfo();
         this.initInfo();
@@ -54,12 +54,9 @@ class LocalHandler implements ISocket {
             case MsgType.R_DICE_INFO:
                 callback = this.onDiceInfo;
                 break;
-            // case MsgType.REQ_DUXLIVETICK:
-            //     callback = this.liveTick;
-            //     break;
-            // case MsgType.REQ_HELP:
-            //     callback = this.help;
-            //     break;
+            case MsgType.R_LOGIN:
+                callback = this.login;
+                break;
         }
         // try {
         callback.apply(this, [type, body]);
@@ -99,16 +96,22 @@ class LocalHandler implements ISocket {
         //     "rolename": login.userName,
         //     "freeInfo": LocalHandler.that.getFreeHit()
         // });
-        // LocalHandler.that.name = login.roleName;
-        // LocalHandler.that.returnMsg(MsgType.ACK_LOGIN, req);
-        // LocalHandler.that.jpPool();
-        // TimerManager.instance.doLoop(1500, LocalHandler.that.jpPool);
+        this.name = body.name;
+        this.returnMsg2(MsgType.A_LOGIN, { success: 0 });
+        this.jpPool();
+        TimerManager.instance.doLoop(1500, this.jpPool, this);
+    }
+
+    private jpPool(): void {
+        this.pool += RandomUtil.randInt(5, 99);
+        this.returnMsg2(MsgType.A_GAME_POOL, { value: this.pool });
     }
 
     private onDiceGo(type: number, body: any): void {
         this.diceInfo.availableTimes--;
-        this.diceInfo.fishIndex += RandomUtil.randInt(1, 6);
-        LocalHandler.that.returnMsg2(MsgType.GLFS_PeriodChangeACK, { num: this.diceInfo.fishIndex });
+        var key: number = RandomUtil.randInt(1, 6)
+        this.diceInfo.fishIndex += key;
+        LocalHandler.that.returnMsg2(MsgType.GLFS_PeriodChangeACK, { num: this.diceInfo.fishIndex, dice: key });
         LocalHandler.that.returnMsg2(MsgType.A_DICE_INFO, this.diceInfo);
     }
 

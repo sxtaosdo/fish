@@ -48,7 +48,7 @@ class ConfigModel {
             }
             console.log("debug模式:" + this._debug);
         }
-        GameDispatcher.send(BaseEvent.CONFIG_INIT_COMPLETE_EVENT);
+        GameDispatcher.send(GameEvent.CONFIG_INIT_COMPLETE_EVENT);
     }
 
     public parseFish(data: any): void {

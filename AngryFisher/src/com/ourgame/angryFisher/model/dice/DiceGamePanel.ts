@@ -6,6 +6,8 @@ class DiceGamePanel extends BaseComponent implements IBase {
 	public static ARMATURE_ZERO_Y: number = 80;
 
 	private armature: dragonBones.Armature;
+	private currentGridIndex: number = 0;
+	private targetGridIndex: number = 0;
 
 	public constructor() {
 		super(false);
@@ -79,16 +81,30 @@ class DiceGamePanel extends BaseComponent implements IBase {
 
 	public exit(): void {
 		TimerManager.instance.clearTimer(this.initDb);
-		// if (this.armature.display.parent) {
-		// 	this.armature.display.parent.removeChild(this.armature.display);
-		// }
-		this.armature.dispose();	//不知道为什么报错
+		try {
+			this.armature.dispose();	//不知道为什么报错
+		} catch (e) {
+			console.error(e);
+		}
 	}
 
 	public execute(data?: any): void {
-		// this.armature.display.x = ConfigModel.instance.diceMapGrid.girdList[data].x + DiceGamePanel.ARMATURE_ZERO_X;
-		// this.armature.display.y = ConfigModel.instance.diceMapGrid.girdList[data].y + DiceGamePanel.ARMATURE_ZERO_Y;
-		egret.Tween.get(this.armature.display).to({ x: ConfigModel.instance.diceMapGrid.girdList[data].x + DiceGamePanel.ARMATURE_ZERO_X, y: ConfigModel.instance.diceMapGrid.girdList[data].y + DiceGamePanel.ARMATURE_ZERO_Y }, 1000);
+		this.targetGridIndex = this.currentGridIndex + data;
+		this.goTarget();
+	}
+
+	private goTarget(): void {
+		if (this.currentGridIndex < this.targetGridIndex) {
+			this.currentGridIndex++;
+			this.move(ConfigModel.instance.diceMapGrid.girdList[this.currentGridIndex].x + DiceGamePanel.ARMATURE_ZERO_X, ConfigModel.instance.diceMapGrid.girdList[this.currentGridIndex].y + DiceGamePanel.ARMATURE_ZERO_Y);
+		} else {
+			var award = ConfigModel.instance.diceMapGrid.awardMap[ConfigModel.instance.diceMapGrid.girdList[this.currentGridIndex].rewardNum - 1];
+			ClientModel.instance.openWindow(DiceAlert, "获得" + award + "万能豆奖励");
+		}
+	}
+
+	private move(x, y): void {
+		egret.Tween.get(this.armature.display).to({ x: x, y: y }, 300).call(this.goTarget, this);
 	}
 
 	private createAward(type: number): egret.DisplayObject {

@@ -80,7 +80,8 @@ class GameWorld extends egret.Sprite implements IBase {
         GameDispatcher.addEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
         GameDispatcher.addEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
         GameDispatcher.addEventListener(TestEvent.CHANGE_MAP, this.changeMap, this);
-        GameDispatcher.addEventListener(BaseEvent.LEVEL_UP_EVENT, this.onLevelUp, this);
+        GameDispatcher.addEventListener(GameEvent.LEVEL_UP_EVENT, this.onLevelUp, this);
+        
     }
 
     public exit(data?: any): void {
@@ -94,6 +95,7 @@ class GameWorld extends egret.Sprite implements IBase {
         GameDispatcher.removeEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
         GameDispatcher.removeEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
         GameDispatcher.removeEventListener(TestEvent.CHANGE_MAP, this.changeMap, this);
+        
     }
 
     public execute(): void {
@@ -156,8 +158,11 @@ class GameWorld extends egret.Sprite implements IBase {
     private changeMap(): void {
         this.bg.execute(true);
     }
+
     private onLevelUp(): void {
         ClientModel.instance.openWindow(LevelUpPanel);
     }
+
+ 
 
 }

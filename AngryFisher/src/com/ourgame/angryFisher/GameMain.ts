@@ -20,12 +20,12 @@ class GameMain extends egret.Sprite implements IBase {
 		this.popup = WindowManager.instance;
 
 		this.addEventListener(egret.Event.ADDED_TO_STAGE, this.enter, this);
-		GameDispatcher.addEventListener(BaseEvent.ASSETS_COMPLETE_EVENT, this.onAssetsComplete, this);
-		GameDispatcher.addEventListener(BaseEvent.WINDOW_EVENT, this.onWindow, this);
+		GameDispatcher.addEventListener(GameEvent.ASSETS_COMPLETE_EVENT, this.onAssetsComplete, this);
+		GameDispatcher.addEventListener(GameEvent.WINDOW_EVENT, this.onWindow, this);
 	}
 
 	public enter(data?: any): void {
-		GameDispatcher.addEventListener(BaseEvent.GAME_STATE_EVENT, this.onStateChange, this);
+		GameDispatcher.addEventListener(GameEvent.GAME_STATE_EVENT, this.onStateChange, this);
 		this.setDefoult();
 	}
 

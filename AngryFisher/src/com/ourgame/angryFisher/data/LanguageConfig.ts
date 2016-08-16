@@ -28,7 +28,7 @@ class LanguageConfig {
                 this.dic[temp2[0]] = temp2[1];
             }
         }
-        GameDispatcher.send(BaseEvent.LANGUAGE_INIT_COMPLETE_EVENT);
+        GameDispatcher.send(GameEvent.LANGUAGE_INIT_COMPLETE_EVENT);
     }
     
     /**

@@ -67,6 +67,11 @@ class MsgReceiveHelper {
             case MsgType.A_DICE_INFO:
                 HallClientModel.instance.onDiceInfo(body);
                 break;
+            case MsgType.A_LOGIN:
+                GameDispatcher.send(BaseEvent.LOGIN_RESULT_EVENT);
+                break;
+            case MsgType.A_GAME_POOL:
+                HallClientModel.instance.onPool(body.value);
         }
     }
 }

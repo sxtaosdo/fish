@@ -129,7 +129,7 @@ class LoadingUI extends BaseComponent implements IBase {
     public enter(data?: any): void {
         // LoadingUI.instance.skinLoaded = false;
         this.skinName = data;
-        GameDispatcher.addEventListener(BaseEvent.CONFIG_INIT_COMPLETE_EVENT, this.onConfigComplete, this);
+        GameDispatcher.addEventListener(GameEvent.CONFIG_INIT_COMPLETE_EVENT, this.onConfigComplete, this);
         this.changTip(this);
         TimerManager.instance.doLoop(2000, this.changTip, this);
     }
@@ -139,7 +139,7 @@ class LoadingUI extends BaseComponent implements IBase {
         RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onComplete, this);
         RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onError, this);
         RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
-        GameDispatcher.instance.removeEventListener(BaseEvent.CONFIG_INIT_COMPLETE_EVENT, this.onConfigComplete, this);
+        GameDispatcher.instance.removeEventListener(GameEvent.CONFIG_INIT_COMPLETE_EVENT, this.onConfigComplete, this);
         if (this.parent != null) {
             this.parent.removeChild(this);
         }

@@ -74,18 +74,20 @@ class HallView extends BaseComponent implements IBase {
 		this.addChildAt(this.qpMc, 1);
 
 		this.jpText = new egret.BitmapText();
-		this.jpText.font = RES.getRes("sy1_fnt");
-		this.jpText.text = "500000000";
-		TimerManager.instance.doLoop(100, () => {
-			this.jpText.text = (parseInt(this.jpText.text) + RandomUtil.randInt(1, 100)).toString();
-		});
+		this.jpText.font = RES.getRes("hallPool_fnt");
+		// this.jpText.text = "500000000";
+		// TimerManager.instance.doLoop(100, () => {
+		// 	this.jpText.text = (parseInt(this.jpText.text) + RandomUtil.randInt(1, 100)).toString();
+		// });
 		this.jpText.x = 180;
-		this.jpText.y = 40;
+		this.jpText.y = 35;
 		this.jpText.width = 210;
 		this.jpText.textAlign = egret.HorizontalAlign.CENTER;
 		this.addChild(this.jpText);
 
 		TimerManager.instance.doLoop(2000, this.changePage, this);
+
+		GameDispatcher.addEventListener(BaseEvent.POOL_EVENT, this.changePool, this);
 	}
 
 	public exit(): void {
@@ -99,6 +101,8 @@ class HallView extends BaseComponent implements IBase {
 		this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onTap, this)
 		this.roomList.removeEventListener(eui.ItemTapEvent.ITEM_TAP, this.onItemTap, this);
 		TimerManager.instance.clearTimer(this.changePage);
+
+		GameDispatcher.removeEventListener(BaseEvent.POOL_EVENT, this.changePool, this);
 	}
 
 	public execute(data?: any): void {
@@ -167,5 +171,9 @@ class HallView extends BaseComponent implements IBase {
 		}
 		this.viewStack.selectedIndex = this.tabBar.selectedIndex;
 		// console.log(this.tabBar.selectedIndex);
+	}
+
+	private changePool(): void {
+		this.jpText.text = StringUtils.numSection(HallClientModel.instance.pool);
 	}
 }
