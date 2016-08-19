@@ -37,7 +37,7 @@ class GameWorld extends egret.Sprite implements IBase {
 
     private test(): void {
         var obj: Object = {};
-        while (this.createList.length < 2) {
+        while (this.createList.length < 1) {
             var key = RandomUtil.randInt(0, ConfigModel.instance.createList.length - 1);
             if (obj[key]) {
                 continue;
@@ -81,7 +81,7 @@ class GameWorld extends egret.Sprite implements IBase {
         GameDispatcher.addEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
         GameDispatcher.addEventListener(TestEvent.CHANGE_MAP, this.changeMap, this);
         GameDispatcher.addEventListener(GameEvent.LEVEL_UP_EVENT, this.onLevelUp, this);
-        
+
     }
 
     public exit(data?: any): void {
@@ -95,7 +95,7 @@ class GameWorld extends egret.Sprite implements IBase {
         GameDispatcher.removeEventListener(TestEvent.ADD_FISH_EVENT, this.addFish, this);
         GameDispatcher.removeEventListener(TestEvent.CHANGE_PATH, this.changePath, this);
         GameDispatcher.removeEventListener(TestEvent.CHANGE_MAP, this.changeMap, this);
-        
+
     }
 
     public execute(): void {
@@ -163,6 +163,6 @@ class GameWorld extends egret.Sprite implements IBase {
         ClientModel.instance.openWindow(LevelUpPanel);
     }
 
- 
+
 
 }

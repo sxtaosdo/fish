@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "level": 1,
+        "shell": "shell0",
+        "bomb": "shell0bomb",
+        "sendInterval": 300,
+        "offy":-40
+    },
+    {
+        "id": 2,
+        "level": 2,
+        "shell": "shell1",
+        "bomb": "shell1bomb",
+        "sendInterval": 300,
+        "offy":-40
+    }
+]

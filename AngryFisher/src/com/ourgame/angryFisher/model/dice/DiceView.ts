@@ -171,11 +171,26 @@ class DiceView extends BaseComponent implements IBase {
 			}
 			this.playing = false;
 			//处理小鱼移动
-			this.game.execute(HallClientModel.instance.goResult);
+			this.game.execute([HallClientModel.instance.goResult, this.autoCentering, this]);//此处待优化
 		});
 	}
 
 	private onDiceInfo(): void {
 		this.availableTimesText.text = HallClientModel.instance.diceInfo.availableTimes.toString();
+	}
+
+	private autoCentering(x, y): void {
+		var lastX, lastY: number = 0
+		lastX = x - 700 / 2;
+		lastY = y - 335 / 2;
+		if (lastX < (700 / 2)) {
+			lastX = 0;
+		}
+		egret.Tween.get(this.contentGroup).to({ scrollH: lastX },300)
+		if (lastY < (335 / 2)) {
+			lastY = 0;
+		}
+		egret.Tween.get(this.contentGroup).to({ scrollV: lastY },300)
+
 	}
 }

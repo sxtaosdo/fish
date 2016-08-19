@@ -28,10 +28,10 @@ class TestWindow extends BaseComponent implements IBase {
 	public enter(data?: any): void {
 		this.main = data;
 		if (this.skinLoaded) {
-			this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onAddBtn, this);
+			// this.addBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onAddBtn, this);
 			this.curBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onCutBtn, this);
-			this.sBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onSBtn, this);
-			this.ssBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.on8Btn, this);
+			// this.sBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onSBtn, this);
+			// this.ssBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.on8Btn, this);
 
 			this.changeMapBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onChangeMap, this);
 			this.closeBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClose, this);

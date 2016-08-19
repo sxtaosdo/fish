@@ -4,11 +4,11 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 	private shellList: Array<ShellRenderer>;
 	private touchEvt: egret.TouchEvent;
 	private lastSendTime: number = 0;
-	private sendInterval: number = 300;
 	private position: Vector2Ds;
 	private shellContent: egret.Sprite;
 
 	public data: PlayerVo;
+	public shellVo: ShellVo;
 
 	public nameText: eui.Label;
 	public lvText: eui.Label;
@@ -32,6 +32,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 
 	public enter(data?: any): void {
 		this.data = UserModel.instance.vo;
+		this.shellVo = ConfigModel.instance.shellList[this.data.gunLevel];
 		if (this.skinLoaded) {
 			this.fillData();
 		}
@@ -47,7 +48,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 	public execute(data?: any): void {
 		if (this.touchEvt != null) {
 			this.onMove(this.touchEvt);
-			if ((egret.getTimer() - this.lastSendTime) > this.sendInterval) {
+			if ((egret.getTimer() - this.lastSendTime) > this.shellVo.sendInterval) {
 				this.fire();
 			}
 		}
@@ -93,10 +94,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 
 	private getIdelShell(): ShellRenderer {
 		var shell: ShellRenderer = EntityManager.instance.getAvailableEntity<ShellRenderer>(ShellRenderer);
-		shell.displayObject = BitMapUtil.createBitmapByName("playerShell_png");
-		shell.displayObject.anchorOffsetX = shell.displayObject.width >> 1
-		shell.displayObject.anchorOffsetY = shell.displayObject.height >> 1
-		shell.entityType = EntityType.SHELL;
+		shell.setData(this.shellVo);
 		shell.owner = this;
 		this.shellList[shell.sid] = shell;
 		return shell;

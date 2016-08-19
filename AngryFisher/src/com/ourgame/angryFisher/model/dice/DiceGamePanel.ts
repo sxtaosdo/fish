@@ -8,6 +8,8 @@ class DiceGamePanel extends BaseComponent implements IBase {
 	private armature: dragonBones.Armature;
 	private currentGridIndex: number = 0;
 	private targetGridIndex: number = 0;
+	private call: Function;
+	private callOwner: any;
 
 	public constructor() {
 		super(false);
@@ -89,14 +91,17 @@ class DiceGamePanel extends BaseComponent implements IBase {
 	}
 
 	public execute(data?: any): void {
-		this.targetGridIndex = this.currentGridIndex + data;
+		this.targetGridIndex = this.currentGridIndex + data[0];
+		this.call = data[1];
+		this.callOwner = data[2];
 		this.goTarget();
 	}
 
 	private goTarget(): void {
 		if (this.currentGridIndex < this.targetGridIndex) {
 			this.currentGridIndex++;
-			this.move(ConfigModel.instance.diceMapGrid.girdList[this.currentGridIndex].x + DiceGamePanel.ARMATURE_ZERO_X, ConfigModel.instance.diceMapGrid.girdList[this.currentGridIndex].y + DiceGamePanel.ARMATURE_ZERO_Y);
+			var vo: GridVo = ConfigModel.instance.diceMapGrid.girdList[this.currentGridIndex]
+			this.move(vo.x + 40, vo.y + vo.offsetY);
 		} else {
 			var award = ConfigModel.instance.diceMapGrid.awardMap[ConfigModel.instance.diceMapGrid.girdList[this.currentGridIndex].rewardNum - 1];
 			ClientModel.instance.openWindow(DiceAlert, "获得" + award + "万能豆奖励");
@@ -104,7 +109,11 @@ class DiceGamePanel extends BaseComponent implements IBase {
 	}
 
 	private move(x, y): void {
-		egret.Tween.get(this.armature.display).to({ x: x, y: y }, 300).call(this.goTarget, this);
+		egret.Tween.get(this.armature.display, {
+			onChange: () => {
+				this.call.apply(this.callOwner, [x, y]);
+			}, onChangeObj: this
+		}).to({ x: x, y: y }, 300).call(this.goTarget, this)/*.call(this.call, this.callOwner, [x, y])*/;
 	}
 
 	private createAward(type: number): egret.DisplayObject {

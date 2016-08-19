@@ -20,7 +20,7 @@ class HallView extends BaseComponent implements IBase {
 	private dataArray: eui.ArrayCollection;
 
 	public constructor() {
-		super();
+		super(false);
 		this.dataArray = new eui.ArrayCollection();
 		this.dataArray.addItem({ id: 0, image: "lobbyRoomBtnbg1_png" });
 		this.dataArray.addItem({ id: 1, image: "lobbyRoomBtnbg2_png" });
@@ -28,6 +28,7 @@ class HallView extends BaseComponent implements IBase {
 		this.dataArray.addItem({ id: 3, image: "lobbyRoomBtnbg4_png" });
 		this.skinName = "resource/game_skins/LabbySkin.exml";
 		this.touchEnabled = false;
+		this.y = 40;
 	}
 
 	protected onSkinComplete(e: any): void {

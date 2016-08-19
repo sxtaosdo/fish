@@ -100,13 +100,22 @@ class ShellMovingEntityStateArrive implements IState {
     public enter(entity: IBaseGameEntity): void {
 		this.client = ClientModel.instance;
 		var shell: ShellRenderer = <ShellRenderer>entity;
-		var dis: egret.Bitmap = <any>entity.getDisplayObject();
-		dis.texture = RES.getRes("net_png");
-		dis.anchorOffsetX = dis.width >> 1;
-		dis.anchorOffsetY = dis.height >> 1;
+		// var dis: egret.MovieClip = <any>entity.getDisplayObject();
+		/*var temp = MovieclipUtils.createMc(shell.data.bomb + "_png", shell.data.bomb + "_json");
+		temp.x = dis.x;
+		temp.y = dis.y + shell.data.offy;
+		dis.parent.addChild(temp);
+		dis.parent.removeChild(dis);
+		shell.displayObject = temp;
+		temp.gotoAndPlay(1, 1);
+		shell.displayObject.anchorOffsetX = shell.displayObject.width >> 1;*/
+		// shell.displayObject.anchorOffsetY = shell.displayObject.height >> 1;
+
+		(<egret.MovieClip>shell.displayObject).movieClipData = shell.mcf.generateMovieClipData(shell.data.bomb);
+		(<egret.MovieClip>shell.displayObject).gotoAndPlay(1, 1);
 		this.client.fishList.forEach(element => {
 			if (element.isDestroy == false) {
-				if (HitTestUtils.hitTest(dis, element.getDisplayObject())) {
+				if (HitTestUtils.hitTest(shell.displayObject, element.getDisplayObject())) {
 					element.getFSM().ChangeState(FishStateDeath.instance);
 					(<PlayerGunRenderer>shell.owner).killFish(element.getDataVo<FishVo>(FishVo))
 				}
@@ -120,7 +129,6 @@ class ShellMovingEntityStateArrive implements IState {
 	}
 
     public exit(entity: IBaseGameEntity): void {
-		//生成网
 	}
 }
 
@@ -153,6 +161,8 @@ class ShellMovingEntityStateDeath implements IState {
 				entity.isDestroy = true;
 				(<PlayerGunRenderer>obj.owner).clearnShell(obj.sid);
 				HitGoldAnimation.instance.enter({ target: obj.owner, money: 99, x: obj.displayObject.x, y: obj.displayObject.y });
+			} else {
+				console.error("obj.displayObject.parent" + obj.displayObject.parent);
 			}
 		});
 	}
@@ -162,6 +172,5 @@ class ShellMovingEntityStateDeath implements IState {
 	}
 
     public exit(entity: IBaseGameEntity): void {
-		//生成网
 	}
 }

@@ -19,6 +19,7 @@ class ConfigModel {
     private _fishList: Array<FishVo>;
     private _deabedList: Array<DeabedVo>;
     private _createList: Array<FishCreateVo>;
+    private _shellList: Array<ShellVo>;
     private _diceMapGrid: DiceVo;
 
 
@@ -26,6 +27,7 @@ class ConfigModel {
         this._fishList = new Array<FishVo>();
         this._deabedList = new Array<DeabedVo>();
         this._createList = new Array<FishCreateVo>();
+        this._shellList = new Array<ShellVo>();
     }
 
     public static get instance(): ConfigModel {
@@ -74,8 +76,6 @@ class ConfigModel {
 
     public parseFishPath(): void {
         ConfigModel.pathNameList.forEach(element => {
-            // console.log("");
-            // var data: ArrayBuffer = RES.getRes(element);
             var data: egret.ByteArray = new egret.ByteArray(RES.getRes(element));
             data.endian = egret.Endian.LITTLE_ENDIAN;
 
@@ -198,16 +198,18 @@ class ConfigModel {
     }
 
     public parseGridList(data: any, callback: Function, thisObj: any): void {
-        // var key: any;
-        // var list = data.Grids.Grid;
-        // for (key in list) {
-        //     var vo: GridVo = new GridVo();
-        //     vo.analysis(list[key]);
-        //     this._girdsList.push(vo);
-        // }
         this._diceMapGrid = new DiceVo();
         this._diceMapGrid.analysis(data.Grids);
         callback.apply(thisObj)
+    }
+
+    public parseShell(data: any): void {
+        var key: any;
+        for (key in data) {
+            var vo: ShellVo = new ShellVo();
+            vo.analysis(data[key]);
+            this._shellList.push(vo);
+        }
     }
 
     public get version(): string {
@@ -252,6 +254,10 @@ class ConfigModel {
 
     public get diceMapGrid(): DiceVo {
         return this._diceMapGrid;
+    }
+
+    public get shellList(): Array<ShellVo> {
+        return this._shellList;
     }
 
 }

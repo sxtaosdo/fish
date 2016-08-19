@@ -18,18 +18,22 @@ class BitMapUtil {
 }
 
 class MovieclipUtils {
-    public static createMc(pngName: string, jsonName: string): egret.MovieClip {
+    public static createMc(pngName: string, jsonName: string, key?: string): egret.MovieClip {
         var mc: egret.MovieClip;
         var js: any = RES.getRes(jsonName);
         var tx: any = RES.getRes(pngName);
         var data: egret.MovieClipDataFactory = new egret.MovieClipDataFactory(js, tx);
-        mc = new egret.MovieClip(data.generateMovieClipData());
+        mc = new egret.MovieClip(data.generateMovieClipData(key));
         mc.stop();
-        // mc.rotation = 180;
-        // mc.anchorOffsetX = mc.width >> 1;
-        // mc.anchorOffsetY = mc.height >> 1;
         mc.play(-1);
         mc.touchEnabled = false;
         return mc;
+    }
+
+    public static getFactory(pngName: string, jsonName: string): egret.MovieClipDataFactory {
+        var js: any = RES.getRes(jsonName);
+        var tx: any = RES.getRes(pngName);
+        var factory: egret.MovieClipDataFactory = new egret.MovieClipDataFactory(js, tx);
+        return factory;
     }
 }
