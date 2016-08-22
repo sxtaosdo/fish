@@ -18,11 +18,6 @@ class FishRenderer extends BaseMovingEntity implements IMovingEneity {
 		this.stateMachine = new StateMachine(this);
 	}
 
-	public updateHitBox(x, y): void {
-		// this.hitBox.x = x + this.data.offx;
-		// this.hitBox.y = y + this.data.offy;
-	}
-
     public update(): void {
 		this.getFSM().Update();
 	}

@@ -253,6 +253,12 @@ class FishStateDestroy implements IState {
 		if (fish.displayObject.parent != null) {
 			fish.displayObject.parent.removeChild(fish.displayObject);
 		}
+		for(var i:number=0;i<ClientModel.instance.fishList.length;i++){
+			if(ClientModel.instance.fishList[i].sid==fish.sid){
+				ClientModel.instance.fishList.splice(i,1);
+				break;
+			}
+		}
 		// delete ClientModel.instance.fishList[fish.sid];
 	}
 

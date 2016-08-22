@@ -5,7 +5,6 @@
 	<e:Label id="lvText" text="等级" x="0" y="66" size="12" width="83" textColor="0xFFF900" textAlign="center" />
 	<e:ProgressBar id="lvBar" x="0" y="85" width="83" skinName="PlayerLvProgressBarSkin"  height="5"/>
 	<e:ProgressBar x="116" y="8" />
-	<e:Image id="robot" x="143" y="75" source="robot_png" width="104" height="73" anchorOffsetX="40" anchorOffsetY="36" rotation="270"/>
 	<e:Label id="gunText" text="88888" x="224" y="68" size="14" width="76"/>
 	<e:Label id="moneyText" text="88888" x="224" y="91" size="14" width="76"/>
 	<e:Image source="playerGunIcon_png" x="204" y="67"/>

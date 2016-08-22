@@ -55,14 +55,16 @@ class RoomInfoListPanel extends BaseComponent implements IBase {
 	}
 
 	private onSelect(evt: eui.ItemTapEvent): void {
-		if (1) {
-			// ClientModel.instance.changeGameState(new GameWorld());
+
+		if (this.dataList.selectedItem.state == 1) {	//等于1为开启状态
+			HallClientModel.instance.selectRoomIndex = this.dataList.selectedItem;
 			ClientModel.instance.changeGameState(LoadingUI.instance);
 			LoadingUI.instance.enter("resource/game_skins/LoadRoomSkin.exml");
 			LoadingUI.instance.loadAssets(() => {
 				ClientModel.instance.changeGameState(new GameWorld());
 			}, LoadingUI.assets2);
 		} else {
+			console.log("敬请期待");
 
 		}
 	}

@@ -36,5 +36,7 @@ interface IMovingEneity extends IBaseGameEntity {
 	/**持有者 */
 	owner: IBase;
 	/**碰撞的包围盒 */
-	testBox: egret.Rectangle;
+	hitBox: egret.Rectangle;
+
+	updateHitBox(x, y);
 }

@@ -60,7 +60,8 @@ class GameWorld extends egret.Sprite implements IBase {
             fish.setData(vo);
             GameWorld.that.contentSp.addChild(fish.getDisplayObject());
             fish.getFSM().ChangeState(FishStateSeek.instance);
-            GameWorld.that.client.fishList[fish.sid] = fish;
+            // GameWorld.that.client.fishList[fish.sid] = fish;
+            GameWorld.that.client.fishList.push(fish);
         } catch (e) {
             console.error(e);
         }
@@ -144,19 +145,19 @@ class GameWorld extends egret.Sprite implements IBase {
             path.forEach(element => {
                 var index: number = 0;
                 element.forEach(element => {
-                    // color += 9;
                     this.graphics.beginFill(color, 0.8);
                     this.graphics.drawCircle(element.x, element.y, 2);
                     this.graphics.endFill();
                     index++;
                 });
-                color += 0x88;
+                color += 0x11;
             });
         }
     }
 
     private changeMap(): void {
         this.bg.execute(true);
+        this.graphics.clear();
     }
 
     private onLevelUp(): void {

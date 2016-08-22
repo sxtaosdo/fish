@@ -55,12 +55,17 @@ class ShellMovingEntityStateSeek implements IState {
 
 		}
 		this.client.fishList.forEach(element => {
-			var dis: egret.DisplayObject = element.displayObject;
-			if (dis.parent != null) {
+			var dis1: egret.DisplayObject = element.displayObject;
+			if (dis1.parent != null) {
 				if (element.getFSM().CurrentState == FishStateSeek.instance) {
-					if (HitTestUtils.hitTest(dis, entity.getDisplayObject())) {		//包围盒碰撞检测
-						// if (dis.hitTestPoint(dis.x, dis.y, false)) {				//点碰撞检测
-						entity.getFSM().ChangeState(ShellMovingEntityStateArrive.instance);
+					var pad1: number = 1.5 * Math.max(dis1.width, dis1.height);
+					var dis2: egret.DisplayObject = entity.getDisplayObject();
+					var pad2: number = 1.5 * Math.max(dis2.width, dis2.height);
+					if ((dis1.x - dis2.x) > -(pad1 + pad2) && (dis1.x - dis2.x) < (pad1 + pad2) && (dis1.y - dis2.y) > -(pad1 + pad2) && (dis1.y - dis2.y) < (pad1 + pad2)) {
+						if (HitTestUtils.hitTest(dis1, entity.getDisplayObject())) {		//包围盒碰撞检测
+							// if (dis.hitTestPoint(dis.x, dis.y, false)) {				//点碰撞检测
+							entity.getFSM().ChangeState(ShellMovingEntityStateArrive.instance);
+						}
 					}
 				}
 			}
@@ -115,9 +120,15 @@ class ShellMovingEntityStateArrive implements IState {
 		(<egret.MovieClip>shell.displayObject).gotoAndPlay(1, 1);
 		this.client.fishList.forEach(element => {
 			if (element.isDestroy == false) {
-				if (HitTestUtils.hitTest(shell.displayObject, element.getDisplayObject())) {
-					element.getFSM().ChangeState(FishStateDeath.instance);
-					(<PlayerGunRenderer>shell.owner).killFish(element.getDataVo<FishVo>(FishVo))
+				var dis1: egret.DisplayObject = shell.displayObject;
+				var dis2: egret.DisplayObject = element.getDisplayObject();
+				var pad1: number = 1.5 * Math.max(dis1.width, dis1.height);
+				var pad2: number = 1.5 * Math.max(dis2.width, dis2.height);
+				if ((dis1.x - dis2.x) > -(pad1 + pad2) && (dis1.x - dis2.x) < (pad1 + pad2) && (dis1.y - dis2.y) > -(pad1 + pad2) && (dis1.y - dis2.y) < (pad1 + pad2)) {
+					if (HitTestUtils.hitTest(shell.displayObject, element.getDisplayObject())) {
+						element.getFSM().ChangeState(FishStateDeath.instance);
+						(<PlayerGunRenderer>shell.owner).killFish(element.getDataVo<FishVo>(FishVo))
+					}
 				}
 			}
 		});

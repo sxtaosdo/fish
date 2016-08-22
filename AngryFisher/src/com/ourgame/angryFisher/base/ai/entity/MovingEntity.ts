@@ -37,7 +37,7 @@ class BaseMovingEntity extends BaseGameEntity {
 	public speedX: number;
 	public speedY: number;
 	public owner:IBase;
-	public testBox: egret.Rectangle;
+	public hitBox:egret.Rectangle;
 	// public rotation: number;
 	protected _position: Vector2Ds;
 	protected _rotation: number;
@@ -45,6 +45,7 @@ class BaseMovingEntity extends BaseGameEntity {
 
 	public constructor() {
 		super();
+		this.hitBox = new egret.Rectangle();
 	}
 
 	public set position(value: Vector2Ds) {

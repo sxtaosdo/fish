@@ -14,15 +14,15 @@ class TestWindow extends BaseComponent implements IBase {
 	private main: Main;
 
 	public constructor() {
-		super();
+		super(false);
 		this.skinName = "resource/game_skins/TestSkin.exml";
-		// this.touchChildren = false;
 		this.alpha = 0.6;
 	}
 
 	protected onSkinComplete(e: any): void {
 		super.onSkinComplete(e);
-		// this.enter();
+		this.x = 745;
+		this.y = 120;
 	}
 
 	public enter(data?: any): void {
@@ -49,7 +49,7 @@ class TestWindow extends BaseComponent implements IBase {
 	public execute(data?: any): void {
 		if (this.skinLoaded) {
 			this.numText.text = "生成数:" + EntityManager.instance.length;
-			this.showNumText.text = "显示数:" + (<egret.DisplayObjectContainer>this.main.game.getChildAt(1)).numChildren;
+			this.showNumText.text = "显示数:" + (<egret.DisplayObjectContainer>this.main.game.getChildAt(1)["getChildAt"](1)).numChildren;
 		}
 	}
 

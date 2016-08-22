@@ -33,8 +33,13 @@ class GameMain extends egret.Sprite implements IBase {
 		if (this.topBar == null) {
 			this.topBar = new TopView();
 		}
-		this.addChildAt(this.topBar, 0);
+		this.addChild(this.topBar);
 		this.topBar.enter();
+		if (ConfigModel.instance.showTest) {
+            var test: TestWindow = new TestWindow();
+            this.addChild(test);
+            test.enter(this.parent);
+        }
 	}
 
 	/**

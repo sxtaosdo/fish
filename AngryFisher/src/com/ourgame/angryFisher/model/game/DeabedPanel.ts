@@ -41,6 +41,8 @@ class DeabedPanel extends egret.Sprite implements IBase {
 			this.playWave();
 			egret.Tween.get(this.bg).to({ alpha: 0.7 }, 500).call((vo) => {
 				this.bg.texture = RES.getRes(vo.bg);
+				this.bg.width = GameWorld.GAME_WIDTH;
+				this.bg.height = GameWorld.GAME_HEIGHT;
 				vo.plant.forEach(element => {
 					var mc: egret.MovieClip = MovieclipUtils.createMc("plant_" + element.id + "_png", "plant_" + element.id + "_json");
 					mc.x = element.x;

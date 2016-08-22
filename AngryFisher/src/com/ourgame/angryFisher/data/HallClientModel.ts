@@ -6,6 +6,8 @@ class HallClientModel {
 	private _goResult: number = 0;
 	private _diceInfo: DiceInfo;
 	private _pool: number = 0;
+	/**当前选中房间信息 */
+	public selectRoomIndex: RoomInfoItemVo;
 
 	public constructor() {
 

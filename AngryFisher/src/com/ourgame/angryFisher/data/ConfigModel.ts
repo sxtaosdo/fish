@@ -90,7 +90,7 @@ class ConfigModel {
                     var pp: PathPointVo = new PathPointVo();
                     pp.x = data.readFloat() * GameWorld.GAME_WIDTH;
                     pp.y = data.readFloat() * GameWorld.GAME_HEIGHT;
-                    pp.speed = 9;
+                    pp.speed = 6;
                     templist.push(pp);//32小数，32小数
                 }
                 /*****************************计算客户端需要的路径点*贝塞尔曲线*************************/

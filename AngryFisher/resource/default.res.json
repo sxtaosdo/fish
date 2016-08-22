@@ -17,11 +17,11 @@
 			"name":"main"
 		},
 		{
-			"keys":"playerBg_png,playerLvBarBar_png,playerLvBarBg_png,robot_png,playerShell_png,net_png,hitAwardGold_json,hitAwardGold_png,playerConeIcon_png,playerGunIcon_png",
+			"keys":"playerBg_png,playerLvBarBar_png,playerLvBarBg_png,playerShell_png,net_png,hitAwardGold_json,hitAwardGold_png,playerConeIcon_png,playerGunIcon_png,robot_json,robot_png",
 			"name":"player"
 		},
 		{
-			"keys":"bg2_png,bg3_png,bg4_png,bg6_png,bg7_png,bg8_png,BattleBackground1_png,bg_png,bg1_png,wave_png,wave1_json,wave1_png",
+			"keys":"bg2_png,bg3_png,bg4_png,bg6_png,bg7_png,bg8_png,BattleBackground1_png,bg_png,bg1_png,wave_png,wave1_json,wave1_png,bg5_png",
 			"name":"bg"
 		},
 		{
@@ -37,7 +37,7 @@
 			"name":"alert"
 		},
 		{
-			"keys":"topBg_png,topExitBtn1_png,topExitBtn2_png,topMoneyBg_png,topMailBtn1_png,topMailBtn2_png,topOpenationBtn1_png,topOpenationBtn2_png,toprechargeBtn1_png,toprechargeBtn2_png,topAutoBtn1_png,topAutoBtn2_png,topHelpBtn1_png,topHelpBtn2_png",
+			"keys":"topBg_png,topExitBtn1_png,topExitBtn2_png,topMoneyBg_png,topMailBtn1_png,topMailBtn2_png,topOpenationBtn1_png,topOpenationBtn2_png,toprechargeBtn1_png,toprechargeBtn2_png,topAutoBtn1_png,topAutoBtn2_png,topHelpBtn1_png,topHelpBtn2_png,hoseBtn_png,hoseBg_png,topSettlementBtn1_png,topSettlementBtn2_png,topGunBtn1_png,topGunBtn2_png,topLockBtn1_png,topLockBtn2_png",
 			"name":"top"
 		},
 		{
@@ -408,11 +408,6 @@
 			"name":"playerLvBarBar_png",
 			"type":"image",
 			"url":"assets/player/playerLvBarBar.png"
-		},
-		{
-			"name":"robot_png",
-			"type":"image",
-			"url":"assets/player/robot.png"
 		},
 		{
 			"name":"playerShell_png",
@@ -2158,6 +2153,61 @@
 			"name":"shell_json",
 			"type":"json",
 			"url":"config/shell.json"
+		},
+		{
+			"name":"robot_json",
+			"type":"json",
+			"url":"assets/player/mc/robot.json"
+		},
+		{
+			"name":"robot_png",
+			"type":"image",
+			"url":"assets/player/mc/robot.png"
+		},
+		{
+			"name":"bg5_png",
+			"type":"image",
+			"url":"assets/bg/bg5.png"
+		},
+		{
+			"name":"hoseBtn_png",
+			"type":"image",
+			"url":"assets/top/hoseBtn.png"
+		},
+		{
+			"name":"hoseBg_png",
+			"type":"image",
+			"url":"assets/top/hoseBg.png"
+		},
+		{
+			"name":"topSettlementBtn1_png",
+			"type":"image",
+			"url":"assets/top/topSettlementBtn1.png"
+		},
+		{
+			"name":"topSettlementBtn2_png",
+			"type":"image",
+			"url":"assets/top/topSettlementBtn2.png"
+		},
+		{
+			"name":"topGunBtn1_png",
+			"type":"image",
+			"url":"assets/top/topGunBtn1.png"
+		},
+		{
+			"name":"topGunBtn2_png",
+			"type":"image",
+			"url":"assets/top/topGunBtn2.png"
+		},
+		{
+			"name":"topLockBtn1_png",
+			"type":"image",
+			"url":"assets/top/topLockBtn1.png"
+		},
+		{
+			"name":"topLockBtn2_png",
+			"type":"image",
+			"url":"assets/top/topLockBtn2.png"
 		}
 	]
 }
