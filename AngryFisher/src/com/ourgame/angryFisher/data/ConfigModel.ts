@@ -75,8 +75,9 @@ class ConfigModel {
     }
 
     public parseFishPath(): void {
-        ConfigModel.pathNameList.forEach(element => {
-            var data: egret.ByteArray = new egret.ByteArray(RES.getRes(element));
+        var list: Array<any> = RES.getGroupByName("path");
+        list.forEach(element => {
+            var data: egret.ByteArray = new egret.ByteArray(RES.getRes(element.name));
             data.endian = egret.Endian.LITTLE_ENDIAN;
 
             var data1 = data.readUnsignedInt();         //32整数文件头   1667330676

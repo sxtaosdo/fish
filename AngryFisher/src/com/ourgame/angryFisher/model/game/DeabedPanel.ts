@@ -20,13 +20,14 @@ class DeabedPanel extends egret.Sprite implements IBase {
 
 	public enter(data?: any): void {
 		this.addChildAt(this.bg, 0);
-		this.plantList.push();
+		// this.plantList.push();
 		this.ripple = MovieclipUtils.createMc("wave1_png", "wave1_json");
 		this.ripple.scaleX = GameWorld.GAME_WIDTH / this.ripple.width;
 		this.ripple.scaleY = GameWorld.GAME_HEIGHT / this.ripple.height;
 		this.ripple.alpha = 0.5;
 		// this.ripple.setf
 		this.addChild(this.ripple);
+		this.execute(true);
 	}
 
 	public exit(): void {
@@ -77,6 +78,8 @@ class DeabedPanel extends egret.Sprite implements IBase {
 		}
 		this.addChild(this.wave);
 		this.wave.x = Main.STAGE_WIDTH;
-		egret.Tween.get(this.wave).to({ x: -this.wave.width }, 1000);
+		egret.Tween.get(this.wave).to({ x: -this.wave.width }, 1000).call(() => {
+			this.wave.parent.removeChild(this.wave);
+		}, this);
 	}
 }
