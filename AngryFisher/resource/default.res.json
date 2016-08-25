@@ -45,7 +45,7 @@
 			"name":"bgPlant"
 		},
 		{
-			"keys":"fish1_json,fish1_png,fishd1_json,fishd1_png,fishd2_json,fishd2_png,fish2_json,fish2_png,fishd4_png,fish3_json,fish3_png,fish4_json,fish4_png,fishd3_json,fishd3_png,fishd4_json,fish6_png,fish5_json,fish5_png,fish6_json,fishd6_png,fishd5_json,fishd5_png,fishd6_json,fishd12_json,fishd12_png,fishd13_json,fishd13_png,fish7_json,fish7_png,fish8_json,fish8_png,fish9_json,fish9_png,fish10_json,fish10_png,fish11_json,fish11_png,fish12_json,fish12_png,fish13_json,fish13_png,fishd7_json,fishd7_png,fishd8_json,fishd8_png,fishd9_json,fishd9_png,fishd10_json,fishd10_png,fishd11_json,fishd11_png",
+			"keys":"fish1_json,fish1_png,fishd1_json,fishd1_png,fishd2_json,fishd2_png,fish2_json,fish2_png,fishd4_png,fish3_json,fish3_png,fish4_json,fish4_png,fishd3_json,fishd3_png,fishd4_json,fish6_png,fish5_json,fish5_png,fish6_json,fishd6_png,fishd5_json,fishd5_png,fishd6_json,fishd12_json,fishd12_png,fishd13_json,fishd13_png,fish7_json,fish7_png,fish8_json,fish8_png,fish9_json,fish9_png,fish10_json,fish10_png,fish11_json,fish11_png,fish12_json,fish12_png,fish13_json,fish13_png,fishd7_json,fishd7_png,fishd8_json,fishd8_png,fishd9_json,fishd9_png,fishd10_json,fishd10_png,fishd11_json,fishd11_png,fishd22_png,fishd23_json,fishd23_png,fish14_json,fish14_png,fish15_json,fish15_png,fish16_json,fish16_png,fish17_json,fish17_png,fish18_json,fish18_png,fish19_json,fish19_png,fish20_json,fish20_png,fish21_json,fish21_png,fish22_json,fish22_png,fish23_json,fish23_png,fishd14_json,fishd14_png,fishd15_json,fishd15_png,fishd16_json,fishd16_png,fishd17_json,fishd17_png,fishd18_json,fishd18_png,fishd19_json,fishd19_png,fishd20_json,fishd20_png,fishd21_json,fishd21_png,fishd22_json",
 			"name":"fish1"
 		},
 		{
@@ -73,7 +73,7 @@
 			"name":"shell"
 		},
 		{
-			"keys":"A_parallel3[8]_track,A_parallel4[2]_track,A_r[4]_track,A_rainbow[4]_track,A_rice[8]_track,A_semicircle[6]_track,A_star1[12]_track,A_star2[12]_track,A_tai[2]_track,A_w[2]_track,A_w[8]_track,A_wave1[8]_track,A_wave2[6]_track,A_wave3[6]_track,A_wave4[6]_track,A_well[8]_track,A_wire[2]_track,A_x[4]_track,B99lb[5]_track,B99lb_r[3]_track,B99lt[5]_track,B99lt_r[3]_track,B99mb[5]_track,B99mb_r[3]_track,B99mt[5]_track,B99mt_r[3]_track,B99rb[5]_track,B99rb_r[3]_track,B99rt[5]_track,B99rt_r[3]_track,BombFish_track,C04[6]_track,C05[6]_track,C06[6]_track,C10[6]_track,C13[1]_track,C15[6]_track,C16[6]_track,C17[1]_track,C17[4]_track,C18[4]_track,C19[4]_track,C20[4]_track,C21[4]_track,C22[6]_track,Golden_Shark_track,GoldenShark_track,GoldenShark_txt,LC17[3]_track,little_golden_shark_track,shark_track,T_2at_track,T_2gt_track,T_at_track,T_bt_track,T_ct_track,T_dt_track,T_et_track,T_gt_track,xiao1_track,xiao3_track,xiao4_track,xiao6_track,-4[13]_track,A_a[24]_track,-A_a[24]_track,A_bone[4]_track,A_c[4]_track,A_cross[4]_track,A_d[8]_track,A_diamond[8]_track,A_grid[4]_track,A_heart[2]_track,A_net[10]_track,A_parallel1[4]_track,A_parallel2[6]_track",
+			"keys":"A_parallel3[8]_track,A_parallel4[2]_track,A_r[4]_track,A_rainbow[4]_track,A_rice[8]_track,A_semicircle[6]_track,A_star1[12]_track,A_star2[12]_track,A_tai[2]_track,A_w[2]_track,A_w[8]_track,A_wave1[8]_track,A_wave2[6]_track,A_wave3[6]_track,A_wave4[6]_track,A_well[8]_track,A_wire[2]_track,A_x[4]_track,B99lb[5]_track,B99lb_r[3]_track,B99lt[5]_track,B99lt_r[3]_track,B99mb[5]_track,B99mb_r[3]_track,B99mt[5]_track,B99mt_r[3]_track,B99rb[5]_track,B99rb_r[3]_track,B99rt[5]_track,B99rt_r[3]_track,BombFish_track,C04[6]_track,C05[6]_track,C06[6]_track,C10[6]_track,C13[1]_track,C15[6]_track,C16[6]_track,C17[1]_track,C17[4]_track,C18[4]_track,C19[4]_track,C20[4]_track,C21[4]_track,C22[6]_track,Golden_Shark_track,GoldenShark_track,LC17[3]_track,little_golden_shark_track,shark_track,T_2at_track,T_2gt_track,T_at_track,T_bt_track,T_ct_track,T_dt_track,T_et_track,T_gt_track,xiao1_track,xiao3_track,xiao4_track,xiao6_track,-4[13]_track,A_a[24]_track,-A_a[24]_track,A_bone[4]_track,A_c[4]_track,A_cross[4]_track,A_d[8]_track,A_diamond[8]_track,A_grid[4]_track,A_heart[2]_track,A_net[10]_track,A_parallel1[4]_track,A_parallel2[6]_track",
 			"name":"path"
 		}
 	],
@@ -2074,11 +2074,6 @@
 			"url":"config/path/GoldenShark.track"
 		},
 		{
-			"name":"GoldenShark_txt",
-			"type":"text",
-			"url":"config/path/GoldenShark.txt"
-		},
-		{
 			"name":"LC17[3]_track",
 			"type":"bin",
 			"url":"config/path/LC17[3].track"
@@ -2217,6 +2212,206 @@
 			"name":"A_parallel2[6]_track",
 			"type":"bin",
 			"url":"config/path/A_parallel2[6].track"
+		},
+		{
+			"name":"fishd22_png",
+			"type":"image",
+			"url":"assets/fish1/fishd22.png"
+		},
+		{
+			"name":"fishd23_json",
+			"type":"json",
+			"url":"assets/fish1/fishd23.json"
+		},
+		{
+			"name":"fishd23_png",
+			"type":"image",
+			"url":"assets/fish1/fishd23.png"
+		},
+		{
+			"name":"fish14_json",
+			"type":"json",
+			"url":"assets/fish1/fish14.json"
+		},
+		{
+			"name":"fish14_png",
+			"type":"image",
+			"url":"assets/fish1/fish14.png"
+		},
+		{
+			"name":"fish15_json",
+			"type":"json",
+			"url":"assets/fish1/fish15.json"
+		},
+		{
+			"name":"fish15_png",
+			"type":"image",
+			"url":"assets/fish1/fish15.png"
+		},
+		{
+			"name":"fish16_json",
+			"type":"json",
+			"url":"assets/fish1/fish16.json"
+		},
+		{
+			"name":"fish16_png",
+			"type":"image",
+			"url":"assets/fish1/fish16.png"
+		},
+		{
+			"name":"fish17_json",
+			"type":"json",
+			"url":"assets/fish1/fish17.json"
+		},
+		{
+			"name":"fish17_png",
+			"type":"image",
+			"url":"assets/fish1/fish17.png"
+		},
+		{
+			"name":"fish18_json",
+			"type":"json",
+			"url":"assets/fish1/fish18.json"
+		},
+		{
+			"name":"fish18_png",
+			"type":"image",
+			"url":"assets/fish1/fish18.png"
+		},
+		{
+			"name":"fish19_json",
+			"type":"json",
+			"url":"assets/fish1/fish19.json"
+		},
+		{
+			"name":"fish19_png",
+			"type":"image",
+			"url":"assets/fish1/fish19.png"
+		},
+		{
+			"name":"fish20_json",
+			"type":"json",
+			"url":"assets/fish1/fish20.json"
+		},
+		{
+			"name":"fish20_png",
+			"type":"image",
+			"url":"assets/fish1/fish20.png"
+		},
+		{
+			"name":"fish21_json",
+			"type":"json",
+			"url":"assets/fish1/fish21.json"
+		},
+		{
+			"name":"fish21_png",
+			"type":"image",
+			"url":"assets/fish1/fish21.png"
+		},
+		{
+			"name":"fish22_json",
+			"type":"json",
+			"url":"assets/fish1/fish22.json"
+		},
+		{
+			"name":"fish22_png",
+			"type":"image",
+			"url":"assets/fish1/fish22.png"
+		},
+		{
+			"name":"fish23_json",
+			"type":"json",
+			"url":"assets/fish1/fish23.json"
+		},
+		{
+			"name":"fish23_png",
+			"type":"image",
+			"url":"assets/fish1/fish23.png"
+		},
+		{
+			"name":"fishd14_json",
+			"type":"json",
+			"url":"assets/fish1/fishd14.json"
+		},
+		{
+			"name":"fishd14_png",
+			"type":"image",
+			"url":"assets/fish1/fishd14.png"
+		},
+		{
+			"name":"fishd15_json",
+			"type":"json",
+			"url":"assets/fish1/fishd15.json"
+		},
+		{
+			"name":"fishd15_png",
+			"type":"image",
+			"url":"assets/fish1/fishd15.png"
+		},
+		{
+			"name":"fishd16_json",
+			"type":"json",
+			"url":"assets/fish1/fishd16.json"
+		},
+		{
+			"name":"fishd16_png",
+			"type":"image",
+			"url":"assets/fish1/fishd16.png"
+		},
+		{
+			"name":"fishd17_json",
+			"type":"json",
+			"url":"assets/fish1/fishd17.json"
+		},
+		{
+			"name":"fishd17_png",
+			"type":"image",
+			"url":"assets/fish1/fishd17.png"
+		},
+		{
+			"name":"fishd18_json",
+			"type":"json",
+			"url":"assets/fish1/fishd18.json"
+		},
+		{
+			"name":"fishd18_png",
+			"type":"image",
+			"url":"assets/fish1/fishd18.png"
+		},
+		{
+			"name":"fishd19_json",
+			"type":"json",
+			"url":"assets/fish1/fishd19.json"
+		},
+		{
+			"name":"fishd19_png",
+			"type":"image",
+			"url":"assets/fish1/fishd19.png"
+		},
+		{
+			"name":"fishd20_json",
+			"type":"json",
+			"url":"assets/fish1/fishd20.json"
+		},
+		{
+			"name":"fishd20_png",
+			"type":"image",
+			"url":"assets/fish1/fishd20.png"
+		},
+		{
+			"name":"fishd21_json",
+			"type":"json",
+			"url":"assets/fish1/fishd21.json"
+		},
+		{
+			"name":"fishd21_png",
+			"type":"image",
+			"url":"assets/fish1/fishd21.png"
+		},
+		{
+			"name":"fishd22_json",
+			"type":"json",
+			"url":"assets/fish1/fishd22.json"
 		}
 	]
 }

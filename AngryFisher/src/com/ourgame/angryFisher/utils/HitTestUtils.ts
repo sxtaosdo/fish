@@ -1,7 +1,7 @@
 class HitTestUtils {
 
 	/**基于矩形的碰撞检测*/
-	public static hitTest(obj1: egret.DisplayObject, obj2: egret.DisplayObject): boolean {
+	public static hitTest(obj1: egret.DisplayObject, obj2: egret.DisplayObject, exact: boolean = false): boolean {
 		var rect1: egret.Rectangle = obj1.getBounds();
 		var rect2: egret.Rectangle = obj2.getBounds();
 		var key: boolean = false;
@@ -12,7 +12,11 @@ class HitTestUtils {
 		egret.Rectangle.release(rect1);
 		egret.Rectangle.release(rect2);
 		key = rect1.intersects(rect2);
-		return key;
+		if (exact) {
+
+		} else {
+			return key;
+		}
 	}
 
 	public static hitTestByRec(r1: egret.Rectangle, r2: egret.Rectangle): boolean {

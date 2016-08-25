@@ -4,6 +4,7 @@ class FishVo {
 	public path: Array<PathPointVo>;
 	public index: number;
 	public rate: number;
+	public hitTestLevel: number;
 
 	public constructor() {
 		this.path = new Array<PathPointVo>();
@@ -13,6 +14,7 @@ class FishVo {
 		this.name = data.name;
 		this.rate = data.rate;
 		this.id = data.id;
+		this.hitTestLevel = data.hitTestLevel;
 		var key: any;
 		var index: number = 0;
 		for (key in data.path) {

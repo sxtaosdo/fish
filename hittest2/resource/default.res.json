@@ -1,0 +1,400 @@
+{
+	"groups": [
+		{
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,fish7_png,fish8_png,fish10_png,fish11_png,fish12_png,fish13_png,fishd1_png,fishd2_png,fishd3_png,fishd4_png,fishd5_png,fishd6_png,fishd7_png,fishd8_png,fishd9_png,fishd10_png,fishd11_png,fishd12_png,fishd13_png,fish1_png,fish2_png,fish3_png,fish4_png,fish5_png,fish6_png,fish9_png,fish9_json,fish8_json,fish11_json,fish12_json,fish10_json,fishd1_json,fishd2_json,fish13_json,fishd3_json,fishd5_json,fishd4_json,fishd6_json,fishd7_json,fishd8_json,fishd9_json,fishd10_json,fishd12_json,fishd13_json,fishd11_json,fish1_json,fish2_json,fish4_json,fish3_json,fish5_json,fish6_json,fish7_json",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "fish1/fish7.png",
+			"type": "image",
+			"name": "fish7_png"
+		},
+		{
+			"url": "fish1/fish8.png",
+			"type": "image",
+			"name": "fish8_png"
+		},
+		{
+			"url": "fish1/fish10.png",
+			"type": "image",
+			"name": "fish10_png"
+		},
+		{
+			"url": "fish1/fish11.png",
+			"type": "image",
+			"name": "fish11_png"
+		},
+		{
+			"url": "fish1/fish12.png",
+			"type": "image",
+			"name": "fish12_png"
+		},
+		{
+			"url": "fish1/fish13.png",
+			"type": "image",
+			"name": "fish13_png"
+		},
+		{
+			"url": "fish1/fishd1.png",
+			"type": "image",
+			"name": "fishd1_png"
+		},
+		{
+			"url": "fish1/fishd2.png",
+			"type": "image",
+			"name": "fishd2_png"
+		},
+		{
+			"url": "fish1/fishd3.png",
+			"type": "image",
+			"name": "fishd3_png"
+		},
+		{
+			"url": "fish1/fishd4.png",
+			"type": "image",
+			"name": "fishd4_png"
+		},
+		{
+			"url": "fish1/fishd5.png",
+			"type": "image",
+			"name": "fishd5_png"
+		},
+		{
+			"url": "fish1/fishd6.png",
+			"type": "image",
+			"name": "fishd6_png"
+		},
+		{
+			"url": "fish1/fishd7.png",
+			"type": "image",
+			"name": "fishd7_png"
+		},
+		{
+			"url": "fish1/fishd8.png",
+			"type": "image",
+			"name": "fishd8_png"
+		},
+		{
+			"url": "fish1/fishd9.png",
+			"type": "image",
+			"name": "fishd9_png"
+		},
+		{
+			"url": "fish1/fishd10.png",
+			"type": "image",
+			"name": "fishd10_png"
+		},
+		{
+			"url": "fish1/fishd11.png",
+			"type": "image",
+			"name": "fishd11_png"
+		},
+		{
+			"url": "fish1/fishd12.png",
+			"type": "image",
+			"name": "fishd12_png"
+		},
+		{
+			"url": "fish1/fishd13.png",
+			"type": "image",
+			"name": "fishd13_png"
+		},
+		{
+			"url": "fish1/fish1.png",
+			"type": "image",
+			"name": "fish1_png"
+		},
+		{
+			"url": "fish1/fish2.png",
+			"type": "image",
+			"name": "fish2_png"
+		},
+		{
+			"url": "fish1/fish3.png",
+			"type": "image",
+			"name": "fish3_png"
+		},
+		{
+			"url": "fish1/fish4.png",
+			"type": "image",
+			"name": "fish4_png"
+		},
+		{
+			"url": "fish1/fish5.png",
+			"type": "image",
+			"name": "fish5_png"
+		},
+		{
+			"url": "fish1/fish6.png",
+			"type": "image",
+			"name": "fish6_png"
+		},
+		{
+			"url": "fish1/fish9.png",
+			"type": "image",
+			"name": "fish9_png"
+		},
+		{
+			"url": "fish1/fish9.json",
+			"type": "json",
+			"name": "fish9_json"
+		},
+		{
+			"url": "fish1/fish8.json",
+			"type": "json",
+			"name": "fish8_json"
+		},
+		{
+			"url": "fish1/fish11.json",
+			"type": "json",
+			"name": "fish11_json"
+		},
+		{
+			"url": "fish1/fish12.json",
+			"type": "json",
+			"name": "fish12_json"
+		},
+		{
+			"url": "fish1/fish10.json",
+			"type": "json",
+			"name": "fish10_json"
+		},
+		{
+			"url": "fish1/fishd1.json",
+			"type": "json",
+			"name": "fishd1_json"
+		},
+		{
+			"url": "fish1/fishd2.json",
+			"type": "json",
+			"name": "fishd2_json"
+		},
+		{
+			"url": "fish1/fish13.json",
+			"type": "json",
+			"name": "fish13_json"
+		},
+		{
+			"url": "fish1/fishd3.json",
+			"type": "json",
+			"name": "fishd3_json"
+		},
+		{
+			"url": "fish1/fishd5.json",
+			"type": "json",
+			"name": "fishd5_json"
+		},
+		{
+			"url": "fish1/fishd4.json",
+			"type": "json",
+			"name": "fishd4_json"
+		},
+		{
+			"url": "fish1/fishd6.json",
+			"type": "json",
+			"name": "fishd6_json"
+		},
+		{
+			"url": "fish1/fishd7.json",
+			"type": "json",
+			"name": "fishd7_json"
+		},
+		{
+			"url": "fish1/fishd8.json",
+			"type": "json",
+			"name": "fishd8_json"
+		},
+		{
+			"url": "fish1/fishd9.json",
+			"type": "json",
+			"name": "fishd9_json"
+		},
+		{
+			"url": "fish1/fishd10.json",
+			"type": "json",
+			"name": "fishd10_json"
+		},
+		{
+			"url": "fish1/fishd12.json",
+			"type": "json",
+			"name": "fishd12_json"
+		},
+		{
+			"url": "fish1/fishd13.json",
+			"type": "json",
+			"name": "fishd13_json"
+		},
+		{
+			"url": "fish1/fishd11.json",
+			"type": "json",
+			"name": "fishd11_json"
+		},
+		{
+			"url": "fish1/fish1.json",
+			"type": "json",
+			"name": "fish1_json"
+		},
+		{
+			"url": "fish1/fish2.json",
+			"type": "json",
+			"name": "fish2_json"
+		},
+		{
+			"url": "fish1/fish4.json",
+			"type": "json",
+			"name": "fish4_json"
+		},
+		{
+			"url": "fish1/fish3.json",
+			"type": "json",
+			"name": "fish3_json"
+		},
+		{
+			"url": "fish1/fish5.json",
+			"type": "json",
+			"name": "fish5_json"
+		},
+		{
+			"url": "fish1/fish6.json",
+			"type": "json",
+			"name": "fish6_json"
+		},
+		{
+			"url": "fish1/fish7.json",
+			"type": "json",
+			"name": "fish7_json"
+		}
+	]
+}

@@ -105,16 +105,6 @@ class ShellMovingEntityStateArrive implements IState {
     public enter(entity: IBaseGameEntity): void {
 		this.client = ClientModel.instance;
 		var shell: ShellRenderer = <ShellRenderer>entity;
-		// var dis: egret.MovieClip = <any>entity.getDisplayObject();
-		/*var temp = MovieclipUtils.createMc(shell.data.bomb + "_png", shell.data.bomb + "_json");
-		temp.x = dis.x;
-		temp.y = dis.y + shell.data.offy;
-		dis.parent.addChild(temp);
-		dis.parent.removeChild(dis);
-		shell.displayObject = temp;
-		temp.gotoAndPlay(1, 1);
-		shell.displayObject.anchorOffsetX = shell.displayObject.width >> 1;*/
-		// shell.displayObject.anchorOffsetY = shell.displayObject.height >> 1;
 
 		(<egret.MovieClip>shell.displayObject).movieClipData = shell.mcf.generateMovieClipData(shell.data.bomb);
 		(<egret.MovieClip>shell.displayObject).gotoAndPlay(1, 1);
@@ -125,7 +115,18 @@ class ShellMovingEntityStateArrive implements IState {
 				var pad1: number = 1.5 * Math.max(dis1.width, dis1.height);
 				var pad2: number = 1.5 * Math.max(dis2.width, dis2.height);
 				if ((dis1.x - dis2.x) > -(pad1 + pad2) && (dis1.x - dis2.x) < (pad1 + pad2) && (dis1.y - dis2.y) > -(pad1 + pad2) && (dis1.y - dis2.y) < (pad1 + pad2)) {
+					console.log("in hit");
+
 					if (HitTestUtils.hitTest(shell.displayObject, element.getDisplayObject())) {
+						console.log("hitTestLevel:" + element.getDataVo<FishVo>(FishVo).hitTestLevel);
+						if (element.getDataVo<FishVo>(FishVo).hitTestLevel == 1) {	//精准碰撞检测
+							var bmp: egret.Texture = (<egret.MovieClip>element.displayObject).$bitmapData;
+							if (bmp.getPixel32(dis1.x, dis2.x)[3] < 1) {
+								console.log(bmp.getPixel32(dis1.x, dis2.x)[3]);
+
+								return;
+							}
+						}
 						element.getFSM().ChangeState(FishStateDeath.instance);
 						(<PlayerGunRenderer>shell.owner).killFish(element.getDataVo<FishVo>(FishVo))
 					}
@@ -133,6 +134,8 @@ class ShellMovingEntityStateArrive implements IState {
 			}
 		});
 		entity.getFSM().ChangeState(ShellMovingEntityStateDeath.instance);
+
+		//target.$bitmapData.getPixel32(evt.localX,evt.localY)
 	}
 
     public execute(entity: IBaseGameEntity): void {

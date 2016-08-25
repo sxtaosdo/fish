@@ -39,13 +39,15 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 
 	public enter(data?: any): void {
 		this.data = UserModel.instance.vo;
-		this.shellVo = ConfigModel.instance.shellList[this.data.gunLevel];
+		// this.shellVo = ConfigModel.instance.shellList[this.data.gunLevel];
+		this.shellVo = this.data.gunLevel == 0 ? ConfigModel.instance.shellList[1] : ConfigModel.instance.shellList[this.data.gunLevel];
 		if (this.skinLoaded) {
 			this.fillData();
 		}
 		this.centerPoint = this.localToGlobal(this.robot.x, this.robot.y);
 		this.position = new Vector2Ds(this.centerPoint.x, this.centerPoint.y - 50);
 		this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAdd, this);
+		this.robot.filters = [new egret.ColorMatrixFilter(MatrixUtils.change)];
 	}
 
 	public exit(): void {
@@ -93,6 +95,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 		shell.position = this.position;
 		shell.getFSM().ChangeState(ShellMovingEntityStateSeek.instance);
 		shell.rotation = this.robot.rotation;
+		// shell.displayObject.scaleX = shell.displayObject.scaleY = this.data.level == 0 ? 1 : this.data.level;
 		this.data.gunCount--;
 		this.shellContent.addChild(shell.displayObject);
 		// this.shellContent.addChild(shell.testBox);
@@ -125,6 +128,7 @@ class PlayerGunRenderer extends BaseComponent implements IBase {
 			this.gunText.text = this.data.gunCount.toString();
 			this.moneyText.text = this.data.moeny.toString();
 			this.lvText.text = this.data.level.toString();
+			this.shellVo = this.data.level == 0 ? ConfigModel.instance.shellList[1] : ConfigModel.instance.shellList[this.data.gunLevel];
 		}
 	}
 

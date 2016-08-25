@@ -1,3 +1,6 @@
+/**
+ * 游戏环节的主场景
+ */
 class GameWorld extends egret.Sprite implements IBase {
 
     public static GAME_WIDTH: number = 730;
@@ -37,15 +40,14 @@ class GameWorld extends egret.Sprite implements IBase {
 
     private test(): void {
         var obj: Object = {};
-        while (this.createList.length < 5) {
-            var key = RandomUtil.randInt(0, ConfigModel.instance.createList.length - 1);
-            if (obj[key]) {
-                continue;
-            } else {
-                obj[key] = true;
-            }
-            var vo: FishCreateVo = ConfigModel.instance.createList[key]
-            // console.log(vo.fishType);
+        while (this.createList.length < 1) {
+            // var key = RandomUtil.randInt(0, ConfigModel.instance.createList.length - 1);
+            // if (obj[key]) {
+            //     continue;
+            // } else {
+            //     obj[key] = true;
+            // }
+            var vo: FishCreateVo = ConfigModel.instance.createList[3]
             this.createList.push(vo);
             this.drawPathPoint(ConfigModel.instance.pathList[vo.pathID]);
         }
