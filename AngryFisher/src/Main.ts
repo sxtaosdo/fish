@@ -66,11 +66,11 @@ class Main extends eui.UILayer {
     }
 
     private onAssetsComplete(): void {
-        // if (ConfigModel.instance.showTest) {
-        //     var test: TestWindow = new TestWindow();
-        //     this.addChild(test);
-        //     test.enter(this);
-        // }
+        if (ConfigModel.instance.showTest) {
+            var test: TestWindow = new TestWindow();
+            this.addChild(test);
+            test.enter(this);
+        }
     }
 
     /**
@@ -103,20 +103,20 @@ class Main extends eui.UILayer {
      * 创建场景界面
      * Create scene interface
      */
-    protected startCreateScene(): void {
-        var button = new eui.Button();
-        button.label = "Click!";
-        button.horizontalCenter = 0;
-        button.verticalCenter = 0;
-        this.addChild(button);
-        button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
-    }
+    // protected startCreateScene(): void {
+    //     var button = new eui.Button();
+    //     button.label = "Click!";
+    //     button.horizontalCenter = 0;
+    //     button.verticalCenter = 0;
+    //     this.addChild(button);
+    //     button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+    // }
 
-    private onButtonClick(e: egret.TouchEvent) {
-        var panel = new eui.Panel();
-        panel.title = "Title";
-        panel.horizontalCenter = 0;
-        panel.verticalCenter = 0;
-        this.addChild(panel);
-    }
+    // private onButtonClick(e: egret.TouchEvent) {
+    //     var panel = new eui.Panel();
+    //     panel.title = "Title";
+    //     panel.horizontalCenter = 0;
+    //     panel.verticalCenter = 0;
+    //     this.addChild(panel);
+    // }
 }

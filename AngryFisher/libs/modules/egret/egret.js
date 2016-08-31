@@ -1542,7 +1542,7 @@ var egret;
          * @private
          * 标记矩阵失效
          */
-        p.invalidateMatrix = function () {
+        p.$invalidateMatrix = function () {
             this.$setFlags(8 /* InvalidMatrix */);
             this.$invalidatePosition();
         };
@@ -1911,7 +1911,7 @@ var egret;
                 return false;
             }
             values[0 /* scaleX */] = value;
-            this.invalidateMatrix();
+            this.$invalidateMatrix();
             return true;
         };
         d(p, "scaleY"
@@ -1955,7 +1955,7 @@ var egret;
                 return false;
             }
             this.$DisplayObject[1 /* scaleY */] = value;
-            this.invalidateMatrix();
+            this.$invalidateMatrix();
             return true;
         };
         d(p, "rotation"
@@ -2005,7 +2005,7 @@ var egret;
             values[2 /* skewX */] += angle;
             values[3 /* skewY */] += angle;
             values[4 /* rotation */] = value;
-            this.invalidateMatrix();
+            this.$invalidateMatrix();
             return true;
         };
         d(p, "skewX"
@@ -2038,7 +2038,7 @@ var egret;
             value = clampRotation(value);
             value = value / 180 * Math.PI;
             values[2 /* skewX */] = value;
-            this.invalidateMatrix();
+            this.$invalidateMatrix();
             return true;
         };
         d(p, "skewY"
@@ -2071,7 +2071,7 @@ var egret;
             value = clampRotation(value);
             value = value / 180 * Math.PI;
             values[3 /* skewY */] = value;
-            this.invalidateMatrix();
+            this.$invalidateMatrix();
             return true;
         };
         d(p, "width"
@@ -2134,7 +2134,7 @@ var egret;
             //     values[Keys.scaleY] = bounds.height / baseHeight;
             //     values[Keys.scaleX] = value / baseWidth;
             // }
-            this.invalidateMatrix();
+            this.$invalidateMatrix();
             return true;
         };
         d(p, "height"
@@ -2197,7 +2197,7 @@ var egret;
             //     values[Keys.scaleY] = value / baseHeight;
             //     values[Keys.scaleX] = bounds.width / baseWidth;
             // }
-            this.invalidateMatrix();
+            this.$invalidateMatrix();
             return true;
         };
         d(p, "measuredWidth"
@@ -4011,10 +4011,7 @@ var egret;
      * @platform Web,Native
      * @includeExample egret/display/BitmapFillMode.ts
      */
-    var BitmapFillMode = (function () {
-        function BitmapFillMode() {
-        }
-        var d = __define,c=BitmapFillMode,p=c.prototype;
+    egret.BitmapFillMode = {
         /**
          * @language en_US
          * Repeat the bitmap to fill area.
@@ -4027,7 +4024,7 @@ var egret;
          * @version Egret 2.4
          * @platform Web
          */
-        BitmapFillMode.REPEAT = "repeat";
+        REPEAT: "repeat",
         /**
          * @language en_US
          * Scale bitmap fill to fill area.
@@ -4040,7 +4037,7 @@ var egret;
          * @version Egret 2.4
          * @platform Web,Native
          */
-        BitmapFillMode.SCALE = "scale";
+        SCALE: "scale",
         /**
          * @language en_US
          * The bitmap ends at the edge of the region.
@@ -4053,11 +4050,8 @@ var egret;
          * @version Egret 2.4
          * @platform Web,Native
          */
-        BitmapFillMode.CLIP = "clip";
-        return BitmapFillMode;
-    }());
-    egret.BitmapFillMode = BitmapFillMode;
-    egret.registerClass(BitmapFillMode,'egret.BitmapFillMode');
+        CLIP: "clip"
+    };
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -4243,10 +4237,7 @@ var egret;
      * @version Egret 2.5
      * @platform Web,Native
      */
-    var CapsStyle = (function () {
-        function CapsStyle() {
-        }
-        var d = __define,c=CapsStyle,p=c.prototype;
+    egret.CapsStyle = {
         /**
          * @language en_US
          * Used to specify no caps in the caps parameter of the egret.Graphics.lineStyle() method.
@@ -4259,7 +4250,7 @@ var egret;
          * @version Egret 2.5
          * @platform Web,Native
          */
-        CapsStyle.NONE = "none";
+        NONE: "none",
         /**
          * @language en_US
          * Used to specify round caps in the caps parameter of the egret.Graphics.lineStyle() method.
@@ -4272,7 +4263,7 @@ var egret;
          * @version Egret 2.5
          * @platform Web,Native
          */
-        CapsStyle.ROUND = "round";
+        ROUND: "round",
         /**
          * @language en_US
          * Used to specify square caps in the caps parameter of the egret.Graphics.lineStyle() method.
@@ -4285,11 +4276,8 @@ var egret;
          * @version Egret 2.5
          * @platform Web,Native
          */
-        CapsStyle.SQUARE = "square";
-        return CapsStyle;
-    }());
-    egret.CapsStyle = CapsStyle;
-    egret.registerClass(CapsStyle,'egret.CapsStyle');
+        SQUARE: "square"
+    };
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -4330,43 +4318,37 @@ var egret;
     /**
      * @language zh_CN
      * 脏矩形策略常量。
-     * @version Egret 2.5
+     * @version Egret 3.0
      * @platform Web,Native
      */
-    var DirtyRegionPolicy = (function () {
-        function DirtyRegionPolicy() {
-        }
-        var d = __define,c=DirtyRegionPolicy,p=c.prototype;
+    egret.DirtyRegionPolicy = {
         /**
          * @language en_US
          * Close automatic detection of dirty region
-         * @version Egret 2.5
+         * @version Egret 3.0
          * @platform Web,Native
          */
         /**
          * @language zh_CN
          * 关闭自动脏矩形检测
-         * @version Egret 2.5
+         * @version Egret 3.0
          * @platform Web,Native
          */
-        DirtyRegionPolicy.OFF = "off";
+        OFF: "off",
         /**
          * @language en_US
          * Open automatic detection of dirty region
-         * @version Egret 2.5
+         * @version Egret 3.0
          * @platform Web,Native
          */
         /**
          * @language zh_CN
          * 开启自动脏矩形检测
-         * @version Egret 2.5
+         * @version Egret 3.0
          * @platform Web,Native
          */
-        DirtyRegionPolicy.ON = "on";
-        return DirtyRegionPolicy;
-    }());
-    egret.DirtyRegionPolicy = DirtyRegionPolicy;
-    egret.registerClass(DirtyRegionPolicy,'egret.DirtyRegionPolicy');
+        ON: "on"
+    };
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -4776,7 +4758,9 @@ var egret;
             child.$propagateFlagsDown(1648 /* DownOnAddedOrRemoved */);
             child.$setParent(null);
             var indexNow = children.indexOf(child);
-            children.splice(indexNow, 1);
+            if (indexNow != -1) {
+                children.splice(indexNow, 1);
+            }
             this.$propagateFlagsUp(4 /* InvalidBounds */);
             return child;
         };
@@ -6073,10 +6057,7 @@ var egret;
      * @version Egret 2.5
      * @platform Web,Native
      */
-    var JointStyle = (function () {
-        function JointStyle() {
-        }
-        var d = __define,c=JointStyle,p=c.prototype;
+    egret.JointStyle = {
         /**
          * @language en_US
          * Specifies beveled joints in the joints parameter of the egret.Graphics.lineStyle() method.
@@ -6089,7 +6070,7 @@ var egret;
          * @version Egret 2.5
          * @platform Web,Native
          */
-        JointStyle.BEVEL = "bevel";
+        BEVEL: "bevel",
         /**
          * @language en_US
          * Specifies mitered joints in the joints parameter of the egret.Graphics.lineStyle() method.
@@ -6102,7 +6083,7 @@ var egret;
          * @version Egret 2.5
          * @platform Web,Native
          */
-        JointStyle.MITER = "miter";
+        MITER: "miter",
         /**
          * @language en_US
          * Specifies round joints in the joints parameter of the egret.Graphics.lineStyle() method.
@@ -6115,11 +6096,8 @@ var egret;
          * @version Egret 2.5
          * @platform Web,Native
          */
-        JointStyle.ROUND = "round";
-        return JointStyle;
-    }());
-    egret.JointStyle = JointStyle;
-    egret.registerClass(JointStyle,'egret.JointStyle');
+        ROUND: "round"
+    };
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -6284,6 +6262,19 @@ var egret;
          */
         LANDSCAPE_FLIPPED: "landscapeFlipped"
     };
+})(egret || (egret = {}));
+var egret;
+(function (egret) {
+    /**
+     * @private
+     */
+    function createMap() {
+        var obj = Object.create(null);
+        obj.__v8__ = undefined;
+        delete obj.__v8__;
+        return obj;
+    }
+    egret.createMap = createMap;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -6689,7 +6680,7 @@ var egret;
             }
             delete Texture._displayList[hashCode];
         };
-        Texture._displayList = {};
+        Texture._displayList = egret.createMap();
         return Texture;
     }(egret.HashObject));
     egret.Texture = Texture;
@@ -7156,7 +7147,7 @@ var egret;
              * @private
              * 纹理缓存字典
              */
-            this._textureMap = {};
+            this._textureMap = egret.createMap();
             this.$texture = texture;
             this._bitmapX = texture._bitmapX - texture._offsetX;
             this._bitmapY = texture._bitmapY - texture._offsetY;
@@ -13057,11 +13048,6 @@ var egret;
                 this.needUpdateRegions = false;
                 /**
                  * @private
-                 * 显示对象的渲染节点发生改变时，把自身的IRenderable对象注册到此列表上。
-                 */
-                this.dirtyNodes = {};
-                /**
-                 * @private
                  */
                 this.dirtyNodeList = [];
                 /**
@@ -13076,6 +13062,7 @@ var egret;
                 this.root = root;
                 this.dirtyRegion = new sys.DirtyRegion(root);
                 this.isStage = (root instanceof egret.Stage);
+                this.dirtyNodes = egret.createMap();
             }
             var d = __define,c=DisplayList,p=c.prototype;
             /**
@@ -13191,7 +13178,7 @@ var egret;
             p.updateDirtyRegions = function () {
                 var dirtyNodeList = this.dirtyNodeList;
                 this.dirtyNodeList = [];
-                this.dirtyNodes = {};
+                this.dirtyNodes = egret.createMap();
                 this.needUpdateRegions = false;
                 var dirtyRegion = this.dirtyRegion;
                 var length = dirtyNodeList.length;
@@ -16321,7 +16308,11 @@ var egret;
                     if (!child.$visible || child.$alpha <= 0 || child.$maskedObject) {
                         continue;
                     }
-                    if ((child.$blendMode !== 0 ||
+                    var filters = child.$getFilters();
+                    if (filters && filters.length > 0) {
+                        drawCalls += this.drawWithFilter(child, context, dirtyList, matrix, clipRegion, root);
+                    }
+                    else if ((child.$blendMode !== 0 ||
                         (child.$mask && (child.$mask.$parentDisplayList || root)))) {
                         drawCalls += this.drawWithClip(child, context, dirtyList, matrix, clipRegion, root);
                     }
@@ -16338,6 +16329,75 @@ var egret;
                     }
                 }
             }
+            return drawCalls;
+        };
+        /**
+         * @private
+         */
+        p.drawWithFilter = function (displayObject, context, dirtyList, matrix, clipRegion, root) {
+            var drawCalls = 0;
+            var filters = displayObject.$getFilters();
+            var filtersLen = filters.length;
+            var hasBlendMode = (displayObject.$blendMode !== 0);
+            if (hasBlendMode) {
+                var compositeOp = blendModes[displayObject.$blendMode];
+                if (!compositeOp) {
+                    compositeOp = defaultCompositeOp;
+                }
+            }
+            // 获取显示对象的链接矩阵
+            var displayMatrix = egret.Matrix.create();
+            displayMatrix.copyFrom(displayObject.$getConcatenatedMatrix());
+            // 获取显示对象的矩形区域
+            var region;
+            region = egret.sys.Region.create();
+            var bounds = displayObject.$getOriginalBounds();
+            region.updateRegion(bounds, displayMatrix);
+            // 为显示对象创建一个新的buffer
+            // todo 这里应该计算 region.x region.y
+            var displayBuffer = this.createRenderBuffer(region.width, region.height);
+            var displayContext = displayBuffer.context;
+            displayContext.setTransform(1, 0, 0, 1, -region.minX, -region.minY);
+            var offsetM = egret.Matrix.create().setTo(1, 0, 0, 1, -region.minX, -region.minY);
+            drawCalls += this.drawDisplayObject(displayObject, displayContext, dirtyList, offsetM, displayObject.$displayList, region, root);
+            egret.Matrix.release(offsetM);
+            //绘制结果到屏幕
+            if (drawCalls > 0) {
+                if (hasBlendMode) {
+                    context.globalCompositeOperation = compositeOp;
+                }
+                drawCalls++;
+                context.globalAlpha = 1;
+                context.setTransform(1, 0, 0, 1, region.minX + matrix.tx, region.minY + matrix.ty);
+                // 应用滤镜
+                var imageData = displayContext.getImageData(0, 0, displayBuffer.surface.width, displayBuffer.surface.height);
+                for (var i = 0; i < filtersLen; i++) {
+                    var filter = filters[i];
+                    if (filter.type == "colorTransform") {
+                        colorFilter(imageData.data, displayBuffer.surface.width, displayBuffer.surface.height, filter.$matrix);
+                    }
+                    else if (filter.type == "blur") {
+                        blurFilter(imageData.data, displayBuffer.surface.width, displayBuffer.surface.height, filter.$blurX, filter.$blurY);
+                    }
+                    else if (filter.type == "glow") {
+                        // TODO glow滤镜实现 kickout hideObject
+                        var r = filter.$red;
+                        var g = filter.$green;
+                        var b = filter.$blue;
+                        var a = filter.$alpha;
+                        dropShadowFilter(imageData.data, displayBuffer.surface.width, displayBuffer.surface.height, [r, g, b, a], filter.$blurX, filter.$blurY, filter.$angle || 0, filter.$distance || 0, filter.$strength);
+                    }
+                }
+                displayContext.putImageData(imageData, 0, 0);
+                // 绘制结果的时候，应用滤镜
+                context.drawImage(displayBuffer.surface, 0, 0);
+                if (hasBlendMode) {
+                    context.globalCompositeOperation = defaultCompositeOp;
+                }
+            }
+            renderBufferPool.push(displayBuffer);
+            egret.sys.Region.release(region);
+            egret.Matrix.release(displayMatrix);
             return drawCalls;
         };
         /**
@@ -16868,6 +16928,221 @@ var egret;
             gradient.addColorStop(ratios[i] / 255, getRGBAString(colors[i], alphas[i]));
         }
         return gradient;
+    }
+    /**
+     * @private
+     */
+    function colorFilter(buffer, w, h, matrix) {
+        var r0 = matrix[0], r1 = matrix[1], r2 = matrix[2], r3 = matrix[3], r4 = matrix[4];
+        var g0 = matrix[5], g1 = matrix[6], g2 = matrix[7], g3 = matrix[8], g4 = matrix[9];
+        var b0 = matrix[10], b1 = matrix[11], b2 = matrix[12], b3 = matrix[13], b4 = matrix[14];
+        var a0 = matrix[15], a1 = matrix[16], a2 = matrix[17], a3 = matrix[18], a4 = matrix[19];
+        for (var p = 0, e = w * h * 4; p < e; p += 4) {
+            var r = buffer[p + 0];
+            var g = buffer[p + 1];
+            var b = buffer[p + 2];
+            var a = buffer[p + 3];
+            buffer[p + 0] = r0 * r + r1 * g + r2 * b + r3 * a + r4;
+            buffer[p + 1] = g0 * r + g1 * g + g2 * b + g3 * a + g4;
+            buffer[p + 2] = b0 * r + b1 * g + b2 * b + b3 * a + b4;
+            buffer[p + 3] = a0 * r + a1 * g + a2 * b + a3 * a + a4;
+        }
+    }
+    /**
+     * @private
+     */
+    function blurFilter(buffer, w, h, blurX, blurY) {
+        blurFilterH(buffer, w, h, blurX);
+        blurFilterV(buffer, w, h, blurY);
+    }
+    /**
+     * @private
+     */
+    function blurFilterH(buffer, w, h, blurX) {
+        var lineBuffer = new Uint8ClampedArray(w * 4);
+        var lineSize = w * 4;
+        var windowLength = (blurX * 2) + 1;
+        var windowSize = windowLength * 4;
+        for (var y = 0; y < h; y++) {
+            var pLineStart = y * lineSize;
+            var rs = 0, gs = 0, bs = 0, as = 0, alpha = 0, alpha2 = 0;
+            // Fill window
+            for (var ptr = -blurX * 4, end = blurX * 4 + 4; ptr < end; ptr += 4) {
+                var key = pLineStart + ptr;
+                if (key < pLineStart || key >= pLineStart + lineSize) {
+                    continue;
+                }
+                alpha = buffer[key + 3];
+                rs += buffer[key + 0] * alpha;
+                gs += buffer[key + 1] * alpha;
+                bs += buffer[key + 2] * alpha;
+                as += alpha;
+            }
+            // Slide window
+            for (var ptr = pLineStart, end = pLineStart + lineSize, linePtr = 0, lastPtr = ptr - blurX * 4, nextPtr = ptr + (blurX + 1) * 4; ptr < end; ptr += 4, linePtr += 4, nextPtr += 4, lastPtr += 4) {
+                lineBuffer[linePtr + 0] = rs / as;
+                lineBuffer[linePtr + 1] = gs / as;
+                lineBuffer[linePtr + 2] = bs / as;
+                lineBuffer[linePtr + 3] = as / windowLength;
+                alpha = buffer[nextPtr + 3];
+                alpha2 = buffer[lastPtr + 3];
+                if (alpha || alpha == 0) {
+                    if (alpha2 || alpha2 == 0) {
+                        rs += buffer[nextPtr + 0] * alpha - buffer[lastPtr + 0] * alpha2;
+                        gs += buffer[nextPtr + 1] * alpha - buffer[lastPtr + 1] * alpha2;
+                        bs += buffer[nextPtr + 2] * alpha - buffer[lastPtr + 2] * alpha2;
+                        as += alpha - alpha2;
+                    }
+                    else {
+                        rs += buffer[nextPtr + 0] * alpha;
+                        gs += buffer[nextPtr + 1] * alpha;
+                        bs += buffer[nextPtr + 2] * alpha;
+                        as += alpha;
+                    }
+                }
+                else {
+                    if (alpha2 || alpha2 == 0) {
+                        rs += -buffer[lastPtr + 0] * alpha2;
+                        gs += -buffer[lastPtr + 1] * alpha2;
+                        bs += -buffer[lastPtr + 2] * alpha2;
+                        as += -alpha2;
+                    }
+                    else {
+                    }
+                }
+            }
+            // Copy line
+            buffer.set(lineBuffer, pLineStart);
+        }
+    }
+    /**
+     * @private
+     */
+    function blurFilterV(buffer, w, h, blurY) {
+        var columnBuffer = new Uint8ClampedArray(h * 4);
+        var stride = w * 4;
+        var windowLength = (blurY * 2) + 1;
+        for (var x = 0; x < w; x++) {
+            var pColumnStart = x * 4;
+            var rs = 0, gs = 0, bs = 0, as = 0, alpha = 0, alpha2 = 0;
+            // Fill window
+            for (var ptr = -blurY * stride, end = blurY * stride + stride; ptr < end; ptr += stride) {
+                var key = pColumnStart + ptr;
+                if (key < pColumnStart || key >= pColumnStart + h * stride) {
+                    continue;
+                }
+                alpha = buffer[key + 3];
+                rs += buffer[key + 0] * alpha;
+                gs += buffer[key + 1] * alpha;
+                bs += buffer[key + 2] * alpha;
+                as += alpha;
+            }
+            // Slide window
+            for (var ptr = pColumnStart, end = pColumnStart + h * stride, columnPtr = 0, lastPtr = pColumnStart - blurY * stride, nextPtr = pColumnStart + ((blurY + 1) * stride); ptr < end; ptr += stride, columnPtr += 4, nextPtr += stride, lastPtr += stride) {
+                columnBuffer[columnPtr + 0] = rs / as;
+                columnBuffer[columnPtr + 1] = gs / as;
+                columnBuffer[columnPtr + 2] = bs / as;
+                columnBuffer[columnPtr + 3] = as / windowLength;
+                alpha = buffer[nextPtr + 3];
+                alpha2 = buffer[lastPtr + 3];
+                if (alpha || alpha == 0) {
+                    if (alpha2 || alpha2 == 0) {
+                        rs += buffer[nextPtr + 0] * alpha - buffer[lastPtr + 0] * alpha2;
+                        gs += buffer[nextPtr + 1] * alpha - buffer[lastPtr + 1] * alpha2;
+                        bs += buffer[nextPtr + 2] * alpha - buffer[lastPtr + 2] * alpha2;
+                        as += alpha - alpha2;
+                    }
+                    else {
+                        rs += buffer[nextPtr + 0] * alpha;
+                        gs += buffer[nextPtr + 1] * alpha;
+                        bs += buffer[nextPtr + 2] * alpha;
+                        as += alpha;
+                    }
+                }
+                else {
+                    if (alpha2 || alpha2 == 0) {
+                        rs += -buffer[lastPtr + 0] * alpha2;
+                        gs += -buffer[lastPtr + 1] * alpha2;
+                        bs += -buffer[lastPtr + 2] * alpha2;
+                        as += -alpha2;
+                    }
+                    else {
+                    }
+                }
+            }
+            // Copy column
+            for (var i = x * 4, end = i + h * stride, j = 0; i < end; i += stride, j += 4) {
+                buffer[i + 0] = columnBuffer[j + 0];
+                buffer[i + 1] = columnBuffer[j + 1];
+                buffer[i + 2] = columnBuffer[j + 2];
+                buffer[i + 3] = columnBuffer[j + 3];
+            }
+        }
+    }
+    function glowFilter(buffer, w, h, color, blurX, blurY, strength) {
+        dropShadowFilter(buffer, w, h, color, blurX, blurY, 0, 0, strength);
+    }
+    function dropShadowFilter(buffer, w, h, color, blurX, blurY, angle, distance, strength) {
+        var tmp = alphaFilter(buffer, color);
+        panFilter(tmp, w, h, angle, distance);
+        blurFilter(tmp, w, h, blurX, blurY);
+        scaleAlphaChannel(tmp, strength);
+        compositeSourceOver(tmp, buffer);
+        buffer.set(tmp);
+    }
+    function alphaFilter(buffer, color) {
+        if (!color) {
+            color = [0, 0, 0, 0];
+        }
+        var plane = new Uint8ClampedArray(buffer);
+        for (var ptr = 0, end = plane.length; ptr < end; ptr += 4) {
+            var alpha = plane[ptr + 3];
+            plane[ptr + 0] = color[0] * alpha;
+            plane[ptr + 1] = color[1] * alpha;
+            plane[ptr + 2] = color[2] * alpha;
+        }
+        return plane;
+    }
+    function panFilter(buffer, w, h, angle, distance) {
+        var dy = (Math.sin(angle) * distance) | 0;
+        var dx = (Math.cos(angle) * distance) | 0;
+        var oldBuffer = new Int32Array(buffer.buffer);
+        var newBuffer = new Int32Array(oldBuffer.length);
+        for (var oy = 0; oy < h; oy++) {
+            var ny = oy + dy;
+            if (ny < 0 || ny > h) {
+                continue;
+            }
+            for (var ox = 0; ox < w; ox++) {
+                var nx = ox + dx;
+                if (nx < 0 || nx > w) {
+                    continue;
+                }
+                newBuffer[ny * w + nx] = oldBuffer[oy * w + ox];
+            }
+        }
+        oldBuffer.set(newBuffer);
+    }
+    function scaleAlphaChannel(buffer, value) {
+        for (var ptr = 0, end = buffer.length; ptr < end; ptr += 4) {
+            buffer[ptr + 3] *= value;
+        }
+    }
+    function compositeSourceOver(dst, src) {
+        for (var ptr = 0, end = dst.length; ptr < end; ptr += 4) {
+            var Dr = dst[ptr + 0];
+            var Dg = dst[ptr + 1];
+            var Db = dst[ptr + 2];
+            var Da = dst[ptr + 3] / 255;
+            var Sr = src[ptr + 0];
+            var Sg = src[ptr + 1];
+            var Sb = src[ptr + 2];
+            var Sa = src[ptr + 3] / 255;
+            dst[ptr + 0] = Sr + Dr * (1 - Sa);
+            dst[ptr + 1] = Sg + Dg * (1 - Sa);
+            dst[ptr + 2] = Sb + Db * (1 - Sa);
+            dst[ptr + 3] = (Sa + Da * (1 - Sa)) * 255;
+        }
     }
 })(egret || (egret = {}));
 var egret;
@@ -18546,6 +18821,10 @@ var egret;
             /**
              * @private
              */
+            this.stageTextAdded = false;
+            /**
+             * @private
+             */
             this._text = null;
             /**
              * @private
@@ -18569,6 +18848,9 @@ var egret;
          *
          */
         p._addStageText = function () {
+            if (this.stageTextAdded) {
+                return;
+            }
             if (!this._text.$inputEnabled) {
                 this._text.$touchEnabled = true;
             }
@@ -18578,12 +18860,16 @@ var egret;
             this._text.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onMouseDownHandler, this);
             this.stageText.addEventListener("blur", this.blurHandler, this);
             this.stageText.addEventListener("focus", this.focusHandler, this);
+            this.stageTextAdded = true;
         };
         /**
          * @private
          *
          */
         p._removeStageText = function () {
+            if (!this.stageTextAdded) {
+                return;
+            }
             if (!this._text.$inputEnabled) {
                 this._text.$touchEnabled = false;
             }
@@ -18593,6 +18879,7 @@ var egret;
             this.tempStage.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onStageDownHandler, this);
             this.stageText.removeEventListener("blur", this.blurHandler, this);
             this.stageText.removeEventListener("focus", this.focusHandler, this);
+            this.stageTextAdded = false;
         };
         /**
          * @private
@@ -20289,6 +20576,13 @@ var egret;
                 var element = text2Arr[i];
                 //可能设置为没有文本，忽略绘制
                 if (!element.text) {
+                    if (lineElement) {
+                        lineElement.width = lineW;
+                        lineElement.height = lineH;
+                        lineElement.charNum = lineCharNum;
+                        values[5 /* textWidth */] = Math.max(values[5 /* textWidth */], lineW);
+                        values[6 /* textHeight */] += lineH;
+                    }
                     continue;
                 }
                 element.style = element.style || {};

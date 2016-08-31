@@ -1,0 +1,781 @@
+{
+  "Grids": {
+    "total": 76,
+    "final": 71,
+    "awardMap": [
+      50,
+      100,
+      200,
+      300,
+      500,
+      1000,
+      2000,
+      3000,
+      5000,
+      10000,
+      20000
+    ],
+    "Grid": [
+      {
+        "offsetX": 45,
+        "isCover": 0,
+        "offsetY": 79,
+        "rewardNum": 100,
+        "index": 1,
+        "rewardType": 0,
+        "x": 126,
+        "y": 76
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 2,
+        "rewardType": 1,
+        "x": 239,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 4,
+        "index": 3,
+        "rewardType": 1,
+        "x": 302,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 4,
+        "rewardType": 1,
+        "x": 365,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 5,
+        "rewardType": 1,
+        "x": 428,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 6,
+        "rewardType": 1,
+        "x": 491,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 3,
+        "index": 7,
+        "rewardType": 1,
+        "x": 554,
+        "y": 73
+      },
+      {
+        "offsetX": 50,
+        "isCover": 0,
+        "offsetY": 108,
+        "rewardNum": 0,
+        "index": 8,
+        "rewardType": 4,
+        "x": 629.75,
+        "y": -4.85
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 9,
+        "rewardType": 1,
+        "x": 740,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 10,
+        "rewardType": 1,
+        "x": 803,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 11,
+        "rewardType": 1,
+        "x": 866,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 12,
+        "rewardType": 1,
+        "x": 929,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 4,
+        "index": 13,
+        "rewardType": 1,
+        "x": 992,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 14,
+        "rewardType": 1,
+        "x": 1055,
+        "y": 73
+      },
+      {
+        "offsetX": 50,
+        "isCover": 0,
+        "offsetY": 108,
+        "rewardNum": 0,
+        "index": 15,
+        "rewardType": 2,
+        "x": 1112.75,
+        "y": -10.85
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 3,
+        "index": 16,
+        "rewardType": 1,
+        "x": 1222,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 17,
+        "rewardType": 1,
+        "x": 1285,
+        "y": 73
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 18,
+        "rewardType": 1,
+        "x": 1285,
+        "y": 136
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 19,
+        "rewardType": 1,
+        "x": 1285,
+        "y": 199
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 7,
+        "index": 20,
+        "rewardType": 1,
+        "x": 1285,
+        "y": 262
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 3,
+        "index": 21,
+        "rewardType": 1,
+        "x": 1222,
+        "y": 262
+      },
+      {
+        "offsetX": 50,
+        "isCover": 0,
+        "offsetY": 108,
+        "rewardNum": 0,
+        "index": 22,
+        "rewardType": 5,
+        "x": 1100.2,
+        "y": 181.15
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 23,
+        "rewardType": 1,
+        "x": 1030,
+        "y": 262
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 24,
+        "rewardType": 1,
+        "x": 967,
+        "y": 262
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 6,
+        "index": 25,
+        "rewardType": 1,
+        "x": 904,
+        "y": 262
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 26,
+        "rewardType": 1,
+        "x": 904,
+        "y": 325
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 4,
+        "index": 27,
+        "rewardType": 1,
+        "x": 904,
+        "y": 388
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 28,
+        "rewardType": 1,
+        "x": 967,
+        "y": 388
+      },
+      {
+        "offsetX": 50,
+        "isCover": 0,
+        "offsetY": 108,
+        "rewardNum": 0,
+        "index": 29,
+        "rewardType": 3,
+        "x": 1029.75,
+        "y": 311.15
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 30,
+        "rewardType": 1,
+        "x": 1100,
+        "y": 463
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 31,
+        "rewardType": 1,
+        "x": 1100,
+        "y": 526
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 3,
+        "index": 32,
+        "rewardType": 1,
+        "x": 1163,
+        "y": 526
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 33,
+        "rewardType": 1,
+        "x": 1226,
+        "y": 526
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 34,
+        "rewardType": 1,
+        "x": 1289,
+        "y": 526
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 35,
+        "rewardType": 1,
+        "x": 1289,
+        "y": 589
+      },
+      {
+        "offsetX": 50,
+        "isCover": 0,
+        "offsetY": 108,
+        "rewardNum": 0,
+        "index": 36,
+        "rewardType": 6,
+        "x": 1225.75,
+        "y": 574.15
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 37,
+        "rewardType": 1,
+        "x": 1167,
+        "y": 667
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 4,
+        "index": 38,
+        "rewardType": 1,
+        "x": 1104,
+        "y": 667
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 39,
+        "rewardType": 1,
+        "x": 1041,
+        "y": 667
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 3,
+        "index": 40,
+        "rewardType": 1,
+        "x": 978,
+        "y": 667
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 41,
+        "rewardType": 1,
+        "x": 915,
+        "y": 667
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 42,
+        "rewardType": 1,
+        "x": 852,
+        "y": 667
+      },
+      {
+        "offsetX": 50,
+        "isCover": 0,
+        "offsetY": 108,
+        "rewardNum": 0,
+        "index": 43,
+        "rewardType": 4,
+        "x": 742.15,
+        "y": 584.3
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 44,
+        "rewardType": 1,
+        "x": 672,
+        "y": 667
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 3,
+        "index": 45,
+        "rewardType": 1,
+        "x": 609,
+        "y": 667
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 3,
+        "index": 46,
+        "rewardType": 1,
+        "x": 546,
+        "y": 667
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 47,
+        "rewardType": 1,
+        "x": 483,
+        "y": 667
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 48,
+        "rewardType": 1,
+        "x": 420,
+        "y": 667
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 6,
+        "index": 49,
+        "rewardType": 1,
+        "x": 357,
+        "y": 667
+      },
+      {
+        "offsetX": 50,
+        "isCover": 1,
+        "offsetY": 108,
+        "rewardNum": 0,
+        "index": 50,
+        "rewardType": 2,
+        "x": 254.05,
+        "y": 574.15
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 51,
+        "rewardType": 1,
+        "x": 222,
+        "y": 600
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 4,
+        "index": 52,
+        "rewardType": 1,
+        "x": 222,
+        "y": 537
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 53,
+        "rewardType": 1,
+        "x": 285,
+        "y": 537
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 54,
+        "rewardType": 1,
+        "x": 348,
+        "y": 537
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 55,
+        "rewardType": 1,
+        "x": 411,
+        "y": 537
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 3,
+        "index": 56,
+        "rewardType": 1,
+        "x": 474,
+        "y": 537
+      },
+      {
+        "offsetX": 50,
+        "isCover": 0,
+        "offsetY": 108,
+        "rewardNum": 0,
+        "index": 57,
+        "rewardType": 3,
+        "x": 549.1,
+        "y": 448.15
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 58,
+        "rewardType": 1,
+        "x": 664,
+        "y": 537
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 59,
+        "rewardType": 1,
+        "x": 727,
+        "y": 537
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 60,
+        "rewardType": 1,
+        "x": 727,
+        "y": 474
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 61,
+        "rewardType": 1,
+        "x": 727,
+        "y": 411
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 4,
+        "index": 62,
+        "rewardType": 1,
+        "x": 727,
+        "y": 348
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 63,
+        "rewardType": 1,
+        "x": 727,
+        "y": 285
+      },
+      {
+        "offsetX": 50,
+        "isCover": 0,
+        "offsetY": 108,
+        "rewardNum": 0,
+        "index": 64,
+        "rewardType": 5,
+        "x": 688.15,
+        "y": 117.15
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 3,
+        "index": 65,
+        "rewardType": 1,
+        "x": 621,
+        "y": 206
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 5,
+        "index": 66,
+        "rewardType": 1,
+        "x": 558,
+        "y": 206
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 3,
+        "index": 67,
+        "rewardType": 1,
+        "x": 495,
+        "y": 206
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 68,
+        "rewardType": 1,
+        "x": 432,
+        "y": 206
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 69,
+        "rewardType": 1,
+        "x": 369,
+        "y": 206
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 10,
+        "index": 70,
+        "rewardType": 1,
+        "x": 369,
+        "y": 269
+      },
+      {
+        "offsetX": 50,
+        "isCover": 0,
+        "offsetY": 108,
+        "rewardNum": 0,
+        "index": 71,
+        "rewardType": 6,
+        "x": 314.75,
+        "y": 270.25
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 72,
+        "rewardType": 1,
+        "x": 245,
+        "y": 343
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 1,
+        "index": 73,
+        "rewardType": 1,
+        "x": 182,
+        "y": 343
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 11,
+        "index": 74,
+        "rewardType": 1,
+        "x": 182,
+        "y": 280
+      },
+      {
+        "offsetX": 31,
+        "isCover": 0,
+        "offsetY": 25,
+        "rewardNum": 2,
+        "index": 75,
+        "rewardType": 1,
+        "x": 119,
+        "y": 280
+      },
+      {
+        "offsetX": 45,
+        "isCover": 0,
+        "offsetY": 79,
+        "rewardNum": 100,
+        "index": 76,
+        "rewardType": 0,
+        "x": 65,
+        "y": 287
+      }
+    ]
+  }
+}
