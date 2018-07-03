@@ -22,126 +22,121 @@
 
     <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
     <!--modules_files_start-->
-	<script egret="lib" src="libs/modules/egret/egret.js" src-release="libs/modules/egret/egret.min.js"></script>
-	<script egret="lib" src="libs/modules/egret/egret.web.js" src-release="libs/modules/egret/egret.web.min.js"></script>
-	<script egret="lib" src="libs/modules/eui/eui.js" src-release="libs/modules/eui/eui.min.js"></script>
-	<script egret="lib" src="libs/modules/res/res.js" src-release="libs/modules/res/res.min.js"></script>
-	<script egret="lib" src="libs/modules/game/game.js" src-release="libs/modules/game/game.min.js"></script>
-	<script egret="lib" src="libs/modules/game/game.web.js" src-release="libs/modules/game/game.web.min.js"></script>
-	<script egret="lib" src="libs/modules/tween/tween.js" src-release="libs/modules/tween/tween.min.js"></script>
-	<script egret="lib" src="libs/modules/socket/socket.js" src-release="libs/modules/socket/socket.min.js"></script>
-	<script egret="lib" src="libs/modules/dragonBones/dragonBones.js" src-release="libs/modules/dragonBones/dragonBones.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.js"></script>
+	<script egret="lib" src="libs/modules/eui/eui.js"></script>
+	<script egret="lib" src="libs/modules/res/res.js"></script>
+	<script egret="lib" src="libs/modules/game/game.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.js"></script>
+	<script egret="lib" src="libs/modules/socket/socket.js"></script>
+	<script egret="lib" src="libs/modules/dragonBones/dragonBones.js"></script>
+	<script egret="lib" src="promise/bin/promise.js"></script>
 	<!--modules_files_end-->
 
     <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
-    <!--other_libs_files_start-->
-    <script egret="lib" src="libs/greensock/greensock.min.js" src-release="libs/greensock/greensock.min.js"></script>
-	<script egret="lib" src="libs/protobuf/Long.min.js" src-release="libs/protobuf/Long.min.js"></script>
-	<script egret="lib" src="libs/protobuf/ByteBufferAB.min.js" src-release="libs/protobuf/ByteBufferAB.min.js"></script>
-	<script egret="lib" src="libs/protobuf/ProtoBuf.min.js" src-release="libs/protobuf/ProtoBuf.min.js"></script>
-    <!--other_libs_files_end-->
+    
 
     <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
     <!--game_files_start-->
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/entity/BaseGameEntity.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/BaseComponent.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/net/message/BaseMessage.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/entity/MovingEntity.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/utils/TreeSet.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/v2d/Vector2Ds.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/interface/IBase.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/interface/IBaseGameEntity.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/interface/ICompositor.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/interface/IMovingEneity.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/ClientModel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/ConfigModel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/HallClientModel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/LanguageConfig.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/UserModel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/def/EntityType.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/def/GameStateDef.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/def/StateDef.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/DeabedVo.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/DiceInfo.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/DiceVo.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/FishCreateVo.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/FishVo.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/GridVo.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/PathPointVo.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/PlayerVo.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/RoomInfoVo.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/data/vo/ShellVo.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/event/BaseEvent.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/event/GameDispatcher.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/event/GameEvent.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/dice/DiceGamePanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/dice/DiceView.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/game/DeabedPanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/game/GameWorld.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/game/HitGoldAnimation.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/game/JpBarPanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/game/PlayerList.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/hall/HallView.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/hall/RoomInfoListPanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/loading/LoadingUI.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/login/LoginView.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/renderer/FishRenderer.js"></script>
-	<script egret="game" src="bin-debug/AssetAdapter.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/renderer/RoomBtnItemRenderer.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/renderer/RoomInfoListRenderer.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/renderer/ShellRenderer.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/top/TopView.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/Alert.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/messaging/MessageType.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/BindPanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/DiceAlert.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/HelpPanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/HitInfoPanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/IWindow.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/LevelUpPanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/MailPanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/OperationPanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/RankPanel.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/window/WindowManager.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/native/AndroidInterface.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/native/INative.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/native/InterfaceManager.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/native/IosInterface.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/native/WebInterface.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/native/WxInterface.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/net/ConnectionManager.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/net/ISocket.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/net/MsgReceiveHelper.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/net/MsgSendHelper.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/net/MsgType.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/net/handler/SocketIoHandler.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/net/handler/WebSocketHandler.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/messaging/MessageDispatcher.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/net/message/MsgLoginReq.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/net/service/LocalService.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/utils/BitMapUtil.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/utils/ButtonUtils.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/utils/HitTestUtils.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/utils/MatrixUtils.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/utils/PcHelper.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/utils/RandomUtil.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/utils/RollNumber.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/utils/StringUtils.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/utils/TimeUtils.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/utils/TimerManager.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/test/TestEvent.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/test/TestWindow.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/fsm/StateMachine.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/fsm/ShellEntityState.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/fsm/IState.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/fsm/FishEntityState.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/messaging/Telegram.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/entity/EntityManager.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/base/ai/utils/FishPathUtil.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/GameMain.js"></script>
-	<script egret="game" src="bin-debug/ThemeAdapter.js"></script>
-	<script egret="game" src="bin-debug/Main.js"></script>
-	<script egret="game" src="bin-debug/com/ourgame/angryFisher/model/renderer/PlayerGunRenderer.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/entity/BaseGameEntity.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/BaseComponent.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/net/message/BaseMessage.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/entity/MovingEntity.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/hall/HallView.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/entity/EntityManager.js"></script>
+	<script egret="lib" src="bin-debug/ThemeAdapter.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/fsm/FishEntityState.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/fsm/IState.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/fsm/ShellEntityState.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/fsm/StateMachine.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/messaging/MessageDispatcher.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/messaging/MessageType.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/messaging/Telegram.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/utils/FishPathUtil.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/utils/TreeSet.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/ai/v2d/Vector2Ds.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/interface/IBase.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/interface/IBaseGameEntity.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/interface/ICompositor.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/base/interface/IMovingEneity.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/ClientModel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/ConfigModel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/HallClientModel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/LanguageConfig.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/UserModel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/def/EntityType.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/def/GameStateDef.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/def/StateDef.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/vo/DeabedVo.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/vo/DiceInfo.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/vo/DiceVo.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/vo/FishCreateVo.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/vo/FishVo.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/vo/GridVo.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/vo/PathPointVo.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/vo/PlayerVo.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/vo/RoomInfoVo.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/data/vo/ShellVo.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/event/BaseEvent.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/event/GameDispatcher.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/event/GameEvent.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/dice/DiceGamePanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/dice/DiceView.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/game/DeabedPanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/game/GameWorld.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/game/HitGoldAnimation.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/game/JpBarPanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/game/PlayerList.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/test/TestWindow.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/hall/RoomInfoListPanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/loading/LoadingUI.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/login/LoginView.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/renderer/FishRenderer.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/renderer/PlayerGunRenderer.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/renderer/RoomBtnItemRenderer.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/renderer/RoomInfoListRenderer.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/renderer/ShellRenderer.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/top/TopView.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/Alert.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/GameMain.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/BindPanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/DiceAlert.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/HelpPanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/HitInfoPanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/IWindow.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/LevelUpPanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/MailPanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/OperationPanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/RankPanel.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/model/window/WindowManager.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/native/AndroidInterface.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/native/INative.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/native/InterfaceManager.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/native/IosInterface.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/native/WebInterface.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/native/WxInterface.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/net/ConnectionManager.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/net/ISocket.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/net/MsgReceiveHelper.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/net/MsgSendHelper.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/net/MsgType.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/net/handler/SocketIoHandler.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/net/handler/WebSocketHandler.js"></script>
+	<script egret="lib" src="bin-debug/AssetAdapter.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/net/message/MsgLoginReq.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/net/service/LocalService.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/utils/BitMapUtil.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/utils/ButtonUtils.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/utils/HitTestUtils.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/utils/MatrixUtils.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/utils/PcHelper.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/utils/RandomUtil.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/utils/RollNumber.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/utils/StringUtils.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/utils/TimerManager.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/angryFisher/utils/TimeUtils.js"></script>
+	<script egret="lib" src="bin-debug/com/ourgame/test/TestEvent.js"></script>
+	<script egret="lib" src="bin-debug/Main.js"></script>
 	<!--game_files_end-->
 </head>
 <body>
