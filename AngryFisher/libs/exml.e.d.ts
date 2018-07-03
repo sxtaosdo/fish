@@ -50,16 +50,6 @@ declare module skins{
 	class VSliderSkin extends eui.Skin{
 	}
 }
-declare class LoadingProgressBarSkin extends eui.Skin{
-}
-declare class LoadingRoomPBSkin extends eui.Skin{
-}
-declare class PlayerLvProgressBarSkin extends eui.Skin{
-}
-declare class DiceGameSkin extends eui.Skin{
-}
-declare class DicePanelSkin extends eui.Skin{
-}
 declare class JpBarSkin extends eui.Skin{
 }
 declare class LabbyRoomInfoListSkin extends eui.Skin{
@@ -75,6 +65,16 @@ declare class RightPanel extends eui.Skin{
 declare class TestSkin extends eui.Skin{
 }
 declare class TopSkin extends eui.Skin{
+}
+declare class LoadingProgressBarSkin extends eui.Skin{
+}
+declare class LoadingRoomPBSkin extends eui.Skin{
+}
+declare class PlayerLvProgressBarSkin extends eui.Skin{
+}
+declare class DiceGameSkin extends eui.Skin{
+}
+declare class DicePanelSkin extends eui.Skin{
 }
 declare class AlertSkin extends eui.Skin{
 }

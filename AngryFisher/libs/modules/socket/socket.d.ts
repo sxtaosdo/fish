@@ -1,4 +1,4 @@
-declare module egret {
+declare namespace egret {
     /**
      * @language en_US
      * @private
@@ -94,11 +94,11 @@ declare module egret {
      * @version Egret 2.4
      * @platform Web,Native
      */
-    var ISocket: {
+    let ISocket: {
         new (): ISocket;
     };
 }
-declare module egret {
+declare namespace egret {
     /**
      * @language en_US
      * The egret.WebSocket class enables code to establish a TCP socket connection, for sending and receiving character string or binary data.
@@ -171,6 +171,10 @@ declare module egret {
          */
         private _connected;
         /**
+         * @private
+         */
+        private _connecting;
+        /**
          * @language en_US
          * Create an egret.WebSocket object
          * This parameter is reserved for later versions. The connection address and port number are imported in the connect function
@@ -185,7 +189,6 @@ declare module egret {
          * @platform Web,Native
          */
         constructor(host?: string, port?: number);
-        private connectCount;
         /**
          * @language en_US
          * Connect the socket to the specified host and port number
@@ -375,7 +378,7 @@ declare module egret {
         type: string;
     }
 }
-declare module egret.native {
+declare namespace egret.native {
     /**
      * @private
      */
@@ -397,7 +400,7 @@ declare module egret.native {
         close(): void;
     }
 }
-declare module egret.web {
+declare namespace egret.web {
     /**
      * @private
      */
