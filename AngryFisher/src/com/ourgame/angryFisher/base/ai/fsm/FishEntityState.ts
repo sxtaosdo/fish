@@ -147,6 +147,7 @@ class FishStateArrive implements IState {
 			fish.pathStep += 1;
 			entity.getFSM().ChangeState(FishStateSeek.instance);
 		}
+
 	}
 
     public execute(entity: IBaseGameEntity): void {

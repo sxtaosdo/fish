@@ -12,9 +12,9 @@
 	],
 	"game": [
 		"bin-debug/com/ourgame/angryFisher/base/ai/entity/BaseGameEntity.js",
+		"bin-debug/com/ourgame/angryFisher/base/ai/entity/MovingEntity.js",
 		"bin-debug/com/ourgame/angryFisher/model/window/BaseComponent.js",
 		"bin-debug/com/ourgame/angryFisher/net/message/BaseMessage.js",
-		"bin-debug/com/ourgame/angryFisher/base/ai/entity/MovingEntity.js",
 		"bin-debug/com/ourgame/angryFisher/model/hall/HallView.js",
 		"bin-debug/com/ourgame/angryFisher/base/ai/entity/EntityManager.js",
 		"bin-debug/ThemeAdapter.js",
@@ -60,7 +60,7 @@
 		"bin-debug/com/ourgame/angryFisher/model/game/HitGoldAnimation.js",
 		"bin-debug/com/ourgame/angryFisher/model/game/JpBarPanel.js",
 		"bin-debug/com/ourgame/angryFisher/model/game/PlayerList.js",
-		"bin-debug/com/ourgame/test/TestWindow.js",
+		"bin-debug/Main.js",
 		"bin-debug/com/ourgame/angryFisher/model/hall/RoomInfoListPanel.js",
 		"bin-debug/com/ourgame/angryFisher/model/loading/LoadingUI.js",
 		"bin-debug/com/ourgame/angryFisher/model/login/LoginView.js",
@@ -109,6 +109,6 @@
 		"bin-debug/com/ourgame/angryFisher/utils/TimerManager.js",
 		"bin-debug/com/ourgame/angryFisher/utils/TimeUtils.js",
 		"bin-debug/com/ourgame/test/TestEvent.js",
-		"bin-debug/Main.js"
+		"bin-debug/com/ourgame/test/TestWindow.js"
 	]
 }

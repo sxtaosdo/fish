@@ -118,15 +118,15 @@ class ShellMovingEntityStateArrive implements IState {
 					console.log("in hit");
 
 					if (HitTestUtils.hitTest(shell.displayObject, element.getDisplayObject())) {
-						console.log("hitTestLevel:" + element.getDataVo<FishVo>(FishVo).hitTestLevel);
-						if (element.getDataVo<FishVo>(FishVo).hitTestLevel == 1) {	//精准碰撞检测
-							var bmp: egret.Texture = (<egret.MovieClip>element.displayObject).$bitmapData;
-							if (bmp.getPixel32(dis1.x, dis2.x)[3] < 1) {
-								console.log(bmp.getPixel32(dis1.x, dis2.x)[3]);
-
-								return;
-							}
-						}
+						//TODO 精确碰撞检测
+						// console.log("hitTestLevel:" + element.getDataVo<FishVo>(FishVo).hitTestLevel);
+						// if (element.getDataVo<FishVo>(FishVo).hitTestLevel == 1) {	//精准碰撞检测
+						// 	var bmp: egret.Texture = (<egret.MovieClip>element.displayObject).$bitmapData;
+						// 	if (bmp.getPixel32(dis1.x, dis2.x)[3] < 1) {
+						// 		console.log(bmp.getPixel32(dis1.x, dis2.x)[3]);
+						// 		return;
+						// 	}
+						// }
 						element.getFSM().ChangeState(FishStateDeath.instance);
 						(<PlayerGunRenderer>shell.owner).killFish(element.getDataVo<FishVo>(FishVo))
 					}

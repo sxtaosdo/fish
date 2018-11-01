@@ -1,7 +1,4 @@
 
-
-
-
 class BaseMovingEntity extends BaseGameEntity {
 
 	/**
